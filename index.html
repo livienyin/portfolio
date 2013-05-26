@@ -7,14 +7,14 @@
   <script src="http://underscorejs.org/underscore.js"></script>
   <script src="js/main.js"></script>
 </head>
-<body>
+<body id="home">
 <div id="header">
   <h1 id="title">Livien Yin</h1>
   <ul id="navigation">
     <li class="menu-item previous">
       <h2>
         <a rel="painting" href="http://www.livienyin.com/painting">
-          Painting
+          Handmade
         </a>
       </h2>
     </li>
@@ -28,7 +28,7 @@
     <li class="menu-item next">
       <h2>
         <a rel="webdev" href="http://www.livienyin.com/webdev">
-        Code
+        Codemade
         </a>
       </h2>
     </li>
@@ -39,15 +39,15 @@
   <div id="painting" class="previous page">
     <h3 class="subtitle">Portfolio</h3>
   </div>
-  <div id="about" class="active page">
-    <h3 class="subtitle">Information and Inspiration</h3>
+  <div id="about-news" class="active page">
+    <h3 class="subtitle">Information and News</h3>
     <div id="about">
-      <div id="facetime" class="column">
+      <div id="facetime" class="skinny-column">
         <div class="thumbnail">
           <img src="images/mugshot.jpg" alt="Livien's face">
         </div>
       </div> <!-- facetime -->
-      <div id="about-content" class="column">
+      <div id="about-content" class="skinny-column">
         <h3>Hello</h3>
         <h1 class="inline-title">Livien Yin</h1>
         <div class="about-paragraphs">
@@ -71,8 +71,74 @@
           </p>
         </div> 
       </div> <!-- about-content -->
-    </div>
-  </div>
+      <div id="contact-info" class="skinny-column">
+        <h3>Don't hesitate to</h3>
+        <h1 class="inline-title">Contact Me</h1>
+        <p>
+          <em>Residing in</em><br />
+          San Francisco, CA
+        </p>
+        <p>
+          <em>livienyin@gmail.com</em><br />
+          781 330 2338
+        </p>
+        <p>
+          <em>Elsewhere</em><br />
+          +
+          <a href="http://www.github.com/livienyin">
+            <em>GitHub</em>
+          </a><br />
+          + 
+          <a href="http://www.twitter.com/livienyin">
+            <em>Twitter</em>
+          </a>
+      </div> <!-- contact-info -->
+    </div> <!-- about -->
+    <div id="news">
+      <div class="med-column">
+        <div class="story">
+          <div class="thumbnail">
+            <img src="images/wdi_story.png" alt="WDI"
+            style="border:4px solid yellow">
+          </div>
+          <h3>Class: 3 weeks left</h3> 
+          <h1 class="inline-title">5.25.13</h1>
+          <p>
+            Donec id elit non mi porta gravida at eget metus. Nulla
+            vitae elit libero, a pharetra augue. Duis mollis, est non
+            commodo luctus, nisi erat porttitor ligula, eget lacinia
+            odio sem nec elit.
+          </p>
+        </div> <!-- story -->
+        <div class="story">
+          <div class="thumbnail">
+            <img src="images/lemons_story.jpeg" alt="WDI">
+          </div>
+          <h3>Fun: Fresh Lemons at Jessie's</h3> 
+          <h1 class="inline-title">5.25.13</h1>
+          <p>
+            Donec id elit non mi porta gravida at eget metus. Nulla
+            vitae elit libero, a pharetra augue. Duis mollis, est non
+            commodo luctus, nisi erat porttitor ligula, eget lacinia
+            odio sem nec elit.
+          </p>
+        </div> <!-- story -->
+        <div class="story">
+          <div class="thumbnail">
+            <img src="images/canterbury_story.jpeg" alt="WDI">
+          </div>
+          <h3>Visits: Canterbury</h3> 
+          <h1 class="inline-title">5.25.13</h1>
+          <p>
+            Donec id elit non mi porta gravida at eget metus. Nulla
+            vitae elit libero, a pharetra augue. Duis mollis, est non
+            commodo luctus, nisi erat porttitor ligula, eget lacinia
+            odio sem nec elit.
+          </p>
+        </div> <!-- story -->
+      </div>
+    </div> <!-- news -->
+  </div> <!-- about-news -->
   <div id="webdev" class="next page">
     <h3 class="subtitle">Portfolio</h3>
   </div>  

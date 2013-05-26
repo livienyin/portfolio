@@ -22,13 +22,16 @@ h2 {
     font-style:normal; 
     font-weight:normal; 
     font-family:Georgia; 
-    font-size:35px; 
+    font-size:40px; 
 }
 h3 {
     font-style:italic;
 }
 p {
     margin-bottom: 15px;
+}
+em {
+    font-style: italic;
 }
 
 /* Layout Modules */
@@ -38,13 +41,18 @@ p {
     right:0px; 
     text-align:center; 
     position: absolute; 
-    letter-spacing: 1px;
 }
-.column {
-    width: 50%; 
+.skinny-column {
+    width: 42%; 
     margin-left: 4%; 
     margin-right: 4%; 
     float:left;
+}
+.med-column {
+    width: 92%;
+    margin-left: 4%;
+    margin-right: 4%;
+    float: left;
 }
 .thumbnail img {
     width: 100%;
@@ -83,6 +91,17 @@ p {
     display: inline-block;
     width: 50%;
 }
+#about-content {
+    float: left;
+    clear: left;
+}
+#contact-info {
+    float: left;
+}
+#news {
+    float: right;
+    width: 50%;
+}
 
 /* Specifics */
 #navigation .menu-item {
@@ -90,10 +109,17 @@ p {
     display:inline-block;
     position:relative;
 }
+#navigation .previous a, #navigation .next a {
+    color: #cccccc;
+}
+#navigation .next a:hover, #navigation .previous a:hover {
+    color: #cccccc;
+    text-decoration: line-through;
+}
 #content .page {
     width: 78%;
     min-height: 100%;
-    padding-top: 300px;
+    padding-top: 310px;
     position:absolute;
 }
 #content .active { 
@@ -104,7 +130,7 @@ p {
 }
 #content .next, #content .previous { 
     top:0; 
-    background-color: #eaeaea; 
+    background-color: #FAEEC8; 
     cursor:pointer; 
 }
 #content .next { 
@@ -112,4 +138,9 @@ p {
 }
 #content .previous { 
     right:95%; 
+}
+#news .story {
+    margin-bottom: 30px; 
+    color: #9a9a9a; 
+    position: relative;
 }
