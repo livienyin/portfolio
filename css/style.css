@@ -11,6 +11,9 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acron
     font-size:100%; 
     vertical-align:baseline;
 }
+* {
+  box-sizing: border-box;
+}
 
 /* Inline */
 h1 { 
@@ -102,7 +105,24 @@ em {
     float: right;
     width: 50%;
 }
-
+.project {
+    overflow: auto;
+    margin-bottom: 70px;
+    clear: both;
+}
+.project-description {
+    float: left;
+    display: inline-block;
+    width: 21%;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+.project-image {
+    float: right;
+    width: 67%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
 /* Specifics */
 #navigation .menu-item {
     width:33.3%;

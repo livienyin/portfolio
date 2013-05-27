@@ -2,14 +2,15 @@ var duration = 1000;
 
 $(document).ready(function() {
   
+  // next animation
   $('#home .next').on('click', function(event){
     // next animates to active
     $('#content .next').animate({
       'left' : '5%', 
       'margin-right' : '6%', 
       'margin-left' : '6%', 
-      'backgroundColor' : '#FFFFFF'}, 
-     duration,
+      'backgroundColor' : '#FFFFFF' 
+     }, duration,
      function(){
        $(this).addClass('active').removeClass('next');
      });
@@ -19,8 +20,8 @@ $(document).ready(function() {
       'left': '-73%',
       'margin-right' : '0%', 
       'margin-left' : '0%', 
-      'backgroundColor' : '##EFF0F1'},
-     duration,
+      'backgroundColor' : '##EFF0F1'
+     }, duration,
      function(){
        $(this).addClass('previous').removeClass('active');
      });
@@ -30,10 +31,77 @@ $(document).ready(function() {
       .css({'left' : '-73%'})
       .animate({ 'left' : '-151%'}, 
       duration, function(){$(this).remove();})
-      .clone().addClass('next')
+      .clone()
+      .addClass('next')
       .removeClass('previous')
       .appendTo('#content')
       .css({ 'left' : '173%'})
       .animate({'left' : '95%'}, duration);
+
+    //animate menu
+    $('#navigation .previous')
+      .animate({'width' : '0', 'opacity' : '0'}, duration, function(){
+      $(this).addClass('next')
+          .removeClass('previous')
+          .appendTo('#navigation')
+          .css({ 'width' : '33.3%'})
+          .fadeTo(duration, 1);
+      });
+    $('#navigation .active').addClass('previous').removeClass('active');
+    $('#navigation .next').addClass('active').removeClass('next');
+    event.stopPropagation();
+    return false;
   });
+
+  // previous animation
+  $('#home .previous').on('click', function(event){
+    
+    // previous animates to active
+    $('#content .previous')
+      .css({'left' : '-73%'}).animate({
+        'left' : '5%', 
+        'margin-right' : '6%', 
+        'margin-left' : '6%', 
+        'backgroundColor' : '#FFFFFF'
+      }, duration, function(){
+      $(this).addClass('active')
+        .removeClass('previous');
+    });
+    
+    // active animates to next
+   $('#content .active')
+    .animate({ 
+      'left' : '95%',
+      'margin-right' : '0%', 
+      'margin-left' : '0%', 
+      'backgroundColor' : '##EFF0F1'
+    }, duration, function(){
+      $(this).addClass('next').removeClass('active');
+    });
+    
+    // next animates to previous
+    $('#content .next')
+      .animate({'left' : '173%'}, 
+      duration, function(){$(this).remove();})
+      .clone().addClass('previous')
+      .removeClass('next')
+      .prependTo('#content')
+      .css({'left' : '-151%'})
+      .animate({'left' : '-73%'}, duration);
+    
+    //animate menu
+    $('#navigation .next')
+      .animate({'width' : '0', 'opacity' : '0'}, duration, function(){
+        $(this).addClass('previous')
+          .removeClass('next')
+          .prependTo('#navigation')
+          .css({ 'width' : '33.3%'})
+          .fadeTo(duration, 1);
+      });
+    $('#navigation .active').addClass('next').removeClass('active');
+    $('#navigation .previous').addClass('active').removeClass('previous');
+    event.stopPropagation();
+    return false;
+    
+  }); // end of previous animation
 });
