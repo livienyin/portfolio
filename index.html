@@ -3,7 +3,10 @@
 <head>
   <title>Livien Yin</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700'
+      rel='stylesheet' type='text/css'>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
   <script src="http://underscorejs.org/underscore.js"></script>
   <script src="js/main.js"></script>
 </head>
@@ -12,25 +15,13 @@
   <h1 id="title">Livien Yin</h1>
   <ul id="navigation">
     <li class="menu-item previous">
-      <h2>
-        <a rel="painting" href="http://www.livienyin.com/painting">
-          Handmade
-        </a>
-      </h2>
+      <h2>Handmade</h2>
     </li>
     <li class="menu-item active">
-      <h2>
-        <a rel="about" href="http://www.livienyin.com/about">
-        About
-        </a>
-      </h2>
+      <h2>About</h2>
     </li>
     <li class="menu-item next">
-      <h2>
-        <a rel="webdev" href="http://www.livienyin.com/webdev">
-        Codemade
-        </a>
-      </h2>
+      <h2>Codemade</h2>
     </li>
   </ul>
 </div> <!-- header -->
@@ -39,6 +30,32 @@
 
   <div id="painting" class="previous page">
     <h3 class="subtitle">Portfolio</h3>
+    <div class="project">
+      <div class="project-description">
+        <h4>Painting</h4>
+        <p class="tools">
+          Oils and acrylic on canvas
+        </p>
+        <p>
+          Vestibulum id ligula porta felis euismod semper. Lorem
+          ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+          sed diam eget risus varius blandit sit amet non magna.
+        </p>
+        <p>
+          Nullam quis risus eget urna mollis ornare vel eu leo. Sed posuere
+          consectetur est at lobortis. Etiam porta sem malesuada magna
+          mollis euismod. Nullam quis risus eget urna mollis ornare
+          vel eu leo. Curabitur blandit tempus porttitor. Donec id
+          elit non mi porta gravida at eget metus.
+        </p>
+      </div>
+      <div class="project-image">
+        <div class="thumbnail">
+          <img src="images/painting.jpg">
+        </div>
+      </div>
+    </div> <!-- project -->
+
   </div> <!-- painting -->
 
   <div id="about-news" class="active page">
@@ -74,18 +91,17 @@
         </div> 
       </div> <!-- about-content -->
       <div id="contact-info" class="skinny-column">
-        <h3>Don't hesitate to</h3>
-        <h1 class="inline-title">Contact Me</h1>
+        <em>Please feel free to</em>
+        <h1 class="inline-title">Contact</h1>
         <p>
-          <em>Residing in</em><br />
           San Francisco, CA
         </p>
         <p>
-          <em>livienyin@gmail.com</em><br />
+          livienyin@gmail.com<br />
           781 330 2338
         </p>
         <p>
-          <em>Elsewhere</em><br />
+          Elsewhere:<br />
           +
           <a href="http://www.github.com/livienyin">
             <em>GitHub</em>
@@ -146,9 +162,28 @@
     <h3 class="subtitle">Portfolio</h3>
     <div class="project">
       <div class="project-description">
-        <p>Vestibulum id ligula porta felis euismod semper. Lorem
-        ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-        sed diam eget risus varius blandit sit amet non magna.</p>
+        <div class="project-link">
+          <h4>
+            <a href="http://cssstache.com">
+              CSS Stache
+            </a>
+          </h4>
+        </div>
+        <p class="tools">
+          SCSS, Javascript, Ruby on Rails
+        </p>
+        <p>
+          Vestibulum id ligula porta felis euismod semper. Lorem
+          ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+          sed diam eget risus varius blandit sit amet non magna.
+        </p>
+        <p>
+          Nullam quis risus eget urna mollis ornare vel eu leo. Sed posuere
+          consectetur est at lobortis. Etiam porta sem malesuada magna
+          mollis euismod. Nullam quis risus eget urna mollis ornare
+          vel eu leo. Curabitur blandit tempus porttitor. Donec id
+          elit non mi porta gravida at eget metus.
+        </p>
       </div>
       <div class="project-image">
         <div class="thumbnail">
@@ -158,9 +193,21 @@
     </div> <!-- project -->
     <div class="project">
       <div class="project-description">
-        <p>Vestibulum id ligula porta felis euismod semper. Lorem
-        ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-        sed diam eget risus varius blandit sit amet non magna.</p>
+        <div class="project-link">
+          <h4>
+            <a href="http://cssstache.com">
+              InTune
+            </a>
+          </h4>
+        </div>
+        <p class="tools">
+          Ruby on Rails, Last.fm API, HTML5, CSS3
+        </p>
+        <p>
+          This little rails app compares Last.fm users with their
+          friends to see which friends have the same favorite artists.
+          A simple bar chart displays the shared artists by playcount.
+        </p>
       </div>
       <div class="project-image">
         <div class="thumbnail">

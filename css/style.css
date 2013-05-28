@@ -17,20 +17,29 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acron
 
 /* Inline */
 h1 { 
-    font-family:Futura; 
-    font-size:14px; 
-    letter-spacing:1px; 
+    font-family: Open Sans; 
+    font-weight: 700;
+    font-size: 14px; 
+    letter-spacing: 1px;
 }
 h2 { 
-    font-style:normal; 
-    font-weight:normal; 
-    font-family:Georgia; 
+    line-height: 1;
+    font-family: Georgia;
     font-size:40px; 
+    letter-spacing: 1px;
 }
 h3 {
     font-style:italic;
 }
+h4 {
+    font-family: Georgia;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
 p {
+    font-size: 12px;
+    line-height: 18px;
+    font-family: Open Sans, sans-serif;
     margin-bottom: 15px;
 }
 em {
@@ -65,7 +74,32 @@ em {
 .inline-title {
     margin-bottom: 30px;
 }
-
+.project {
+    overflow: auto;
+    margin-bottom: 70px;
+    clear: both;
+}
+.project-description {
+    float: left;
+    display: inline-block;
+    width: 18%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.project-image {
+    float: right;
+    width: 71%;
+    margin-left: 5%;
+    margin-right: 2%;
+}
+.project-link a:hover {
+    background-color: #d4ff00;
+}
+.tools {
+    font-family: Open Sans, sans-serif;
+    font-size: 12px;
+    color: #ff4200;
+}
 /* Layout Elements */
 #header {
     z-index:1; 
@@ -105,36 +139,19 @@ em {
     float: right;
     width: 50%;
 }
-.project {
-    overflow: auto;
-    margin-bottom: 70px;
-    clear: both;
-}
-.project-description {
-    float: left;
-    display: inline-block;
-    width: 21%;
-    margin-left: 4%;
-    margin-right: 4%;
-}
-.project-image {
-    float: right;
-    width: 67%;
-    margin-left: 2%;
-    margin-right: 2%;
-}
+
 /* Specifics */
 #navigation .menu-item {
     width:33.3%;
     display:inline-block;
     position:relative;
 }
-#navigation .previous a, #navigation .next a {
+#navigation .previous h2, #navigation .next h2 {
+    cursor: pointer;
     color: #cccccc;
 }
 #navigation .next a:hover, #navigation .previous a:hover {
-    color: #cccccc;
-    text-decoration: line-through;
+    color: black;
 }
 #content .page {
     width: 78%;
@@ -150,7 +167,9 @@ em {
 }
 #content .next, #content .previous { 
     top:0; 
-    background-color: #FAEEC8; 
+//    background-color: #A3FFE0;
+    background-color: #D4FF00;
+//    background-color: #FAEEC8; 
     cursor:pointer; 
 }
 #content .next { 
