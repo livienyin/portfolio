@@ -8,10 +8,10 @@ $(document).ready(function() {
 
     // next animates to active
     $('#content .next').animate({
-      'left' : '5%', 
-      'margin-right' : '6%', 
-      'margin-left' : '6%', 
-      'backgroundColor' : '#ffffff' 
+      'left': '5%', 
+      'margin-right': '6%', 
+      'margin-left': '6%', 
+      'backgroundColor': '#ffffff' 
      }, duration, easing,
      function(){
        $(this).addClass('active').removeClass('next');
@@ -20,9 +20,9 @@ $(document).ready(function() {
     // active animates to previous
     $('#content .active').animate({
       'left': '-73%',
-      'margin-right' : '0%', 
-      'margin-left' : '0%', 
-      'backgroundColor' : '#FEDFAD'
+      'margin-right': '0%', 
+      'margin-left': '0%', 
+      'backgroundColor': '#FEDFAD'
      }, duration, easing,
      function(){
        $(this).addClass('previous').removeClass('active');
@@ -30,24 +30,24 @@ $(document).ready(function() {
     
     // previous animates to next
     $('#content .previous')
-      .css({'left' : '-73%'})
-      .animate({ 'left' : '-151%'}, 
+      .css({'left': '-73%'})
+      .animate({ 'left': '-151%'}, 
       duration, easing, function(){$(this).remove();})
       .clone()
       .addClass('next')
       .removeClass('previous')
       .appendTo('#content')
-      .css({ 'left' : '173%'})
-      .animate({'left' : '95%', 'backgroundColor' : '#FEDFAD'}, duration);
+      .css({ 'left': '173%'})
+      .animate({'left': '95%', 'backgroundColor': '#FEDFAD'}, duration);
 
     //animate menu
     $('#navigation').css('text-align','left');
     $('#navigation .previous')
-      .animate({'width' : '0', 'opacity' : '0'}, duration, easing, function(){
+      .animate({'width': '0', 'opacity': '0'}, duration, easing, function(){
       $(this).addClass('next')
           .removeClass('previous')
           .appendTo('#navigation')
-          .css({ 'width' : '33.3%'})
+          .css({ 'width': '33.3%'})
           .fadeTo(duration, 1);
       });
     $('#navigation .active').addClass('previous').removeClass('active');
@@ -60,12 +60,12 @@ $(document).ready(function() {
   $(document).on('click', '#home .previous', function(event){
     // previous animates to active
     $('#content .previous')
-      .css({ 'left' : '-73%'})
+      .css({ 'left': '-73%'})
       .animate({
-        'left' : '5%', 
-        'margin-right' : '6%', 
-        'margin-left' : '6%', 
-        'backgroundColor' : '#FFFFFF' 
+        'left': '5%', 
+        'margin-right': '6%', 
+        'margin-left': '6%', 
+        'backgroundColor': '#FFFFFF' 
       }, duration, easing, function(){
         $(this).addClass('active')
           .removeClass('previous');});
@@ -74,32 +74,32 @@ $(document).ready(function() {
     // active animates to next
     $('#content .active')
       .animate({
-        'left' : '95%', 
-        'margin-right' : '0%', 
-        'margin-left' : '0%', 
-        'backgroundColor' : '#ADFFFF' 
+        'left': '95%', 
+        'margin-right': '0%', 
+        'margin-left': '0%', 
+        'backgroundColor': '#ADFFFF' 
       }, duration, easing, function(){
         $(this).addClass('next')
           .removeClass('active');});
     
     // next animates to previous
     $('#content .next')
-      .animate({'left' : '173%'}, 
+      .animate({'left': '173%'}, 
       duration, easing, function(){$(this).remove();})
       .clone().addClass('previous')
       .removeClass('next')
       .prependTo('#content')
-      .css({'left' : '-151%'})
-      .animate({'left' : '-73%', 'backgroundColor' : '#ADFFFF'}, duration);
+      .css({'left': '-151%'})
+      .animate({'left': '-73%', 'backgroundColor': '#ADFFFF'}, duration);
     
     //animate menu
     $('#navigation').css('text-align','right');
     $('#navigation .next')
-      .animate({'width' : '0', 'opacity' : '0'}, duration, easing, function(){
+      .animate({'width': '0', 'opacity': '0'}, duration, easing, function(){
         $(this).addClass('previous')
           .removeClass('next')
           .prependTo('#navigation')
-          .css({ 'width' : '33.3%'})
+          .css({ 'width': '33.3%'})
           .fadeTo(duration, 1);
       });
     $('#navigation .active').addClass('next').removeClass('active');
