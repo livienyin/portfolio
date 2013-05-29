@@ -1,4 +1,4 @@
-var duration = 1000;
+var duration = 1500;
 var easing = 'easeInOutQuint';
 
 $(document).ready(function() {
@@ -22,7 +22,7 @@ $(document).ready(function() {
       'left': '-73%',
       'margin-right' : '0%', 
       'margin-left' : '0%', 
-      'backgroundColor' : '#faeec8'
+      'backgroundColor' : '#FEDFAD'
      }, duration, easing,
      function(){
        $(this).addClass('previous').removeClass('active');
@@ -38,9 +38,10 @@ $(document).ready(function() {
       .removeClass('previous')
       .appendTo('#content')
       .css({ 'left' : '173%'})
-      .animate({'left' : '95%', 'backgroundColor' : '#faeec8'}, duration);
+      .animate({'left' : '95%', 'backgroundColor' : '#FEDFAD'}, duration);
 
     //animate menu
+    $('#navigation').css('text-align','left');
     $('#navigation .previous')
       .animate({'width' : '0', 'opacity' : '0'}, duration, easing, function(){
       $(this).addClass('next')
@@ -76,7 +77,7 @@ $(document).ready(function() {
         'left' : '95%', 
         'margin-right' : '0%', 
         'margin-left' : '0%', 
-        'backgroundColor' : '#a3ffe0' 
+        'backgroundColor' : '#ADFFFF' 
       }, duration, easing, function(){
         $(this).addClass('next')
           .removeClass('active');});
@@ -89,9 +90,10 @@ $(document).ready(function() {
       .removeClass('next')
       .prependTo('#content')
       .css({'left' : '-151%'})
-      .animate({'left' : '-73%', 'backgroundColor' : '#a3ffe0'}, duration);
+      .animate({'left' : '-73%', 'backgroundColor' : '#ADFFFF'}, duration);
     
     //animate menu
+    $('#navigation').css('text-align','right');
     $('#navigation .next')
       .animate({'width' : '0', 'opacity' : '0'}, duration, easing, function(){
         $(this).addClass('previous')
