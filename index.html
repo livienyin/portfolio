@@ -8,6 +8,7 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
   <script src="http://underscorejs.org/underscore.js"></script>
+  <script src="js/bootstrap-carousel.min.js"></script>
   <script src="js/main.js"></script>
 </head>
 <body id="home">
@@ -30,7 +31,7 @@
 
   <div id="painting" class="previous page">
     <h3 class="subtitle">Portfolio</h3>
-    <div class="project">
+    <div class="project carousel">
       <div class="project-description">
         <h4>Painting</h4>
         <p class="tools">
@@ -49,9 +50,16 @@
           elit non mi porta gravida at eget metus.
         </p>
       </div>
-      <div class="project-image">
-        <div class="thumbnail">
-          <img src="images/painting.jpg">
+      <div class="project-image carousel-inner">
+        <div class="thumbnail item">
+          <a href=".project" data-slide="next">
+            <img src="images/painting.jpg">
+          </a>
+        </div>
+        <div class="thumbnail item">
+          <a href=".project" data-slide="next">
+            <img src="images/painting2.jpeg">
+          </a>
         </div>
       </div>
     </div> <!-- project -->
