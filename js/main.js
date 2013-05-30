@@ -5,8 +5,8 @@ $(document).ready(function() {
 
   // next animation
   $(document).on('click', '#home .next', function(event){
-    if( !$(this).is(':animated')) {
-    // next animates to active
+    if(!$(this).is(':animated')) {
+    // next animates to current
     $('#content .next').animate(
       {
         'left': '5%', 
@@ -17,11 +17,11 @@ $(document).ready(function() {
       animationDuration,
       easing,
       function(){
-        $(this).addClass('active').removeClass('next');
+        $(this).addClass('current').removeClass('next');
       });
     
-    // active animates to previous
-    $('#content .active').animate(
+    // current animates to previous
+    $('#content .current').animate(
       {
         'left': '-73%',
         'margin-right': '0%', 
@@ -31,7 +31,7 @@ $(document).ready(function() {
       animationDuration,
       easing,
       function(){
-        $(this).addClass('previous').removeClass('active');
+        $(this).addClass('previous').removeClass('current');
       });
     
     // previous animates to next
@@ -56,8 +56,8 @@ $(document).ready(function() {
           .css({ 'width': '33.3%'})
           .fadeTo(animationDuration, 1);
       });
-    $('#navigation .active').addClass('previous').removeClass('active');
-    $('#navigation .next').addClass('active').removeClass('next');
+    $('#navigation .current').addClass('previous').removeClass('current');
+    $('#navigation .next').addClass('current').removeClass('next');
     event.stopPropagation();
     return false;
     }
@@ -67,7 +67,7 @@ $(document).ready(function() {
   $(document).on('click', '#home .previous', function(event){
     if( !$(this).is(':animated')) {
 
-    // previous animates to active
+    // previous animates to current
     $('#content .previous')
       .css({ 'left': '-73%'})
       .animate({
@@ -76,12 +76,12 @@ $(document).ready(function() {
         'margin-left': '6%', 
         'backgroundColor': '#FFFFFF' 
       }, animationDuration, easing, function(){
-        $(this).addClass('active')
+        $(this).addClass('current')
           .removeClass('previous');});
 
     
-    // active animates to next
-    $('#content .active')
+    // current animates to next
+    $('#content .current')
       .animate({
         'left': '95%', 
         'margin-right': '0%', 
@@ -89,7 +89,7 @@ $(document).ready(function() {
         'backgroundColor': '#ADFFFF' 
       }, animationDuration, easing, function(){
         $(this).addClass('next')
-          .removeClass('active');});
+          .removeClass('current');});
     
     // next animates to previous
     $('#content .next')
@@ -111,8 +111,8 @@ $(document).ready(function() {
           .css({ 'width': '33.3%'})
           .fadeTo(animationDuration, 1);
       });
-    $('#navigation .active').addClass('next').removeClass('active');
-    $('#navigation .previous').addClass('active').removeClass('previous');
+    $('#navigation .current').addClass('next').removeClass('current');
+    $('#navigation .previous').addClass('current').removeClass('previous');
     event.stopPropagation();
     return false;
     }

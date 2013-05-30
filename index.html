@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>Livien Yin</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/carousel.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700'
       rel='stylesheet' type='text/css'>
@@ -17,7 +19,7 @@
     <li class="menu-item previous">
       <h2>Handmade</h2>
     </li>
-    <li class="menu-item active">
+    <li class="menu-item current">
       <h2>Livien Yin</h2>
     </li>
     <li class="menu-item next">
@@ -30,9 +32,14 @@
 
   <div id="painting" class="previous page">
     <h3 class="subtitle">Portfolio</h3>
-    <div class="project carousel">
+    <div class="project">
       <div class="project-description">
-        <h4>Painting</h4>
+        <h4>
+          Painting
+          <a href="#light-series" data-slide="prev"
+          style="padding-left:30px;">← </a>
+          <a href="#light-series" data-slide="next">→</a>
+        </h4>
         <p class="tools">
           Oils and acrylic on canvas
         </p>
@@ -49,16 +56,114 @@
           elit non mi porta gravida at eget metus.
         </p>
       </div>
-      <div class="project-image">
-        <div class="thumbnail">
-          <img src="images/painting.jpg">
+      <div id="light-series" class="project-image carousel">
+
+        <div class="carousel-inner">
+          <div class="thumbnail item active"> 
+            <a href="#light-series" data-slide="next">
+              <img src="images/painting1.jpg">
+            </a>
+          </div>
+          <div class="thumbnail item">
+            <a href="#light-series" data-slide="next">
+              <img src="images/painting3.jpg">
+            </a>
+          </div>
+          <div class="thumbnail item">
+            <a href="#light-series" data-slide="next">
+              <img src="images/painting4.jpg">
+            </a>
+          </div>
+          <div class="thumbnail item">
+            <a href="#light-series" data-slide="next">
+              <img src="images/painting2.jpg">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div> <!-- project -->
+    <div class="project">
+      <div class="project-description">
+        <h4>Painting II</h4>
+        <p class="tools">
+          Oils and acrylic on canvas
+        </p>
+        <p>
+          Vestibulum id ligula porta felis euismod semper. Lorem
+          ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+          sed diam eget risus varius blandit sit amet non magna.
+        </p>
+        <p>
+          Nullam quis risus eget urna mollis ornare vel eu leo. Sed posuere
+          consectetur est at lobortis. Etiam porta sem malesuada magna
+          mollis euismod. Nullam quis risus eget urna mollis ornare
+          vel eu leo. Curabitur blandit tempus porttitor. Donec id
+          elit non mi porta gravida at eget metus.
+        </p>
+      </div>
+      <div id="bw-series" class="project-image carousel">
+        <div class="carousel-inner">
+          <div class="thumbnail item active"> 
+            <a href="#bw-series" data-slide="next">
+              <img src="images/painting_bw3.jpg">
+            </a>
+          </div>
+          <div class="thumbnail item">
+            <a href="#bw-series" data-slide="next">
+              <img src="images/painting_bw2.jpg">
+            </a>
+          </div>
+          <div class="thumbnail item">
+            <a href="#bw-series" data-slide="next">
+              <img src="images/painting_bw1.jpg">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div> <!-- project -->
+    <div class="project">
+      <div class="project-description">
+        <h4>Painting Sketches</h4>
+        <p class="tools">
+          Oils and acrylic on canvas
+        </p>
+        <p>
+          Vestibulum id ligula porta felis euismod semper. Lorem
+          ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+          sed diam eget risus varius blandit sit amet non magna.
+        </p>
+        <p>
+          Nullam quis risus eget urna mollis ornare vel eu leo. Sed posuere
+          consectetur est at lobortis. Etiam porta sem malesuada magna
+          mollis euismod. Nullam quis risus eget urna mollis ornare
+          vel eu leo. Curabitur blandit tempus porttitor. Donec id
+          elit non mi porta gravida at eget metus.
+        </p>
+      </div>
+      <div id="bw-sketches" class="project-image carousel">
+        <div class="carousel-inner">
+          <div class="thumbnail item active"> 
+            <a href="#bw-sketches" data-slide="next">
+              <img src="images/sketch_bw3.jpg">
+            </a>
+          </div>
+          <div class="thumbnail item">
+            <a href="#bw-sketches" data-slide="next">
+              <img src="images/sketch_bw1.jpg">
+            </a>
+          </div>
+          <div class="thumbnail item">
+            <a href="#bw-sketches" data-slide="next">
+              <img src="images/sketch_bw2.jpg">
+            </a>
+          </div>
         </div>
       </div>
     </div> <!-- project -->
 
   </div> <!-- painting -->
 
-  <div id="about-news" class="active page">
+  <div id="about-news" class="current page">
     <h3 class="subtitle">Information & News</h3>
     <div id="about">
       <div id="facetime" class="skinny-column">
@@ -104,11 +209,11 @@
           Elsewhere:<br />
           +
           <a href="http://www.github.com/livienyin">
-            <em>GitHub</em>
+            <em style="letter-spacing:1px">GitHub</em>
           </a><br />
           + 
           <a href="http://www.twitter.com/livienyin">
-            <em>Twitter</em>
+            <em style="letter-spacing:1px">Twitter</em>
           </a>
       </div> <!-- contact-info -->
     </div> <!-- about -->

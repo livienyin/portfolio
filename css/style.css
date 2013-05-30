@@ -164,7 +164,7 @@ em {
     padding-top: 310px;
     position:absolute;
 }
-#content .active { 
+#content .current { 
     position:relative; 
     margin:0 6%; 
     left:5%; 
