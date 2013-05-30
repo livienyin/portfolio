@@ -1,7 +1,82 @@
+function modulus(n, m) {
+  if(n < 0) {
+    return (m + (n % m)) % m;
+  }
+  return n % m;
+}
+
+function ContentItem(title, divID, backgroundColor) {
+  this.title = title;
+  this.backgroundColor = backgroundColor;
+  this.divID = divID;
+  this.currentDisplayClass = null;
+}
+
+contentItem.prototype.getDivElement = function() {
+  return $('#' + this.divID);
+}
+
+contentItem.prototype.swapDisplayClass = function(newDisplayClass) {
+  this.getDivElement().addClass(this.currentDisplayClass).removeClass(newDisplayClass);
+  this.currentDisplayClass = newDisplayClass;
+}
+
+function PageCarousel(contentItems) {
+  this.contentItems = contentItems;
+  this.currentIndex = 0;
+  this.animationDuration = 1500;
+  this.easing = 'easeInOutQuint';
+  this.currentlyAnimating = false;
+  this.currentBackgroundColor = '#ffffff';
+  this.percentageOfPeekingDivVisible = 5;
+  this.divSize = 100 - (this.percentageOfPeekingDivVisible * 2);
+  this.currentMarginSize = 6;
+  this.peekingMarginSize = 0;
+}
+
+pageCarousel.prototype.rotateCarousel = function (numberToRotateBy) {
+  var newIndex = modulus(this.currentIndex + numberToRotateBy, this.contentItems.length);
+  var newCurrent = this.contentItems[newIndex];
+  var newNext = this.contentItems[modulus(newIndex + 1, this.contentItems.length)];
+  var newPrevious = this.contentItems[modulus(newIndex - 1, this.contentItems.length)];
+  newCurrent.getDivElement().animate(
+    this.buildAnimationProperties(newCurrent, 0);
+    this.animationDuration,
+    this.easing,
+    function () { newCurrent.swapDisplayClass('current'); }
+  );
+  newNext.getDivElement().animate(
+    this.buildAnimationProperties(newNext, 1),
+    this.animationDuration,
+    this.easing,
+    function () { newNext.swapDisplayClass('next'); }
+  );
+  newPrevious.getDivElement().animate(
+    this.buildAnimationProperties(newPrevious, -1),
+    this.animationDuration,
+    this.easing,
+    function () { newNext.swapDisplayClass('previous'); }
+  );
+}
+
+pageCarousel.prototype.buildAnimationProperties = function (contentItem, newDisplayIndex) {
+  var divCenter = (newDisplayIndex * divSize) + 50; // This is the
+  // absolute position of the center of the div given the position
+  // index.
+  var newMarginSize = newDisplayIndex == 0 ? this.currentMarginSize : this.peekingMarginSize;
+  return {
+    'left': divCenter - this.divSize/2;
+    'right': divCenter + this.divSize/2;
+    'margin-right': newMarginSize;
+    'margin-left':  newMarginSize;
+    'backgroundColor': newDisplayIndex == 0 ? this.currentBackgroundColor : contentItem.backgroundColor
+  }
+}
+
+pageCarousel.prototype.shouldAnimate = function () {
+}
+
 $(document).ready(function() {
-  var animationDuration = 1500;
-  var easing = 'easeInOutQuint';
-  var currentlyAnimating = false;
 
   // next animation
   $(document).on('click', '#home .next', function(event){
@@ -9,9 +84,7 @@ $(document).ready(function() {
     // next animates to current
     $('#content .next').animate(
       {
-        'left': '5%', 
-        'margin-right': '6%', 
-        'margin-left': '6%', 
+        'left': '25%', 
         'backgroundColor': '#ffffff' 
       },
       animationDuration,
