@@ -6,261 +6,154 @@ function modulus(n, m) {
 }
 
 $(document).ready(function(){
+  var animationDuration = 1500;
+  var easing = 'easeInOutQuint';
+  var defaultBackgroundColor = '#ffffff';
+  var percentageOfPeekingDivVisible = 5;
+  var currentMarginSize = 6;
+  var peekingMarginSize = 0;
+  var divSize = 100 - (this.percentageOfPeekingDivVisible * 2);
   
-  var ContentItem = Backbone.Model.extend({
-    defaults: function(title, contentSRC, backgroundColor) {
+  var CarouselPage = Backbone.Model.extend({
+    defaults: function(title, url, backgroundColor) {
       return {
         title: title,
-        contentSRC: contentSRC,
+        url: url,
         backgroundColor: backgroundColor
       }
     }
     
   });
 
-  var ContentItems = Backbone.Collection.extend({
-    model: ContentItem,
+  var CarouselPages = Backbone.Collection.extend({
+    model: CarouselPage
+  });
+
+  var Carousel = Backbone.Model.extend({
+    initialize: function() {
+      this.carouselPages = new CarouselPages(this.get('carouselPages'));
+      this.previousIndex = 0;
+      this.currentIndex = 0;
+    },
     current: function() {
-      
+      return this.carouselPages.at(this.currentIndex);
+    },
+    next: function() {
+      return this.carouselPages.at(modulus(this.currentIndex + 1, this.carouselPages.length));
+    },
+    previous: function() {
+      return this.carouselPages.at(modulus(this.currentIndex - 1, this.carouselPages.length));
+    },
+    rotate: function(indexToRotateBy) {
+      this.currentIndex = modulus(this.currentIndex + indexToRotateBy, this.carouselPages.length);
+    }
+  });
+
+  var CarouselView = Backbone.View.extend({
+    el: 'div',
+    attributes: {id: 'content'},
+    initialize: function () {
+      this.currentIndex = this.model.get('currentIndex');
+      this.previous = CarouselPageView({model: this.model.previous(), displayPosition: -1});
+      this.current = CarouselPageView({model: this.model.current(), displayPosition: 0});
+      this.next = CarouselPageView({model: this.model.next(), displayPosition: 1});
+      this.$el.append(this.previous.$el);
+      this.$el.append(this.current.$el);
+      this.$el.append(this.next.$el);
+    },
+    render: function () {
+      if (this.currentIndex != this.model.currentIndex) {
+       return 0; 
+      }
+    }
+  });
+
+  var CarouselPageView = Backbone.View.extend({
+    el: 'iframe',
+    initialize: function () {
+      this.$el.attr('src', this.model.get('url'));
+      this.displayPosition = this.options.displayPosition;
+    },
+    rotateTo: function(newDisplayPosition) {
+      this.$el.animate(
+        this.buildDisplayProperties(newDisplayPosition),
+        this.animationDuration,
+        this.easing,
+        function () { newCurrent.swapDisplayClass('current'); }
+      );
+    },
+    buildDisplayProperties: function (newDisplayPosition) {
+      var divCenter = (newDisplayIndex * divSize) + 50; // This is the
+      var newMarginSize = newDisplayIndex == 0 ? currentMarginSize : peekingMarginSize;
+      return {
+        'left': divCenter - divSize/2,
+        'right': divCenter + divSize/2,
+        'margin-right': newMarginSize,
+        'margin-left':  newMarginSize,
+        'backgroundColor': this.getBackgroundColorForDisplayPosition(newDisplayPosition)
+      }
+    },
+    getBackgroundColorForDisplayPosition: function(displayPosition) {
+      return displayPosition == 0 ? defaultBackgroundColor : this.model.get('backgroundColor');
+    }
+  });
+
+  var NavigationItemView = Backbone.View.extend({
+    el: 'li',
+    initialize: function() {
+      this.$el.innerHTML = this.model.get('title');
+      this.$el.css({display: "inline-block", width: "33.3%"});
     }
   });
 
   var NavigationView = Backbone.View.extend({
-    el: 'div',
+    el: 'ul',
     attributes: {id: 'header'},
-    
-  });
-
-  var ContentView = Backbone.View.extend({
-    el: 'div',
-    attributes: {id: 'content'}
-  });
-
-  var ContentItemView = Backbone.View.extend({
-    el: 'iframe',
+    initialize: function() {
+      this.previous = new NavigationItemView({model: this.model.previous()});
+      this.current = new NavigationItemView({model: this.model.current()});
+      this.next = new NavigationItemView({model: this.model.next()});
+      this.$el.append(this.previous.$el);
+      this.$el.append(this.current.$el);
+      this.$el.append(this.next.$el);
+      this.currentIndex = this.model.currentIndex;
+    },
     render: function () {
-       this.$el.attr('src', this.model.contentSRC);
+      if (this.currentIndex != this.model.currentIndex) {
+        if (modulus(this.currentIndex + 1, this.model.carouselPages.length) == this.model.currentIndex) {
+          this.previous.remove()
+          this.previous = this.current;
+          this.current = this.next;
+          this.next = new NavigationItemView({model: this.model.next()});
+          this.$el.append(this.next.$el);
+        } else {
+          this.next.remove();
+          this.next = this.current;
+          this.current = this.previous;
+          this.previous = new NavigationItemView({model: this.model.previous()});
+          this.$el.prepend(this.previous.$el);
+        }
+      }
     }
   });
 
   var AppView = Backbone.View.extend({
+    el: $('#home'),
+    initialize: function() {
+      this.carousel = new Carousel(this.options);
+      this.navigationView = new NavigationView({model: this.carousel});
+      this.$el.append(this.navigationView.$el);
+      debugger;
+      this.carouselView = new CarouselView({model: this.carousel});
+      this.$el.append(this.carouselView.$el);
+      this.currentlyAnimating = false;
+    }
   });
-
+  var appView = new AppView({
+    carouselPages: [
+      new CarouselPage({title: 'about', url: 'about.html', backgroundColor: 'white'}),
+      new CarouselPage({title: 'painting', url: 'painting.html', backgroundColor: 'white'}),
+      new CarouselPage({title: 'code', url: 'code.html', backgroundColor: 'white'})
+    ]
+  })
 });
-
-
-function ContentItem(title, contentSRC, backgroundColor) {
-  this.title = title;
-  this.contentSRC = contentSRC;
-  this.backgroundColor = backgroundColor;
-  this.currentDisplayClass = null;
-  this.initializeContent();
-}
-
-ContentItem.prototype.initializeContent = function () {
-  this.iframeElement = $('<iframe />');
-  this.iframeElement.attr('src', this.contentSRC);
-  this.headerElement = $('<li /><h2 />');
-  this.headerElement.innerHTML = this.title;
-}
-
-ContentItem.prototype.swapDisplayClass = function(newDisplayClass) {
-  this.iframeElement.addClass(newDisplayClass).removeClass(this.currentDisplayClass);
-  this.currentDisplayClass = newDisplayClass;
-}
-
-function PageCarousel(contentItems) {
-  this.contentItems = contentItems; 
-  this.currentIndex = 0;
-  this.animationDuration = 1500;
-  this.easing = 'easeInOutQuint';
-  this.currentlyAnimating = false;
-  this.currentBackgroundColor = '#ffffff';
-  this.percentageOfPeekingDivVisible = 5;
-  this.divSize = 100 - (this.percentageOfPeekingDivVisible * 2);
-  this.currentMarginSize = 6;
-  this.peekingMarginSize = 0;
-  this.headerElement = $('<div id="header" />');
-  this.contentElement = $('<div id="content" />');
-
-  // Initialize Dom Elements
-  this.setDisplayClasses();
-  $('#content').append(this.current().iframeElement).append(this.next().iframeElement).append(this.previous().iframeElement);
-    
-}
-
-PageCarousel.prototype.current = function() {
-  return this.contentItems[this.currentIndex];
-}
-
-PageCarousel.prototype.next = function() {
-  return this.contentItems[modulus(this.currentIndex + 1, this.contentItems.length)];
-}
-
-PageCarousel.prototype.previous = function() {
-  return this.contentItems[modulus(this.currentIndex - 1, this.contentItems.length)];
-}
-
-PageCarousel.prototype.setDisplayClasses = function() {
-  this.current().swapDisplayClass('current');
-  this.next().swapDisplayClass('next');
-  this.previous().swapDisplayClass('previous');
-}
-
-PageCarousel.prototype.rotateCarousel = function(numberToRotateBy) {
-  var newIndex = modulus(this.currentIndex + numberToRotateBy, this.contentItems.length);
-  var newCurrent = this.contentItems[newIndex];
-  var newNext = this.contentItems[modulus(newIndex + 1, this.contentItems.length)];
-  var newPrevious = this.contentItems[modulus(newIndex - 1, this.contentItems.length)];
-  newCurrent.iframeElement.animate(
-    this.buildAnimationProperties(newCurrent, 0),
-    this.animationDuration,
-    this.easing,
-    function () { newCurrent.swapDisplayClass('current'); }
-  );
-  newNext.getDivElement().animate(
-    this.buildAnimationProperties(newNext, 1),
-    this.animationDuration,
-    this.easing,
-    function () { newNext.swapDisplayClass('next'); }
-  );
-  newPrevious.getDivElement().animate(
-    this.buildAnimationProperties(newPrevious, -1),
-    this.animationDuration,
-    this.easing,
-    function () { newNext.swapDisplayClass('previous'); }
-  );
-}
-
-PageCarousel.prototype.buildAnimationProperties = function (contentItem, newDisplayIndex) {
-  var divCenter = (newDisplayIndex * divSize) + 50; // This is the
-  // absolute position of the center of the div given the position
-  // index.
-  var newMarginSize = newDisplayIndex == 0 ? this.currentMarginSize : this.peekingMarginSize;
-  return {
-    'left': divCenter - this.divSize/2,
-    'right': divCenter + this.divSize/2,
-    'margin-right': newMarginSize,
-    'margin-left':  newMarginSize,
-    'backgroundColor': newDisplayIndex == 0 ? this.currentBackgroundColor : contentItem.backgroundColor
-  }
-}
-
-PageCarousel.prototype.shouldAnimate = function () {
-}
-
-// $(document).ready(function() {
-
-//   // next animation
-//   $(document).on('click', '#home .next', function(event){
-//     if(!$(this).is(':animated')) {
-//     // next animates to current
-//     $('#content .next').animate(
-//       {
-//         'left': '25%', 
-//         'backgroundColor': '#ffffff' 
-//       },
-//       animationDuration,
-//       easing,
-//       function(){
-//         $(this).addClass('current').removeClass('next');
-//       });
-    
-//     // current animates to previous
-//     $('#content .current').animate(
-//       {
-//         'left': '-73%',
-//         'margin-right': '0%', 
-//         'margin-left': '0%', 
-//         'backgroundColor': '#FEDFAD'
-//       },
-//       animationDuration,
-//       easing,
-//       function(){
-//         $(this).addClass('previous').removeClass('current');
-//       });
-    
-//     // previous animates to next
-//     $('#content .previous')
-//       .css({'left': '-73%'})
-//       .animate({ 'left': '-151%'}, 
-//       animationDuration, easing, function(){$(this).remove();})
-//       .clone()
-//       .addClass('next')
-//       .removeClass('previous')
-//       .appendTo('#content')
-//       .css({ 'left': '173%'})
-//       .animate({'left': '95%', 'backgroundColor': '#FEDFAD'}, animationDuration);
-
-//     //animate menu
-//     $('#navigation').css('text-align', 'left');
-//     $('#navigation .previous')
-//       .animate({'width': '0', 'opacity': '0'}, animationDuration, easing, function(){
-//       $(this).addClass('next')
-//           .removeClass('previous')
-//           .appendTo('#navigation')
-//           .css({ 'width': '33.3%'})
-//           .fadeTo(animationDuration, 1);
-//       });
-//     $('#navigation .current').addClass('previous').removeClass('current');
-//     $('#navigation .next').addClass('current').removeClass('next');
-//     event.stopPropagation();
-//     return false;
-//     }
-//   });
-
-//   // previous animation
-//   $(document).on('click', '#home .previous', function(event){
-//     if( !$(this).is(':animated')) {
-
-//     // previous animates to current
-//     $('#content .previous')
-//       .css({ 'left': '-73%'})
-//       .animate({
-//         'left': '5%', 
-//         'margin-right': '6%', 
-//         'margin-left': '6%', 
-//         'backgroundColor': '#FFFFFF' 
-//       }, animationDuration, easing, function(){
-//         $(this).addClass('current')
-//           .removeClass('previous');});
-
-    
-//     // current animates to next
-//     $('#content .current')
-//       .animate({
-//         'left': '95%', 
-//         'margin-right': '0%', 
-//         'margin-left': '0%', 
-//         'backgroundColor': '#ADFFFF' 
-//       }, animationDuration, easing, function(){
-//         $(this).addClass('next')
-//           .removeClass('current');});
-    
-//     // next animates to previous
-//     $('#content .next')
-//       .animate({'left': '173%'}, 
-//       animationDuration, easing, function(){$(this).remove();})
-//       .clone().addClass('previous')
-//       .removeClass('next')
-//       .prependTo('#content')
-//       .css({'left': '-151%'})
-//       .animate({'left': '-73%', 'backgroundColor': '#ADFFFF'}, animationDuration);
-    
-//     //animate menu
-//     $('#navigation').css('text-align', 'right');
-//     $('#navigation .next')
-//       .animate({'width': '0', 'opacity': '0'}, animationDuration, easing, function(){
-//         $(this).addClass('previous')
-//           .removeClass('next')
-//           .prependTo('#navigation')
-//           .css({ 'width': '33.3%'})
-//           .fadeTo(animationDuration, 1);
-//       });
-//     $('#navigation .current').addClass('next').removeClass('current');
-//     $('#navigation .previous').addClass('current').removeClass('previous');
-//     event.stopPropagation();
-//     return false;
-//     }
-//   }); // end of previous animation
-// });
