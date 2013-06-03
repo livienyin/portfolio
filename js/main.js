@@ -22,7 +22,6 @@ $(document).ready(function(){
         backgroundColor: backgroundColor
       }
     }
-    
   });
 
   var CarouselPages = Backbone.Collection.extend({
@@ -50,13 +49,13 @@ $(document).ready(function(){
   });
 
   var CarouselView = Backbone.View.extend({
-    el: 'div',
+    tagName: 'div',
     attributes: {id: 'content'},
     initialize: function () {
       this.currentIndex = this.model.get('currentIndex');
-      this.previous = CarouselPageView({model: this.model.previous(), displayPosition: -1});
-      this.current = CarouselPageView({model: this.model.current(), displayPosition: 0});
-      this.next = CarouselPageView({model: this.model.next(), displayPosition: 1});
+      this.previous = new CarouselPageView({model: this.model.previous(), displayPosition: -1});
+      this.current = new CarouselPageView({model: this.model.current(), displayPosition: 0});
+      this.next = new CarouselPageView({model: this.model.next(), displayPosition: 1});
       this.$el.append(this.previous.$el);
       this.$el.append(this.current.$el);
       this.$el.append(this.next.$el);
@@ -69,7 +68,7 @@ $(document).ready(function(){
   });
 
   var CarouselPageView = Backbone.View.extend({
-    el: 'iframe',
+    tagName: 'iframe',
     initialize: function () {
       this.$el.attr('src', this.model.get('url'));
       this.displayPosition = this.options.displayPosition;
@@ -77,8 +76,8 @@ $(document).ready(function(){
     rotateTo: function(newDisplayPosition) {
       this.$el.animate(
         this.buildDisplayProperties(newDisplayPosition),
-        this.animationDuration,
-        this.easing,
+        animationDuration,
+        easing,
         function () { newCurrent.swapDisplayClass('current'); }
       );
     },
@@ -99,15 +98,21 @@ $(document).ready(function(){
   });
 
   var NavigationItemView = Backbone.View.extend({
-    el: 'li',
+    tagName: 'li',
     initialize: function() {
-      this.$el.innerHTML = this.model.get('title');
+      this.$el.html(this.model.get('title'));
       this.$el.css({display: "inline-block", width: "33.3%"});
+    },
+    events: {
+      "click": "makeCurrent"
+    },
+    makeCurrent: function() {
+      this.model.makeCurrent()
     }
   });
 
   var NavigationView = Backbone.View.extend({
-    el: 'ul',
+    tagName: 'ul',
     attributes: {id: 'header'},
     initialize: function() {
       this.previous = new NavigationItemView({model: this.model.previous()});
@@ -134,6 +139,7 @@ $(document).ready(function(){
           this.$el.prepend(this.previous.$el);
         }
       }
+      return this.$el
     }
   });
 
@@ -143,9 +149,8 @@ $(document).ready(function(){
       this.carousel = new Carousel(this.options);
       this.navigationView = new NavigationView({model: this.carousel});
       this.$el.append(this.navigationView.$el);
-      debugger;
-      this.carouselView = new CarouselView({model: this.carousel});
-      this.$el.append(this.carouselView.$el);
+      // this.carouselView = new CarouselView({model: this.carousel});
+      // this.$el.append(this.carouselView.$el);
       this.currentlyAnimating = false;
     }
   });
