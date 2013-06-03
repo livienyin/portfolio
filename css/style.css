@@ -38,8 +38,8 @@ h4 {
     margin-bottom: 15px;
 }
 p {
-    font-size: 12px;
-    line-height: 18px;
+    font-size: 13px;
+    line-height: 20px;
     font-family: Open Sans, sans-serif;
     margin-bottom: 20px;
 }
@@ -87,14 +87,24 @@ em {
     margin-left: 2%;
     margin-right: 2%;
 }
+.project-description p {
+    color: #545554;
+}
 .project-image {
     float: right;
     width: 71%;
     margin-left: 5%;
     margin-right: 2%;
 }
-.project-link a:hover {
+.project-description a:hover, .project-link a:hover {
     background-color: #d4ff00;
+}
+.social-media {
+    letter-spacing: 1px;
+}
+.project-description a, .social-media a, .code-lang a {
+    padding-bottom: 1px;
+    border-bottom: 1px solid #D4FF00;
 }
 
 /* Layout Elements */
@@ -137,7 +147,6 @@ em {
 }
 #tools {
     font-family: Open Sans, sans-serif;
-    font-size: 12px;
     color: #ff4200;
 }
 /* Specifics */
@@ -190,15 +199,4 @@ em {
     margin-bottom: 30px; 
     color: #9a9a9a; 
     position: relative;
-}
-
-.social-media a, .code-lang a {
-    padding-bottom: 1px;
-    border-bottom: 1px solid #D4FF00;
-}
-.social-media {
-    letter-spacing: 1px;
-}
-.project-description p {
-    color: #545554;
 }
