@@ -31,20 +31,19 @@ $(document).ready(function(){
   var Carousel = Backbone.Model.extend({
     initialize: function() {
       this.carouselPages = new CarouselPages(this.get('carouselPages'));
-      this.previousIndex = 0;
-      this.currentIndex = 0;
+      this.set("currentIndex", 0);
     },
     current: function() {
-      return this.carouselPages.at(this.currentIndex);
+      return this.carouselPages.at(this.get("currentIndex"));
     },
     next: function() {
-      return this.carouselPages.at(modulus(this.currentIndex + 1, this.carouselPages.length));
+      return this.carouselPages.at(modulus(this.get("currentIndex") + 1, this.carouselPages.length));
     },
     previous: function() {
-      return this.carouselPages.at(modulus(this.currentIndex - 1, this.carouselPages.length));
+      return this.carouselPages.at(modulus(this.get("currentIndex") - 1, this.carouselPages.length));
     },
     rotate: function(indexToRotateBy) {
-      this.currentIndex = modulus(this.currentIndex + indexToRotateBy, this.carouselPages.length);
+      this.currentIndex = modulus(this.get("currentIndex") + indexToRotateBy, this.carouselPages.length);
     }
   });
 
@@ -60,11 +59,11 @@ $(document).ready(function(){
       this.$el.append(this.current.$el);
       this.$el.append(this.next.$el);
     },
-    render: function () {
-      if (this.currentIndex != this.model.currentIndex) {
+    render: function() {
+      if (this.get("currentIndex") != this.model.get("currentIndex")) {
        return 0; 
       }
-    }
+    },
   });
 
   var CarouselPageView = Backbone.View.extend({
@@ -98,48 +97,111 @@ $(document).ready(function(){
   });
 
   var NavigationItemView = Backbone.View.extend({
-    tagName: 'li',
+    tagName: 'div',
     initialize: function() {
       this.$el.html(this.model.get('title'));
-      this.$el.css({display: "inline-block", width: "33.3%"});
+      this.$el.css({width: "33.3%", position: "absolute"});
     },
     events: {
       "click": "makeCurrent"
     },
     makeCurrent: function() {
-      this.model.makeCurrent()
+      this.options.navigationView.setCurrent(this.index())
+    },
+    index: function() {
+      return this.model.collection.indexOf(this.model);
     }
   });
 
   var NavigationView = Backbone.View.extend({
-    tagName: 'ul',
+    tagName: 'div',
     attributes: {id: 'header'},
     initialize: function() {
-      this.previous = new NavigationItemView({model: this.model.previous()});
-      this.current = new NavigationItemView({model: this.model.current()});
-      this.next = new NavigationItemView({model: this.model.next()});
-      this.$el.append(this.previous.$el);
-      this.$el.append(this.current.$el);
-      this.$el.append(this.next.$el);
-      this.currentIndex = this.model.currentIndex;
+      this.previous = this.buildNavigationItem(this.model.previous());
+      this.current = this.buildNavigationItem(this.model.current());
+      this.next = this.buildNavigationItem(this.model.next());
+      this.listenTo(this.model, "change", this.render);
+      this.previous.$el.css({left: "0%"});
+      this.current.$el.css({left: "33.3%"});
+      this.next.$el.css({left: "66.6%"});
+      this.isAnimating = false;
     },
-    render: function () {
-      if (this.currentIndex != this.model.currentIndex) {
-        if (modulus(this.currentIndex + 1, this.model.carouselPages.length) == this.model.currentIndex) {
-          this.previous.remove()
-          this.previous = this.current;
-          this.current = this.next;
-          this.next = new NavigationItemView({model: this.model.next()});
-          this.$el.append(this.next.$el);
-        } else {
-          this.next.remove();
-          this.next = this.current;
-          this.current = this.previous;
-          this.previous = new NavigationItemView({model: this.model.previous()});
-          this.$el.prepend(this.previous.$el);
-        }
+    buildNavigationItem: function(carouselPage) {
+      var ni = new NavigationItemView({model: carouselPage, navigationView: this})
+      this.$el.append(ni.$el);
+      return ni;
+    },
+    render: function() {
+      that = this;
+      if (this.next.index() == this.model.get("currentIndex")) {
+        this.isAnimating = true;
+        newNext = this.buildNavigationItem(this.model.next());
+        newNext.$el.css({left: "100%", opacity: 0});
+        newNext.$el.animate(
+          {left: '66%', opacity: 1},
+          animationDuration,
+          easing,
+          function() {
+            that.previous.remove();
+            that.previous = that.current;
+            that.current = that.next;
+            that.next = newNext;
+            that.isAnimating = false;
+          }
+        );
+        this.previous.$el.animate(
+          {left: '-33%', opacity: 0},
+          animationDuration,
+          easing
+        );
+        this.next.$el.animate(
+          {left: '33%'},
+          animationDuration,
+          easing
+        );
+        this.current.$el.animate(
+          {left: '0%'},
+          animationDuration,
+          easing
+        );
+      } else if (this.previous.index() == this.model.get("currentIndex")) {
+        this.isAnimating = true;
+        newPrevious = this.buildNavigationItem(this.model.previous());
+        newPrevious.$el.css({left: "-33%", opacity: 0});
+        newPrevious.$el.animate(
+          {left: '0%', opacity: 1},
+          animationDuration,
+          easing,
+          function() {
+            that.next.remove();
+            that.next = that.current;
+            that.current = that.previous;
+            that.previous = newPrevious;
+            that.isAnimating = false;
+          }
+        );
+        this.previous.$el.animate(
+          {left: '33%'},
+          animationDuration,
+          easing
+        );
+        this.next.$el.animate(
+          {left: '100%', opacity: 0},
+          animationDuration,
+          easing
+        );
+        this.current.$el.animate(
+          {left: '66%'},
+          animationDuration,
+          easing
+        );
       }
       return this.$el
+    },
+    setCurrent: function(newIndex) {
+      if (!this.options.appView.isAnimating()) {
+        this.model.set("currentIndex", newIndex);
+      }
     }
   });
 
@@ -147,11 +209,14 @@ $(document).ready(function(){
     el: $('#home'),
     initialize: function() {
       this.carousel = new Carousel(this.options);
-      this.navigationView = new NavigationView({model: this.carousel});
+      this.navigationView = new NavigationView({model: this.carousel, appView: this});
       this.$el.append(this.navigationView.$el);
       // this.carouselView = new CarouselView({model: this.carousel});
       // this.$el.append(this.carouselView.$el);
       this.currentlyAnimating = false;
+    },
+    isAnimating: function() {
+      return this.navigationView.isAnimating;
     }
   });
   var appView = new AppView({
