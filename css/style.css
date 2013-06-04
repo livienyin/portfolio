@@ -31,6 +31,7 @@ h2 {
 }
 h3 {
     font-style:italic;
+    font-family: 'Old Standard TT';
 }
 h4 {
     font-family: Georgia;
@@ -99,14 +100,15 @@ em {
 .project-description a:hover, .project-link a:hover {
     background-color: #d4ff00;
 }
-.social-media {
-    letter-spacing: 1px;
-}
-.project-description a, .social-media a, .code-lang a {
+.project-description a, .contact-item a, .code-lang a {
     padding-bottom: 1px;
     border-bottom: 1px solid #D4FF00;
 }
-
+.contact-item {
+    display: block;
+    letter-spacing: 1px;
+    margin-top: 2px;
+}
 /* Layout Elements */
 #header {
     z-index: 1; 
