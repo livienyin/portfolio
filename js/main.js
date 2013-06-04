@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var animationDuration = 1500;
+  var animationDuration = 2000;
   var easing = 'easeInOutQuint';
   var currentlyAnimating = false;
 
@@ -12,7 +12,8 @@ $(document).ready(function() {
         'left': '5%', 
         'margin-right': '6%', 
         'margin-left': '6%', 
-        'backgroundColor': '#ffffff' 
+        'backgroundColor': '#ffffff',
+        'opacity': '1'
       },
       animationDuration,
       easing,
@@ -26,7 +27,8 @@ $(document).ready(function() {
         'left': '-73%',
         'margin-right': '0%', 
         'margin-left': '0%', 
-        'backgroundColor': '#FEDFAD'
+        'backgroundColor': '#FEDFAD',
+        'opacity': '0.6'
       },
       animationDuration,
       easing,
@@ -44,22 +46,41 @@ $(document).ready(function() {
       .removeClass('previous')
       .appendTo('#content')
       .css({ 'left': '173%'})
-      .animate({'left': '95%', 'backgroundColor': '#FEDFAD'}, animationDuration);
-
-    //animate menu
-    $('#navigation').css('text-align','left');
-    $('#navigation .previous')
-      .animate({'width': '0', 'opacity': '0'}, animationDuration, easing, function(){
-      $(this).addClass('next')
-          .removeClass('previous')
-          .appendTo('#navigation')
-          .css({ 'width': '33.3%'})
-          .fadeTo(animationDuration, 1);
-      });
-    $('#navigation .current').addClass('previous').removeClass('current');
-    $('#navigation .next').addClass('current').removeClass('next');
-    event.stopPropagation();
-    return false;
+      .animate({
+        'left': '95%', 
+        'backgroundColor': '#FEDFAD', 
+        'opacity': '0.6'}, animationDuration);
+      
+    var oldPrevious = $('#header .previous');
+    var newNext = oldPrevious.clone();
+      newNext.appendTo('#header')
+        .css({left: '100%', opacity: 0})
+        .animate(
+          {left: '66%', opacity: 1},
+          animationDuration,
+          easing,
+          function() {
+            oldPrevious.remove();
+            $('#header .current').addClass('previous').removeClass('current');
+            $('#header .next').addClass('current').removeClass('next');
+            newNext.addClass('next').removeClass('previous');
+          }
+        );
+      oldPrevious.animate(
+        {left: '-33%', opacity: '0'},
+        animationDuration,
+        easing
+      );
+      $('#header .next, #header .next h2').animate(
+        {left: '33%', color: 'black'},
+        animationDuration,
+        easing
+      );
+      $('#header .current, #header .current h2').animate(
+        {left: '0%', color: '#cccccc'},
+        animationDuration,
+        easing
+      );
     }
   });
 
@@ -74,7 +95,8 @@ $(document).ready(function() {
         'left': '5%', 
         'margin-right': '6%', 
         'margin-left': '6%', 
-        'backgroundColor': '#FFFFFF' 
+        'backgroundColor': '#FFFFFF',
+        'opacity': '1'
       }, animationDuration, easing, function(){
         $(this).addClass('current')
           .removeClass('previous');});
@@ -86,7 +108,8 @@ $(document).ready(function() {
         'left': '95%', 
         'margin-right': '0%', 
         'margin-left': '0%', 
-        'backgroundColor': '#ADFFFF' 
+        'backgroundColor': '#ADFFFF',
+        'opacity': '0.6'
       }, animationDuration, easing, function(){
         $(this).addClass('next')
           .removeClass('current');});
@@ -99,22 +122,40 @@ $(document).ready(function() {
       .removeClass('next')
       .prependTo('#content')
       .css({'left': '-151%'})
-      .animate({'left': '-73%', 'backgroundColor': '#ADFFFF'}, animationDuration);
-    
-    //animate menu
-    $('#navigation').css('text-align', 'right');
-    $('#navigation .next')
-      .animate({'width': '0', 'opacity': '0'}, animationDuration, easing, function(){
-        $(this).addClass('previous')
-          .removeClass('next')
-          .prependTo('#navigation')
-          .css({ 'width': '33.3%'})
-          .fadeTo(animationDuration, 1);
-      });
-    $('#navigation .current').addClass('next').removeClass('current');
-    $('#navigation .previous').addClass('current').removeClass('previous');
-    event.stopPropagation();
-    return false;
-    }
+      .animate({
+        'left': '-73%', 
+        'backgroundColor': '#ADFFFF', 
+        'opacity': '0.6'}, animationDuration);
+
+    var oldNext = $('#header .next');
+    var newPrevious = oldNext.clone();
+      newPrevious.appendTo('#header')
+        .css({left: '-33.3%', opacity: 0})
+        .animate(
+          {left: '0%', opacity: 1},
+          animationDuration,
+          easing,
+          function() {
+            oldNext.remove();
+            $('#header .current').addClass('next').removeClass('current');
+            $('#header .previous').addClass('current').removeClass('previous');
+            newPrevious.addClass('previous').removeClass('next');
+          });
+      oldNext.animate(
+        {left: '100%', opacity: '0'},
+        animationDuration,
+        easing
+      );
+      $('#header .previous, #header .previous h2').animate(
+        {left: '33%', color: 'black'},
+        animationDuration,
+        easing
+      );
+      $('#header .current, #header .current h2').animate(
+        {left: '66.6%', color: '#cccccc'},
+        animationDuration,
+        easing
+      );
+     }
   }); // end of previous animation
 });

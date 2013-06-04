@@ -111,16 +111,11 @@ em {
 #header {
     z-index: 1; 
     position: absolute; 
+    height: 45px;
     top: 80px; 
     left: 10%; 
     right: 10%; 
     text-align: center;
-}
-#navigation {
-    width:100%;
-    height:45px;
-    font-size:0px;
-    text-align: left;
 }
 #content {
     min-height: 100%;
@@ -150,19 +145,27 @@ em {
     color: #ff4200;
 }
 /* Specifics */
-#navigation .menu-item {
+#header .menu-item {
     width: 33.3%;
-    display: inline-block;
-    position: relative;
+    position: absolute;
 }
-#navigation .menu-item h2 {
+#header .previous {
+    left: 0%;
+}
+#header .current {
+    left: 33.3%;
+}
+#header .next {
+    left: 66.6%;
+}
+#header .menu-item h2 {
     text-align: center;
 }
-#navigation .previous h2, #navigation .next h2 {
+#header .previous h2, #header .next h2 {
     cursor: pointer;
     color: #cccccc;
 }
-#navigation .next a:hover, #navigation .previous a:hover {
+#header .next a:hover, #header .previous a:hover {
     color: black;
 }
 #content .page {
