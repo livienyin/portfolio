@@ -14,100 +14,62 @@ $(document).ready(function(){
   var peekingMarginSize = 0;
   var divSize = 100 - (percentageOfPeekingDivVisible * 2);
   var navigationItemWidth = 100/3;
-  
-  var CarouselPage = Backbone.Model.extend({
-    defaults: function(title, url, backgroundColor) {
-      return {
-        title: title,
-        url: url,
-        backgroundColor: backgroundColor
-      }
-    }
-  });
 
-  var CarouselPages = Backbone.Collection.extend({
-    model: CarouselPage
-  });
-
-  var Carousel = Backbone.Model.extend({
+  var RotatingView = Backbone.View.extend({
     initialize: function() {
-      this.carouselPages = new CarouselPages(this.get('carouselPages'));
-      this.set("currentIndex", 0);
-    },
-    getWithOffsetFromCurrent: function(offset) {
-      return this.carouselPages.at(
-        modulus(this.get("currentIndex") + offset, this.carouselPages.length)
-      );
-    },
-    setCurrent: function(newCurrent) {return},
-    length: function() { return this.carouselPages.length },
-    getDirection: function(index) {
-      direction = modulus(index - this.get('currentIndex'), this.length());
-      // We need to check if wrapping around in the other direction is faster.
-      oppositeDirection = direction - this.length();
-      if (Math.abs(oppositeDirection) < Math.abs(direction)) return oppositeDirection;
-      return direction;
-    }
-  });
-
-  var CarouselView = Backbone.View.extend({
-    tagName: 'div',
-    attributes: {id: 'carousel-pages'},
-    initialize: function () {
-      this.previous = this.buildPageView(-1);
-      this.current = this.buildPageView(0);
-      this.next = this.buildPageView(1);
+      this.childViews = [
+      	this.buildChildView(-1),
+      	this.buildChildView(0),
+      	this.buildChildView(1)
+      ]
       this.listenTo(this.model, "change", this.render);
       this.isAnimating = false;
     },
-    buildPageView: function(currentOffset, displayIndex) {
-      if(typeof(displayIndex)==='undefined') displayIndex = currentOffset;
-      var cpv = new CarouselPageView(
+    buildChildView: function(currentOffset, displayIndex) {
+      if(typeof(displayIndex) === 'undefined') displayIndex = currentOffset;
+      var newItemView = new this.childClass(
         {
           model: this.model.getWithOffsetFromCurrent(currentOffset),
           displayIndex: displayIndex,
-          carouselView: this
+          parentView: this
         }
       );
-      this.$el.append(cpv.$el);
-      return cpv;
+      this.$el.append(newItemView.$el);
+      return newItemView;
     },
     animateInDirection: function(direction) {
       this.isAnimating = true;
-      newPageView = this.buildPageView(direction * -1, direction * -2);
-      newPageView.animateInDirection(direction);
-      this.previous.animateInDirection(direction);
-      this.current.animateInDirection(direction);
-      this.next.animateInDirection(direction);
-
-      // Figure out what the new previous, current and next values
-      // need to be.
-      var displayIndexToCarouselPageView = {};
-      displayIndexToCarouselPageView[newNavigationItemView.displayIndex] = newPageView;
-      displayIndexToCarouselPageView[this.previous.displayIndex] = this.previous;
-      displayIndexToCarouselPageView[this.current.displayIndex] = this.current;
-      displayIndexToCarouselPageView[this.next.displayIndex] = this.next;
-      this.previous = displayIndexToCarouselPageView[-1];
-      this.current = displayIndexToCarouselPageView[0];
-      this.next = displayIndexToCarouselPageView[1];
+      this.childViews.push(this.buildChildView(direction * -1, direction * -2));
+      _.invoke(this.childViews, 'animateInDirection', direction)
+      offScreenChild = _.find(this.childViews, function(childView) {
+        return Math.abs(childView.displayIndex) > 1
+      })
+      this.childViews = _.filter(
+      	this.childViews,
+      	function(childView) {return Math.abs(childView.displayIndex) < 2}
+      );
     },
     render: function() {
-      direction = this.model.getDirection(this.current.index());
+      direction = this.model.getDirection(this.current().index());
       if (direction != 0) this.animateInDirection(direction);
       return this.$el
     },
+    current: function() {
+      return _.find(this.childViews, function(childView) {return childView.displayIndex == 0});
+    }
   });
 
-  var CarouselPageView = Backbone.View.extend({
-    tagName: 'iframe',
-    className: 'page',
+  var RotatingItemView = Backbone.View.extend({
     initialize: function() {
       this.displayIndex = this.options.displayIndex;
-      this.$el.attr('src', this.model.get('url'));
+      this.initializeHTML();
       this.$el.css(this.buildDisplayProperties());
     },
+    events: {
+      "click": "makeCurrent"
+    },
     makeCurrent: function() {
-      this.options.navigationView.setCurrent(this.index())
+      this.options.parentView.model.setCurrent(this.index())
     },
     index: function() {
       return this.model.collection.indexOf(this.model);
@@ -117,9 +79,44 @@ $(document).ready(function(){
       this.displayIndex += direction;
       this.$el.animate(
         this.buildDisplayProperties(), animationDuration, easing,
-        // This is a terrible way to do this. Figure out something better.
-        function() {that.options.carouselView.isAnimating = false}
+        function() {
+          that.options.parentView.isAnimating = false
+          if (Math.abs(that.displayIndex) > 1) that.remove();
+        }
       );
+    },
+  });
+
+  var NavigationItemView = RotatingItemView.extend({
+    tagName: 'div',
+    className: 'menu-item',
+    initializeHTML: function() {
+      this.$el.html(this.model.get('title'));
+    },
+    buildDisplayProperties: function() {
+      return {
+      	width: "33.3%",
+      	position: "absolute",
+      	left: this.leftAsPercentage(),
+        opacity: Math.abs(this.displayIndex) > 1 ? 0 : 1
+      };
+    },
+    leftAsPercentage: function() {
+      return ((this.displayIndex + 1) * navigationItemWidth).toString() + "%";
+    }
+  });
+
+  var NavigationView = RotatingView.extend({
+    tagName: 'div',
+    attributes: {id: 'header'},
+    childClass: NavigationItemView,
+  });
+
+  var CarouselItemView = RotatingItemView.extend({
+    tagName: 'iframe',
+    className: 'page',
+    initializeHTML: function() {
+      this.$el.attr('src', this.model.get('url'));
     },
     buildDisplayProperties: function () {
       var divCenter = (this.displayIndex * divSize) + 50;
@@ -133,104 +130,54 @@ $(document).ready(function(){
         'position': 'absolute',
         'margin-right': (newMarginSize).toString() + "%",
         'margin-left':  (newMarginSize).toString() + "%",
-        'backgroundColor': this.getBackgroundColorForDisplayPosition(this.displayIndex)
+        'backgroundColor': "#ffffff",
+        'height': '100%'
       }
     },
-    leftAsPercentage: function() {
-      return ((this.displayIndex + 1) * navigationItemWidth).toString() + "%";
-    },
-    getBackgroundColorForDisplayPosition: function(displayPosition) {
-      return displayPosition == 0 ? defaultBackgroundColor : this.model.get('backgroundColor');
-    },
-    index: function() {
-      return this.model.collection.indexOf(this.model);
-    }
-  });
-
-  var NavigationItemView = Backbone.View.extend({
-    tagName: 'div',
-    className: 'menu-item',
-    initialize: function() {
-      this.displayIndex = this.options.displayIndex;
-      this.$el.html(this.model.get('title') + this.index().toString());
-      this.$el.css({width: "33.3%", position: "absolute", left: this.leftAsPercentage()});
-    },
-    events: {
-      "click": "makeCurrent"
-    },
-    makeCurrent: function() {
-      this.options.navigationView.setCurrent(this.index())
-    },
-    index: function() {
-      return this.model.collection.indexOf(this.model);
-    },
-    animateInDirection: function(direction) {
-      var that = this;
-      this.displayIndex += direction;
-      var newOpacity = Math.abs(this.displayIndex) > 1 ? 0 : 1;
-      this.$el.animate(
-        {
-          left: ((this.displayIndex + 1) * navigationItemWidth).toString() + "%",
-          opacity: newOpacity
-        }, animationDuration, easing,
-        function() {that.options.navigationView.isAnimating = false}
-      );
-    },
+    
     leftAsPercentage: function() {
       return ((this.displayIndex + 1) * navigationItemWidth).toString() + "%";
     }
   });
 
-  var NavigationView = Backbone.View.extend({
+  var CarouselView = RotatingView.extend({
     tagName: 'div',
-    attributes: {id: 'header'},
-    initialize: function() {
-      this.previous = this.buildNavigationItemView(-1);
-      this.current = this.buildNavigationItemView(0);
-      this.next = this.buildNavigationItemView(1);
-      this.listenTo(this.model, "change", this.render);
-      this.isAnimating = false;
-    },
-    buildNavigationItemView: function(currentOffset, displayIndex) {
-      if(typeof(displayIndex)==='undefined') displayIndex = currentOffset;
-      var niv = new NavigationItemView(
-        {
-          model: this.model.getWithOffsetFromCurrent(currentOffset),
-          displayIndex: displayIndex,
-          navigationView: this
-        }
-      );
-      this.$el.append(niv.$el);
-      return niv;
-    },
-    animateInDirection: function(direction) {
-      this.isAnimating = true;
-      newNavigationItemView = this.buildNavigationItemView(direction * -1, direction * -2);
-      newNavigationItemView.animateInDirection(direction);
-      this.previous.animateInDirection(direction);
-      this.current.animateInDirection(direction);
-      this.next.animateInDirection(direction);
-
-      // Figure out what the new previous, current and next values
-      // need to be.
-      var displayIndexToNavigationItemView = {};
-      displayIndexToNavigationItemView[newNavigationItemView.displayIndex] = newNavigationItemView;
-      displayIndexToNavigationItemView[this.previous.displayIndex] = this.previous;
-      displayIndexToNavigationItemView[this.current.displayIndex] = this.current;
-      displayIndexToNavigationItemView[this.next.displayIndex] = this.next;
-      this.previous = displayIndexToNavigationItemView[-1];
-      this.current = displayIndexToNavigationItemView[0];
-      this.next = displayIndexToNavigationItemView[1];
-    },
-    render: function() {
-      direction = this.model.getDirection(this.current.index());
-      if (direction != 0) this.animateInDirection(direction);
-      return this.$el
-    },
-    setCurrent: function(newIndex) {
-      if (!this.options.appView.isAnimating()) {
-        this.model.set("currentIndex", newIndex);
+    attributes: {id: 'carousel-pages'},
+    childClass: CarouselItemView,
+  });
+  
+  var CarouselPage = Backbone.Model.extend({
+    defaults: function(title, url, backgroundColor) {
+      return {
+        title: title,
+        url: url,
+        backgroundColor: backgroundColor
       }
+    }
+  });
+
+  var CarouselPages = Backbone.Collection.extend({model: CarouselPage});
+
+  var Carousel = Backbone.Model.extend({
+    initialize: function() {
+      this.carouselPages = new CarouselPages(this.get('carouselPages'));
+      this.set("currentIndex", 0);
+    },
+    getWithOffsetFromCurrent: function(offset) {
+      return this.carouselPages.at(
+        modulus(this.get("currentIndex") + offset, this.carouselPages.length)
+      );
+    },
+    setCurrent: function(newCurrent) {
+      if (!this.get('appView').isAnimating()) this.set("currentIndex", newCurrent);
+    },
+    length: function() { return this.carouselPages.length },
+    getDirection: function(index) {
+      direction = modulus(index - this.get('currentIndex'), this.length());
+      // We need to check if wrapping around in the other direction is faster.
+      oppositeDirection = direction - this.length();
+      if (Math.abs(oppositeDirection) < Math.abs(direction)) return oppositeDirection;
+      return direction;
     }
   });
 
@@ -251,9 +198,9 @@ $(document).ready(function(){
   });
   var appView = new AppView({
     carouselPages: [
-      new CarouselPage({title: 'about', url: 'about.html', backgroundColor: 'white'}),
-      new CarouselPage({title: 'painting', url: 'painting.html', backgroundColor: 'white'}),
-      new CarouselPage({title: 'code', url: 'code.html', backgroundColor: 'white'})
+      new CarouselPage({title: 'Livien Yin', url: 'about.html', backgroundColor: 'white'}),
+      new CarouselPage({title: 'Painting', url: 'painting.html', backgroundColor: 'white'}),
+      new CarouselPage({title: 'Code', url: 'code.html', backgroundColor: 'white'})
     ]
   })
 });
