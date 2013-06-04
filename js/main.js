@@ -13,6 +13,7 @@ $(document).ready(function(){
   var currentMarginSize = 6;
   var peekingMarginSize = 0;
   var divSize = 100 - (percentageOfPeekingDivVisible * 2);
+  var navigationItemWidth = 100/3;
   
   var CarouselPage = Backbone.Model.extend({
     defaults: function(title, url, backgroundColor) {
@@ -33,49 +34,96 @@ $(document).ready(function(){
       this.carouselPages = new CarouselPages(this.get('carouselPages'));
       this.set("currentIndex", 0);
     },
-    current: function() {
-      return this.carouselPages.at(this.get("currentIndex"));
+    getWithOffsetFromCurrent: function(offset) {
+      return this.carouselPages.at(
+        modulus(this.get("currentIndex") + offset, this.carouselPages.length)
+      );
     },
-    next: function() {
-      return this.carouselPages.at(modulus(this.get("currentIndex") + 1, this.carouselPages.length));
-    },
-    previous: function() {
-      return this.carouselPages.at(modulus(this.get("currentIndex") - 1, this.carouselPages.length));
-    },
-    rotate: function(indexToRotateBy) {
-      this.currentIndex = modulus(this.get("currentIndex") + indexToRotateBy, this.carouselPages.length);
+    setCurrent: function(newCurrent) {return},
+    length: function() { return this.carouselPages.length },
+    getDirection: function(index) {
+      direction = modulus(index - this.get('currentIndex'), this.length());
+      // We need to check if wrapping around in the other direction is faster.
+      oppositeDirection = direction - this.length();
+      if (Math.abs(oppositeDirection) < Math.abs(direction)) return oppositeDirection;
+      return direction;
     }
   });
 
   var CarouselView = Backbone.View.extend({
     tagName: 'div',
-    attributes: {id: 'content'},
+    attributes: {id: 'carousel-pages'},
     initialize: function () {
-      this.currentIndex = this.model.get('currentIndex');
-      this.previous = new CarouselPageView({model: this.model.previous(), displayPosition: -1});
-      this.current = new CarouselPageView({model: this.model.current(), displayPosition: 0});
-      this.next = new CarouselPageView({model: this.model.next(), displayPosition: 1});
-      this.$el.append(this.previous.$el);
-      this.$el.append(this.current.$el);
-      this.$el.append(this.next.$el);
+      this.previous = this.buildPageView(-1);
+      this.current = this.buildPageView(0);
+      this.next = this.buildPageView(1);
+      this.listenTo(this.model, "change", this.render);
+      this.isAnimating = false;
+    },
+    buildPageView: function(currentOffset, displayIndex) {
+      if(typeof(displayIndex)==='undefined') displayIndex = currentOffset;
+      var cpv = new CarouselPageView(
+        {
+          model: this.model.getWithOffsetFromCurrent(currentOffset),
+          displayIndex: displayIndex,
+          carouselView: this
+        }
+      );
+      this.$el.append(cpv.$el);
+      return cpv;
+    },
+    animateInDirection: function(direction) {
+      this.isAnimating = true;
+      newPageView = this.buildPageView(direction * -1, direction * -2);
+      newPageView.animateInDirection(direction);
+      this.previous.animateInDirection(direction);
+      this.current.animateInDirection(direction);
+      this.next.animateInDirection(direction);
+
+      // Figure out what the new previous, current and next values
+      // need to be.
+      var displayIndexToCarouselPageView = {};
+      displayIndexToCarouselPageView[newNavigationItemView.displayIndex] = newPageView;
+      displayIndexToCarouselPageView[this.previous.displayIndex] = this.previous;
+      displayIndexToCarouselPageView[this.current.displayIndex] = this.current;
+      displayIndexToCarouselPageView[this.next.displayIndex] = this.next;
+      this.previous = displayIndexToCarouselPageView[-1];
+      this.current = displayIndexToCarouselPageView[0];
+      this.next = displayIndexToCarouselPageView[1];
     },
     render: function() {
-      if (this.get("currentIndex") != this.model.get("currentIndex")) {
-       return 0; 
-      }
+      direction = this.model.getDirection(this.current.index());
+      if (direction != 0) this.animateInDirection(direction);
+      return this.$el
     },
   });
 
   var CarouselPageView = Backbone.View.extend({
     tagName: 'iframe',
-    initialize: function () {
+    className: 'page',
+    initialize: function() {
+      this.displayIndex = this.options.displayIndex;
       this.$el.attr('src', this.model.get('url'));
-      this.displayPosition = this.options.displayPosition;
-      this.$el.css(this.buildDisplayProperties(this.displayPosition));
+      this.$el.css(this.buildDisplayProperties());
     },
-    buildDisplayProperties: function (newDisplayIndex) {
-      var divCenter = (newDisplayIndex * divSize) + 50; // This is the
-      var newMarginSize = newDisplayIndex == 0 ? currentMarginSize : peekingMarginSize;
+    makeCurrent: function() {
+      this.options.navigationView.setCurrent(this.index())
+    },
+    index: function() {
+      return this.model.collection.indexOf(this.model);
+    },
+    animateInDirection: function(direction) {
+      var that = this;
+      this.displayIndex += direction;
+      this.$el.animate(
+        this.buildDisplayProperties(), animationDuration, easing,
+        // This is a terrible way to do this. Figure out something better.
+        function() {that.options.carouselView.isAnimating = false}
+      );
+    },
+    buildDisplayProperties: function () {
+      var divCenter = (this.displayIndex * divSize) + 50;
+      var newMarginSize = this.displayIndex == 0 ? currentMarginSize : peekingMarginSize;
       return {
         'left': (divCenter - divSize/2).toString() + "%",
         'right': (divCenter + divSize/2).toString() + "%",
@@ -85,19 +133,27 @@ $(document).ready(function(){
         'position': 'absolute',
         'margin-right': (newMarginSize).toString() + "%",
         'margin-left':  (newMarginSize).toString() + "%",
-        'backgroundColor': this.getBackgroundColorForDisplayPosition(newDisplayIndex)
+        'backgroundColor': this.getBackgroundColorForDisplayPosition(this.displayIndex)
       }
+    },
+    leftAsPercentage: function() {
+      return ((this.displayIndex + 1) * navigationItemWidth).toString() + "%";
     },
     getBackgroundColorForDisplayPosition: function(displayPosition) {
       return displayPosition == 0 ? defaultBackgroundColor : this.model.get('backgroundColor');
+    },
+    index: function() {
+      return this.model.collection.indexOf(this.model);
     }
   });
 
   var NavigationItemView = Backbone.View.extend({
     tagName: 'div',
+    className: 'menu-item',
     initialize: function() {
-      this.$el.html(this.model.get('title'));
-      this.$el.css({width: "33.3%", position: "absolute"});
+      this.displayIndex = this.options.displayIndex;
+      this.$el.html(this.model.get('title') + this.index().toString());
+      this.$el.css({width: "33.3%", position: "absolute", left: this.leftAsPercentage()});
     },
     events: {
       "click": "makeCurrent"
@@ -107,6 +163,21 @@ $(document).ready(function(){
     },
     index: function() {
       return this.model.collection.indexOf(this.model);
+    },
+    animateInDirection: function(direction) {
+      var that = this;
+      this.displayIndex += direction;
+      var newOpacity = Math.abs(this.displayIndex) > 1 ? 0 : 1;
+      this.$el.animate(
+        {
+          left: ((this.displayIndex + 1) * navigationItemWidth).toString() + "%",
+          opacity: newOpacity
+        }, animationDuration, easing,
+        function() {that.options.navigationView.isAnimating = false}
+      );
+    },
+    leftAsPercentage: function() {
+      return ((this.displayIndex + 1) * navigationItemWidth).toString() + "%";
     }
   });
 
@@ -114,85 +185,46 @@ $(document).ready(function(){
     tagName: 'div',
     attributes: {id: 'header'},
     initialize: function() {
-      this.previous = this.buildNavigationItem(this.model.previous());
-      this.current = this.buildNavigationItem(this.model.current());
-      this.next = this.buildNavigationItem(this.model.next());
+      this.previous = this.buildNavigationItemView(-1);
+      this.current = this.buildNavigationItemView(0);
+      this.next = this.buildNavigationItemView(1);
       this.listenTo(this.model, "change", this.render);
-      this.previous.$el.css({left: "0%"});
-      this.current.$el.css({left: "33.3%"});
-      this.next.$el.css({left: "66.6%"});
       this.isAnimating = false;
     },
-    buildNavigationItem: function(carouselPage) {
-      var ni = new NavigationItemView({model: carouselPage, navigationView: this})
-      this.$el.append(ni.$el);
-      return ni;
+    buildNavigationItemView: function(currentOffset, displayIndex) {
+      if(typeof(displayIndex)==='undefined') displayIndex = currentOffset;
+      var niv = new NavigationItemView(
+        {
+          model: this.model.getWithOffsetFromCurrent(currentOffset),
+          displayIndex: displayIndex,
+          navigationView: this
+        }
+      );
+      this.$el.append(niv.$el);
+      return niv;
+    },
+    animateInDirection: function(direction) {
+      this.isAnimating = true;
+      newNavigationItemView = this.buildNavigationItemView(direction * -1, direction * -2);
+      newNavigationItemView.animateInDirection(direction);
+      this.previous.animateInDirection(direction);
+      this.current.animateInDirection(direction);
+      this.next.animateInDirection(direction);
+
+      // Figure out what the new previous, current and next values
+      // need to be.
+      var displayIndexToNavigationItemView = {};
+      displayIndexToNavigationItemView[newNavigationItemView.displayIndex] = newNavigationItemView;
+      displayIndexToNavigationItemView[this.previous.displayIndex] = this.previous;
+      displayIndexToNavigationItemView[this.current.displayIndex] = this.current;
+      displayIndexToNavigationItemView[this.next.displayIndex] = this.next;
+      this.previous = displayIndexToNavigationItemView[-1];
+      this.current = displayIndexToNavigationItemView[0];
+      this.next = displayIndexToNavigationItemView[1];
     },
     render: function() {
-      that = this;
-      if (this.next.index() == this.model.get("currentIndex")) {
-        this.isAnimating = true;
-        newNext = this.buildNavigationItem(this.model.next());
-        newNext.$el.css({left: "100%", opacity: 0});
-        newNext.$el.animate(
-          {left: '66%', opacity: 1},
-          animationDuration,
-          easing,
-          function() {
-            that.previous.remove();
-            that.previous = that.current;
-            that.current = that.next;
-            that.next = newNext;
-            that.isAnimating = false;
-          }
-        );
-        this.previous.$el.animate(
-          {left: '-33%', opacity: 0},
-          animationDuration,
-          easing
-        );
-        this.next.$el.animate(
-          {left: '33%'},
-          animationDuration,
-          easing
-        );
-        this.current.$el.animate(
-          {left: '0%'},
-          animationDuration,
-          easing
-        );
-      } else if (this.previous.index() == this.model.get("currentIndex")) {
-        this.isAnimating = true;
-        newPrevious = this.buildNavigationItem(this.model.previous());
-        newPrevious.$el.css({left: "-33%", opacity: 0});
-        newPrevious.$el.animate(
-          {left: '0%', opacity: 1},
-          animationDuration,
-          easing,
-          function() {
-            that.next.remove();
-            that.next = that.current;
-            that.current = that.previous;
-            that.previous = newPrevious;
-            that.isAnimating = false;
-          }
-        );
-        this.previous.$el.animate(
-          {left: '33%'},
-          animationDuration,
-          easing
-        );
-        this.next.$el.animate(
-          {left: '100%', opacity: 0},
-          animationDuration,
-          easing
-        );
-        this.current.$el.animate(
-          {left: '66%'},
-          animationDuration,
-          easing
-        );
-      }
+      direction = this.model.getDirection(this.current.index());
+      if (direction != 0) this.animateInDirection(direction);
       return this.$el
     },
     setCurrent: function(newIndex) {
@@ -205,6 +237,7 @@ $(document).ready(function(){
   var AppView = Backbone.View.extend({
     el: $('#home'),
     initialize: function() {
+      this.options.appView = this;
       this.carousel = new Carousel(this.options);
       this.navigationView = new NavigationView({model: this.carousel, appView: this});
       this.$el.append(this.navigationView.$el);
