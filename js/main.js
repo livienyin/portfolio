@@ -12,7 +12,7 @@ $(document).ready(function(){
   var percentageOfPeekingDivVisible = 5;
   var currentMarginSize = 6;
   var peekingMarginSize = 0;
-  var divSize = 100 - (this.percentageOfPeekingDivVisible * 2);
+  var divSize = 100 - (percentageOfPeekingDivVisible * 2);
   
   var CarouselPage = Backbone.Model.extend({
     defaults: function(title, url, backgroundColor) {
@@ -71,24 +71,21 @@ $(document).ready(function(){
     initialize: function () {
       this.$el.attr('src', this.model.get('url'));
       this.displayPosition = this.options.displayPosition;
+      this.$el.css(this.buildDisplayProperties(this.displayPosition));
     },
-    rotateTo: function(newDisplayPosition) {
-      this.$el.animate(
-        this.buildDisplayProperties(newDisplayPosition),
-        animationDuration,
-        easing,
-        function () { newCurrent.swapDisplayClass('current'); }
-      );
-    },
-    buildDisplayProperties: function (newDisplayPosition) {
+    buildDisplayProperties: function (newDisplayIndex) {
       var divCenter = (newDisplayIndex * divSize) + 50; // This is the
       var newMarginSize = newDisplayIndex == 0 ? currentMarginSize : peekingMarginSize;
       return {
-        'left': divCenter - divSize/2,
-        'right': divCenter + divSize/2,
-        'margin-right': newMarginSize,
-        'margin-left':  newMarginSize,
-        'backgroundColor': this.getBackgroundColorForDisplayPosition(newDisplayPosition)
+        'left': (divCenter - divSize/2).toString() + "%",
+        'right': (divCenter + divSize/2).toString() + "%",
+        'width': divSize.toString() + "%",
+        'float': 'left',
+        'display': 'inline-block',
+        'position': 'absolute',
+        'margin-right': (newMarginSize).toString() + "%",
+        'margin-left':  (newMarginSize).toString() + "%",
+        'backgroundColor': this.getBackgroundColorForDisplayPosition(newDisplayIndex)
       }
     },
     getBackgroundColorForDisplayPosition: function(displayPosition) {
@@ -211,8 +208,8 @@ $(document).ready(function(){
       this.carousel = new Carousel(this.options);
       this.navigationView = new NavigationView({model: this.carousel, appView: this});
       this.$el.append(this.navigationView.$el);
-      // this.carouselView = new CarouselView({model: this.carousel});
-      // this.$el.append(this.carouselView.$el);
+      this.carouselView = new CarouselView({model: this.carousel});
+      this.$el.append(this.carouselView.$el);
       this.currentlyAnimating = false;
     },
     isAnimating: function() {
