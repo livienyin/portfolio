@@ -24,6 +24,7 @@ $(document).ready(function(){
       	this.buildChildView(0),
       	this.buildChildView(1)
       ]
+      _.invoke(this.childViews, 'initialize');
       this.listenTo(this.model, "change", this.render);
       this.isAnimating = false;
     },
@@ -42,7 +43,8 @@ $(document).ready(function(){
     animateInDirection: function(direction) {
       this.isAnimating = true;
       this.childViews.push(this.buildChildView(direction * -1, direction * -2));
-      _.invoke(this.childViews, 'animateInDirection', direction)
+      _.invoke(this.childViews, 'incrementDisplay', direction);
+      _.invoke(this.childViews, 'animate', direction);
       offScreenChild = _.find(this.childViews, function(childView) {
         return Math.abs(childView.displayIndex) > 1
       })
@@ -81,9 +83,11 @@ $(document).ready(function(){
       this.$el.removeClass("previous current next");
       this.$el.addClass(indexToClass[this.displayIndex]);
     },
-    animateInDirection: function(direction) {
-      var that = this;
+    incrementDisplay: function(direction) {
       this.displayIndex += direction;
+    },
+    animate: function() {
+      var that = this;
       this.$el.animate(
         this.buildDisplayProperties(), animationDuration, easing,
         function() {
@@ -127,6 +131,7 @@ $(document).ready(function(){
   var CarouselItemView = RotatingItemView.extend({
     tagName: 'iframe',
     className: 'page',
+    attributes: {scrolling: "no"},
     initializeHTML: function() {
       this.$el.attr('src', this.model.get('url'));
     },
@@ -136,17 +141,24 @@ $(document).ready(function(){
       return {
         'left': (divCenter - divSize/2).toString() + "%",
         'right': (divCenter + divSize/2).toString() + "%",
-        'width': divSize.toString() + "%",
+        'width': (divSize - 2 * newMarginSize).toString() + "%",
         'float': 'left',
         'display': 'inline-block',
         'position': 'absolute',
         'margin-right': (newMarginSize).toString() + "%",
         'margin-left':  (newMarginSize).toString() + "%",
-        'backgroundColor': "#ffffff",
-        'height': '100%'
+        'backgroundColor': this.getBackgroundColor(),
+        'height': this.getHeight()
       }
     },
-    
+    getHeight: function() {
+      if (this.$el.document == undefined) return "100%";
+      return this.$el.document.body.offsetHeight + 'px';
+    },
+    getBackgroundColor: function() {
+      if (this.displayIndex == 0) return "#ffffff";
+      return this.options.parentView.getBackgroundColor();
+    },
     leftAsPercentage: function() {
       return ((this.displayIndex + 1) * navigationItemWidth).toString() + "%";
     }
@@ -156,6 +168,10 @@ $(document).ready(function(){
     tagName: 'div',
     attributes: {id: 'pages'},
     childClass: CarouselItemView,
+    getBackgroundColor: function() {
+      if (this.current() == undefined) return "#ffffff";
+      return this.current().model.get('backgroundColor');
+    }
   });
   
   var CarouselPage = Backbone.Model.extend({
@@ -210,9 +226,21 @@ $(document).ready(function(){
   });
   var appView = new AppView({
     carouselPages: [
-      new CarouselPage({title: 'Livien Yin', url: 'about.html', backgroundColor: 'white'}),
-      new CarouselPage({title: 'Painting', url: 'painting.html', backgroundColor: 'white'}),
-      new CarouselPage({title: 'Code', url: 'code.html', backgroundColor: 'white'})
+      new CarouselPage({
+      	title: 'Livien Yin',
+      	url: 'about.html',
+      	backgroundColor: 'rgb(254, 223, 173)'
+      }),
+      new CarouselPage({
+      	title: 'Painting',
+      	url: 'painting.html',
+      	backgroundColor: 'rgb(173, 255, 255)'
+      }),
+      new CarouselPage({
+      	title: 'Code',
+      	url: 'code.html',
+      	backgroundColor: 'rgb(173, 255, 255)'
+      }),
     ]
   })
 });

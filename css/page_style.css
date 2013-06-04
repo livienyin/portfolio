@@ -1,5 +1,5 @@
 /* Basics */
-html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,code,del,dfn,em,img,q,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td, iframe { 
+* { 
     list-style-type:none; 
     color:inherit; 
     text-decoration:none; 
@@ -10,10 +10,12 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acron
     font-style:inherit; 
     font-size:100%; 
     vertical-align:baseline;
+    box-sizing: border-box;
 }
 
-* {
-  box-sizing: border-box;
+.content {
+    top: 150px;
+    position: absolute;
 }
 
 h2 { 
@@ -46,8 +48,8 @@ em {
     top: 160px; 
     left: 0px; 
     right: 10px; 
-    text-align: center; 
-    position: absolute; 
+    text-align: center;
+    padding: 20px;
 }
 .skinny-column {
     width: 42%; 
