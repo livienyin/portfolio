@@ -14,6 +14,8 @@ $(document).ready(function(){
   var peekingMarginSize = 0;
   var divSize = 100 - (percentageOfPeekingDivVisible * 2);
   var navigationItemWidth = 100/3;
+  var indexToClass = {0: 'current', 1: 'next'};
+  indexToClass[-1] = 'previous';
 
   var RotatingView = Backbone.View.extend({
     initialize: function() {
@@ -63,6 +65,7 @@ $(document).ready(function(){
     initialize: function() {
       this.displayIndex = this.options.displayIndex;
       this.initializeHTML();
+      this.setClasses();
       this.$el.css(this.buildDisplayProperties());
     },
     events: {
@@ -74,6 +77,10 @@ $(document).ready(function(){
     index: function() {
       return this.model.collection.indexOf(this.model);
     },
+    setClasses: function() {
+      this.$el.removeClass("previous current next");
+      this.$el.addClass(indexToClass[this.displayIndex]);
+    },
     animateInDirection: function(direction) {
       var that = this;
       this.displayIndex += direction;
@@ -81,7 +88,11 @@ $(document).ready(function(){
         this.buildDisplayProperties(), animationDuration, easing,
         function() {
           that.options.parentView.isAnimating = false
-          if (Math.abs(that.displayIndex) > 1) that.remove();
+          if (Math.abs(that.displayIndex) > 1) {
+            that.remove()
+          } else {
+            that.setClasses();
+          }
         }
       );
     },
@@ -98,7 +109,8 @@ $(document).ready(function(){
       	width: "33.3%",
       	position: "absolute",
       	left: this.leftAsPercentage(),
-        opacity: Math.abs(this.displayIndex) > 1 ? 0 : 1
+        opacity: Math.abs(this.displayIndex) > 1 ? 0 : 1,
+        color: this.displayIndex == 0 ? "black" : "rgb(204, 204, 204)"
       };
     },
     leftAsPercentage: function() {
@@ -108,7 +120,7 @@ $(document).ready(function(){
 
   var NavigationView = RotatingView.extend({
     tagName: 'div',
-    attributes: {id: 'header'},
+    attributes: {id: 'navigation'},
     childClass: NavigationItemView,
   });
 
@@ -142,7 +154,7 @@ $(document).ready(function(){
 
   var CarouselView = RotatingView.extend({
     tagName: 'div',
-    attributes: {id: 'carousel-pages'},
+    attributes: {id: 'pages'},
     childClass: CarouselItemView,
   });
   
