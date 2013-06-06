@@ -129,11 +129,10 @@ $(document).ready(function(){
   });
 
   var CarouselItemView = RotatingItemView.extend({
-    tagName: 'iframe',
+    tagName: 'div',
     className: 'page',
-    attributes: {scrolling: "no"},
     initializeHTML: function() {
-      this.$el.attr('src', this.model.get('url'));
+      this.$el.load(this.model.get('url'));
     },
     buildDisplayProperties: function () {
       var divCenter = (this.displayIndex * divSize) + 50;
