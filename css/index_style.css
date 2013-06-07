@@ -12,7 +12,6 @@
     vertical-align:baseline;
     box-sizing: border-box;
     font-family: Georgia;
-    clear: both;
 }
 
 /* Layout Elements */
@@ -34,10 +33,44 @@
     top: 50px;
 }
 
-.page {
-    clear: both;
+#pages {
+    overflow: hidden;
+    position: relative;
 }
 
-.content {
-    clear: both;
+.next, .previous {
+    position: absolute;
+}
+
+.page {
+    position: absolute
+}
+
+.current {
+    position: relative;
+}
+
+h2 { 
+    line-height: 1;
+    font-family: Georgia;
+    font-size:40px; 
+    letter-spacing: 1px;
+}
+h3 {
+    font-style:italic;
+    font-family: 'Old Standard TT';
+}
+h4 {
+    font-family: Georgia;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+p {
+    font-size: 13px;
+    line-height: 20px;
+    font-family: Open Sans, sans-serif;
+    margin-bottom: 20px;
+}
+em {
+    font-style: italic;
 }
