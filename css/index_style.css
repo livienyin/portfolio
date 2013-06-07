@@ -12,6 +12,7 @@
     vertical-align:baseline;
     box-sizing: border-box;
     font-family: Georgia;
+    clear: both;
 }
 
 /* Layout Elements */
@@ -31,4 +32,12 @@
     font-size: 40px; 
     letter-spacing: 1px;
     top: 50px;
+}
+
+.page {
+    clear: both;
+}
+
+.content {
+    clear: both;
 }

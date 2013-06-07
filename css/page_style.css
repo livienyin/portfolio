@@ -15,7 +15,7 @@
 
 .content {
     top: 150px;
-    position: absolute;
+    position: relative;
 }
 
 h2 { 
@@ -127,7 +127,7 @@ em {
 }
 #about-content {
     float: left;
-    clear: left;
+    clear: both;
 }
 #contact-info {
     float: left;

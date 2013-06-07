@@ -1,5 +1,5 @@
 /* Basics */
-html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,code,del,dfn,em,img,q,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td, iframe { 
+* { 
     list-style-type:none; 
     color:inherit; 
     text-decoration:none; 

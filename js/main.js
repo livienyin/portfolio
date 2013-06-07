@@ -147,7 +147,8 @@ $(document).ready(function(){
         'margin-right': (newMarginSize).toString() + "%",
         'margin-left':  (newMarginSize).toString() + "%",
         'backgroundColor': this.getBackgroundColor(),
-        'height': this.getHeight()
+        'opacity': this.displayIndex == 0 ? '1' : '0.6',
+        'min-height': this.getHeight()
       }
     },
     getHeight: function() {
@@ -228,17 +229,17 @@ $(document).ready(function(){
       new CarouselPage({
       	title: 'Livien Yin',
       	url: 'about.html',
-      	backgroundColor: 'rgb(254, 223, 173)'
+      	backgroundColor: '#D4FF00'
       }),
       new CarouselPage({
       	title: 'Painting',
       	url: 'painting.html',
-      	backgroundColor: 'rgb(173, 255, 255)'
+      	backgroundColor: 'rgb(254, 223, 173)'
       }),
       new CarouselPage({
       	title: 'Code',
       	url: 'code.html',
-      	backgroundColor: 'rgb(173, 255, 255)'
+      	backgroundColor: 'rgb(173, 255, 255);'
       }),
     ]
   })
