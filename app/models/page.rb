@@ -3,7 +3,7 @@ class Page < ActiveRecord::Base
 
   def data_for_client
     return {
-      :background_color => self.background_color,
+      :backgroundColor => self.background_color,
       :title => self.title,
       :url => "/page/#{self.id}"
     }

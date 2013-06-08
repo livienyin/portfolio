@@ -222,23 +222,17 @@ $(document).ready(function(){
       return this.navigationView.isAnimating;
     }
   });
-  var appView = new AppView({
-    carouselPages: [
-      new CarouselPage({
-      	title: 'Livien Yin',
-      	url: 'about.html',
-      	backgroundColor: '#D4FF00'
-      }),
-      new CarouselPage({
-      	title: 'Painting',
-      	url: 'painting.html',
-      	backgroundColor: 'rgb(254, 223, 173)'
-      }),
-      new CarouselPage({
-      	title: 'Code',
-      	url: 'code.html',
-      	backgroundColor: 'rgb(173, 255, 255);'
-      }),
-    ]
-  })
+  function createAppView(pageInfoItems) {
+    appView = new AppView({
+      carouselPages: _.map(pageInfoItems, function(pageInfo) {
+        return new CarouselPage(pageInfo);
+      })
+    });
+  }
+  $.ajax({
+    url: '/page_info',
+    method: "get",
+    dataType: "json",
+    success: createAppView
+  });
 });
