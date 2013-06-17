@@ -40,6 +40,7 @@
 
 .next, .previous {
     position: absolute;
+    cursor: pointer;
 }
 
 .page {
@@ -58,7 +59,6 @@ h2 {
 }
 h3 {
     font-style:italic;
-    font-family: 'Old Standard TT';
 }
 h4 {
     font-family: Georgia;
@@ -70,6 +70,14 @@ p {
     line-height: 20px;
     font-family: Open Sans, sans-serif;
     margin-bottom: 20px;
+}
+
+.story a, .story a:visited {
+    padding-bottom: 1px;
+    border-bottom: 1px solid #D4FF00;
+}
+.story a:hover {
+   background-color: #d4ff00;
 }
 em {
     font-style: italic;
