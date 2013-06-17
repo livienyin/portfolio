@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'devise'
 gem 'rails_admin'
 gem 'rails', '3.2.13'
 
@@ -43,6 +44,3 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
-
-
-gem "devise"
