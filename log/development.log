@@ -29060,3 +29060,896 @@ ActionController::RoutingError (No route matches [GET] "/admin"):
 
 
   Rendered /Users/livienyin/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-06-16 21:03:38 -0700
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-06-16 21:03:38 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/livienyin/.rvm/gems/ruby-1.9.3-p392/gems/devise-2.2.4/app/views/devise/shared/_links.erb (1.6ms)
+  Rendered /Users/livienyin/.rvm/gems/ruby-1.9.3-p392/gems/devise-2.2.4/app/views/devise/sessions/new.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 113ms (Views: 49.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/index_style.css?body=1" for 127.0.0.1 at 2013-06-16 21:03:38 -0700
+Served asset /index_style.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/page_style.css?body=1" for 127.0.0.1 at 2013-06-16 21:03:38 -0700
+Served asset /page_style.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-16 21:03:38 -0700
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/carousel.min.css?body=1" for 127.0.0.1 at 2013-06-16 21:03:38 -0700
+Served asset /carousel.min.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-16 21:03:38 -0700
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-16 21:03:38 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-carousel.min.js?body=1" for 127.0.0.1 at 2013-06-16 21:03:38 -0700
+Served asset /bootstrap-carousel.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-06-16 21:03:38 -0700
+Served asset /main.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-16 21:03:38 -0700
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/page_info" for 127.0.0.1 at 2013-06-16 21:03:38 -0700
+Processing by PagesController#get_ordered_page_info as JSON
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE ("pages"."order_index" IS NOT NULL) ORDER BY order_index ASC[0m
+Completed 200 OK in 13ms (Views: 0.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/page/14" for 127.0.0.1 at 2013-06-16 21:03:38 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPage Load (0.3ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "14"]]
+  Rendered pages/painting.html.erb (2.4ms)
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/page/12" for 127.0.0.1 at 2013-06-16 21:03:38 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "12"]]
+  Rendered pages/about.html.erb (0.9ms)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/page/13" for 127.0.0.1 at 2013-06-16 21:03:38 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "13"]]
+  Rendered pages/code.html.erb (1.3ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-06-16 21:03:38 -0700
+Served asset /painting1.jpg - 304 Not Modified (24ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-06-16 21:03:38 -0700
+Served asset /painting4.jpg - 304 Not Modified (1ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-06-16 21:03:38 -0700
+Served asset /painting3.jpg - 304 Not Modified (1ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-06-16 21:03:39 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (1ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-06-16 21:03:39 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (1ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-06-16 21:03:39 -0700
+Served asset /painting2.jpg - 304 Not Modified (1ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-06-16 21:03:39 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-06-16 21:03:39 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-06-16 21:03:39 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (1ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-06-16 21:03:39 -0700
+Served asset /portrait.JPG - 304 Not Modified (2ms)
+
+
+Started GET "/assets/blog_wdi.JPG" for 127.0.0.1 at 2013-06-16 21:03:39 -0700
+Served asset /blog_wdi.JPG - 304 Not Modified (2ms)
+
+
+Started GET "/assets/cssstache1.png" for 127.0.0.1 at 2013-06-16 21:03:39 -0700
+Served asset /cssstache1.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/cssstache2.png" for 127.0.0.1 at 2013-06-16 21:03:39 -0700
+Served asset /cssstache2.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/cssstache3.png" for 127.0.0.1 at 2013-06-16 21:03:39 -0700
+Served asset /cssstache3.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/cssstache4.png" for 127.0.0.1 at 2013-06-16 21:03:39 -0700
+Served asset /cssstache4.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/intune1.png" for 127.0.0.1 at 2013-06-16 21:03:39 -0700
+Served asset /intune1.png - 304 Not Modified (1ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-06-16 21:03:40 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y3I7/Aqkv6ZghAv2UFgDabOSH3CQlKdDxVkRJhTx+7U=", "user"=>{"email"=>"livienyin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'livienyin@gmail.com' LIMIT 1[0m
+Completed 401 Unauthorized in 95ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y3I7/Aqkv6ZghAv2UFgDabOSH3CQlKdDxVkRJhTx+7U=", "user"=>{"email"=>"livienyin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered /Users/livienyin/.rvm/gems/ruby-1.9.3-p392/gems/devise-2.2.4/app/views/devise/shared/_links.erb (0.5ms)
+  Rendered /Users/livienyin/.rvm/gems/ruby-1.9.3-p392/gems/devise-2.2.4/app/views/devise/sessions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 96ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-16 21:03:41 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.min.js?body=1" for 127.0.0.1 at 2013-06-16 21:03:41 -0700
+Served asset /bootstrap-carousel.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-16 21:03:41 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-16 21:03:41 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/page_style.css?body=1" for 127.0.0.1 at 2013-06-16 21:03:41 -0700
+Served asset /page_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/carousel.min.css?body=1" for 127.0.0.1 at 2013-06-16 21:03:41 -0700
+Served asset /carousel.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index_style.css?body=1" for 127.0.0.1 at 2013-06-16 21:03:41 -0700
+Served asset /index_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-06-16 21:03:41 -0700
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-16 21:03:41 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/page_info" for 127.0.0.1 at 2013-06-16 21:03:41 -0700
+Processing by PagesController#get_ordered_page_info as JSON
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE ("pages"."order_index" IS NOT NULL) ORDER BY order_index ASC
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/page/14" for 127.0.0.1 at 2013-06-16 21:03:41 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "14"]]
+  Rendered pages/painting.html.erb (1.3ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/page/12" for 127.0.0.1 at 2013-06-16 21:03:41 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "12"]]
+  Rendered pages/about.html.erb (0.2ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/13" for 127.0.0.1 at 2013-06-16 21:03:41 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "13"]]
+  Rendered pages/code.html.erb (0.6ms)
+Completed 200 OK in 12ms (Views: 6.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-06-16 21:03:41 -0700
+Served asset /painting1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-06-16 21:03:41 -0700
+Served asset /painting4.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-06-16 21:03:41 -0700
+Served asset /painting3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-06-16 21:03:41 -0700
+Served asset /painting2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-06-16 21:03:41 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-06-16 21:03:41 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-06-16 21:03:41 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-06-16 21:03:41 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-06-16 21:03:41 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-06-16 21:03:41 -0700
+Served asset /portrait.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog_wdi.JPG" for 127.0.0.1 at 2013-06-16 21:03:41 -0700
+Served asset /blog_wdi.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache1.png" for 127.0.0.1 at 2013-06-16 21:03:41 -0700
+Served asset /cssstache1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache2.png" for 127.0.0.1 at 2013-06-16 21:03:41 -0700
+Served asset /cssstache2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache3.png" for 127.0.0.1 at 2013-06-16 21:03:41 -0700
+Served asset /cssstache3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache4.png" for 127.0.0.1 at 2013-06-16 21:03:41 -0700
+Served asset /cssstache4.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune1.png" for 127.0.0.1 at 2013-06-16 21:03:41 -0700
+Served asset /intune1.png - 304 Not Modified (0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-06-16 21:03:44 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y3I7/Aqkv6ZghAv2UFgDabOSH3CQlKdDxVkRJhTx+7U=", "user"=>{"email"=>"livienyin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'livienyin@gmail.com' LIMIT 1
+Completed 401 Unauthorized in 84ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y3I7/Aqkv6ZghAv2UFgDabOSH3CQlKdDxVkRJhTx+7U=", "user"=>{"email"=>"livienyin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered /Users/livienyin/.rvm/gems/ruby-1.9.3-p392/gems/devise-2.2.4/app/views/devise/shared/_links.erb (0.4ms)
+  Rendered /Users/livienyin/.rvm/gems/ruby-1.9.3-p392/gems/devise-2.2.4/app/views/devise/sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 93ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-16 21:03:44 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/carousel.min.css?body=1" for 127.0.0.1 at 2013-06-16 21:03:44 -0700
+Served asset /carousel.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/page_style.css?body=1" for 127.0.0.1 at 2013-06-16 21:03:44 -0700
+Served asset /page_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-16 21:03:44 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-16 21:03:44 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.min.js?body=1" for 127.0.0.1 at 2013-06-16 21:03:44 -0700
+Served asset /bootstrap-carousel.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index_style.css?body=1" for 127.0.0.1 at 2013-06-16 21:03:44 -0700
+Served asset /index_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-06-16 21:03:44 -0700
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-16 21:03:44 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/page_info" for 127.0.0.1 at 2013-06-16 21:03:44 -0700
+Processing by PagesController#get_ordered_page_info as JSON
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE ("pages"."order_index" IS NOT NULL) ORDER BY order_index ASC[0m
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/page/14" for 127.0.0.1 at 2013-06-16 21:03:44 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "14"]]
+  Rendered pages/painting.html.erb (0.6ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/page/12" for 127.0.0.1 at 2013-06-16 21:03:44 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "12"]]
+  Rendered pages/about.html.erb (0.6ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/13" for 127.0.0.1 at 2013-06-16 21:03:44 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "13"]]
+  Rendered pages/code.html.erb (0.7ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-06-16 21:03:44 -0700
+Served asset /painting1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-06-16 21:03:44 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-06-16 21:03:44 -0700
+Served asset /painting2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-06-16 21:03:44 -0700
+Served asset /painting3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-06-16 21:03:44 -0700
+Served asset /painting4.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-06-16 21:03:44 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-06-16 21:03:44 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-06-16 21:03:44 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-06-16 21:03:44 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-06-16 21:03:44 -0700
+Served asset /portrait.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog_wdi.JPG" for 127.0.0.1 at 2013-06-16 21:03:44 -0700
+Served asset /blog_wdi.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache1.png" for 127.0.0.1 at 2013-06-16 21:03:44 -0700
+Served asset /cssstache1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache2.png" for 127.0.0.1 at 2013-06-16 21:03:44 -0700
+Served asset /cssstache2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache3.png" for 127.0.0.1 at 2013-06-16 21:03:44 -0700
+Served asset /cssstache3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache4.png" for 127.0.0.1 at 2013-06-16 21:03:44 -0700
+Served asset /cssstache4.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune1.png" for 127.0.0.1 at 2013-06-16 21:03:44 -0700
+Served asset /intune1.png - 304 Not Modified (0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-06-16 21:03:57 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y3I7/Aqkv6ZghAv2UFgDabOSH3CQlKdDxVkRJhTx+7U=", "user"=>{"email"=>"livienyin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'livienyin@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (3.7ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2013-06-08 08:11:49.830231', "current_sign_in_at" = '2013-06-17 04:03:57.500572', "last_sign_in_ip" = '192.168.1.126', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 3, "updated_at" = '2013-06-17 04:03:57.508272' WHERE "users"."id" = 1[0m
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/admin/
+Completed 302 Found in 115ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2013-06-16 21:03:57 -0700
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "pages" 
+  [1m[36mPage Load (4.0ms)[0m  [1mSELECT "pages".* FROM "pages" ORDER BY pages.updated_at desc LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY users.updated_at desc LIMIT 1[0m
+  Rendered /Users/livienyin/.rvm/gems/ruby-1.9.3-p392/gems/rails_admin-0.4.9/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (21.3ms)
+Compiled font-awesome.css  (20ms)  (pid 42247)
+Compiled rails_admin/rails_admin.css  (4988ms)  (pid 42247)
+Compiled jquery.iframe-transport.js  (1ms)  (pid 42247)
+Compiled rails_admin/jquery.remotipart.fixed.js  (11ms)  (pid 42247)
+Compiled jquery.ui.effect.js  (0ms)  (pid 42247)
+Compiled jquery.ui.core.js  (4ms)  (pid 42247)
+Compiled jquery.ui.widget.js  (0ms)  (pid 42247)
+Compiled jquery.ui.mouse.js  (6ms)  (pid 42247)
+Compiled jquery.ui.sortable.js  (64ms)  (pid 42247)
+Compiled jquery.ui.position.js  (1ms)  (pid 42247)
+Compiled jquery.ui.menu.js  (27ms)  (pid 42247)
+Compiled jquery.ui.autocomplete.js  (50ms)  (pid 42247)
+Compiled jquery.ui.datepicker.js  (4ms)  (pid 42247)
+Compiled rails_admin/jquery.ui.timepicker.js  (1ms)  (pid 42247)
+Compiled rails_admin/ra.datetimepicker.js  (0ms)  (pid 42247)
+Compiled rails_admin/jquery.colorpicker.js  (0ms)  (pid 42247)
+Compiled rails_admin/ra.filter-box.js  (0ms)  (pid 42247)
+Compiled rails_admin/ra.filtering-multiselect.js  (0ms)  (pid 42247)
+Compiled rails_admin/ra.filtering-select.js  (0ms)  (pid 42247)
+Compiled rails_admin/ra.remote-form.js  (0ms)  (pid 42247)
+Compiled rails_admin/jquery.pjax.js  (0ms)  (pid 42247)
+Compiled jquery_nested_form.js  (0ms)  (pid 42247)
+Compiled rails_admin/ra.nested-form-hooks.js  (304ms)  (pid 42247)
+Compiled bootstrap-transition.js  (0ms)  (pid 42247)
+Compiled bootstrap-affix.js  (0ms)  (pid 42247)
+Compiled bootstrap-alert.js  (0ms)  (pid 42247)
+Compiled bootstrap-button.js  (0ms)  (pid 42247)
+Compiled bootstrap-carousel.js  (0ms)  (pid 42247)
+Compiled bootstrap-collapse.js  (0ms)  (pid 42247)
+Compiled bootstrap-dropdown.js  (0ms)  (pid 42247)
+Compiled bootstrap-modal.js  (0ms)  (pid 42247)
+Compiled bootstrap-scrollspy.js  (0ms)  (pid 42247)
+Compiled bootstrap-tab.js  (0ms)  (pid 42247)
+Compiled bootstrap-tooltip.js  (0ms)  (pid 42247)
+Compiled bootstrap-popover.js  (0ms)  (pid 42247)
+Compiled bootstrap-typeahead.js  (0ms)  (pid 42247)
+Compiled bootstrap.js  (250ms)  (pid 42247)
+Compiled rails_admin/ra.widgets.js  (636ms)  (pid 42247)
+Compiled rails_admin/ui.js  (308ms)  (pid 42247)
+Compiled rails_admin/custom/ui.js  (198ms)  (pid 42247)
+Compiled rails_admin/rails_admin.js  (2336ms)  (pid 42247)
+  Rendered /Users/livienyin/.rvm/gems/ruby-1.9.3-p392/gems/rails_admin-0.4.9/app/views/layouts/rails_admin/_secondary_navigation.html.haml (8.6ms)
+  Rendered /Users/livienyin/.rvm/gems/ruby-1.9.3-p392/gems/rails_admin-0.4.9/app/views/layouts/rails_admin/pjax.html.haml (5.2ms)
+Completed 200 OK in 7653ms (Views: 7611.5ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/assets/rails_admin/rails_admin.css?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /rails_admin/rails_admin.css - 200 OK (18ms)
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /jquery.ui.effect.js - 200 OK (5ms)
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /jquery.ui.core.js - 200 OK (9ms)
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /jquery.iframe-transport.js - 200 OK (6ms)
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /jquery.ui.widget.js - 200 OK (4ms)
+
+
+Started GET "/assets/rails_admin/jquery.remotipart.fixed.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /rails_admin/jquery.remotipart.fixed.js - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /jquery.ui.sortable.js - 200 OK (18ms)
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /jquery.ui.mouse.js - 200 OK (50ms)
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /jquery.ui.position.js - 200 OK (5ms)
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /jquery.ui.menu.js - 200 OK (14ms)
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /jquery.ui.autocomplete.js - 200 OK (13ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /jquery.ui.datepicker.js - 200 OK (12ms)
+
+
+Started GET "/assets/rails_admin/jquery.ui.timepicker.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /rails_admin/jquery.ui.timepicker.js - 200 OK (2ms)
+
+
+Started GET "/assets/rails_admin/ra.datetimepicker.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /rails_admin/ra.datetimepicker.js - 200 OK (3ms)
+
+
+Started GET "/assets/rails_admin/jquery.colorpicker.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /rails_admin/jquery.colorpicker.js - 200 OK (4ms)
+
+
+Started GET "/assets/rails_admin/ra.filter-box.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /rails_admin/ra.filter-box.js - 200 OK (5ms)
+
+
+Started GET "/assets/rails_admin/ra.filtering-multiselect.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /rails_admin/ra.filtering-multiselect.js - 200 OK (2ms)
+
+
+Started GET "/assets/rails_admin/ra.filtering-select.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /rails_admin/ra.filtering-select.js - 200 OK (3ms)
+
+
+Started GET "/assets/rails_admin/ra.remote-form.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /rails_admin/ra.remote-form.js - 200 OK (2ms)
+
+
+Started GET "/assets/rails_admin/jquery.pjax.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /rails_admin/jquery.pjax.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /jquery_nested_form.js - 200 OK (5ms)
+
+
+Started GET "/assets/rails_admin/ra.nested-form-hooks.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /rails_admin/ra.nested-form-hooks.js - 200 OK (5ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /bootstrap-transition.js - 200 OK (6ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /bootstrap-affix.js - 200 OK (5ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /bootstrap-alert.js - 200 OK (4ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /bootstrap-button.js - 200 OK (4ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /bootstrap-carousel.js - 200 OK (5ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /bootstrap-collapse.js - 200 OK (7ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /bootstrap-dropdown.js - 200 OK (5ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /bootstrap-modal.js - 200 OK (6ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /bootstrap-popover.js - 200 OK (6ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /bootstrap-tab.js - 200 OK (4ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /bootstrap-tooltip.js - 200 OK (9ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /bootstrap-scrollspy.js - 200 OK (6ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /bootstrap-typeahead.js - 200 OK (5ms)
+
+
+Started GET "/assets/rails_admin/ra.widgets.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /rails_admin/ra.widgets.js - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /bootstrap.js - 200 OK (27ms)
+
+
+Started GET "/assets/rails_admin/ui.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /rails_admin/ui.js - 200 OK (2ms)
+
+
+Started GET "/assets/rails_admin/custom/ui.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /rails_admin/custom/ui.js - 200 OK (3ms)
+
+
+Started GET "/assets/rails_admin/rails_admin.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:05 -0700
+Served asset /rails_admin/rails_admin.js - 200 OK (61ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:06 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-16 21:04:06 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2013-06-16 21:04:06 -0700
+Served asset /fontawesome-webfont.woff - 200 OK (10ms)
+Connecting to database specified by database.yml
+  [1m[36m (1.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePages (20130608043741)
+Migrating to AddOrderIndexToPages (20130608053323)
+Migrating to CreateRailsAdminHistoriesTable (20130608075844)
+Migrating to DeviseCreateUsers (20130608075957)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+
+
+Started GET "/admin/page?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2013-06-16 21:09:40 -0700
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"page"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPage Load (0.4ms)[0m  [1mSELECT "pages".* FROM "pages" ORDER BY pages.id desc LIMIT 20 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pages" 
+  Rendered /Users/livienyin/.rvm/gems/ruby-1.9.3-p392/gems/rails_admin-0.4.9/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (135.1ms)
+Completed 200 OK in 224ms (Views: 157.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/admin/page/12?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2013-06-16 21:10:57 -0700
+Processing by RailsAdmin::MainController#show as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"page", "id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = 12 LIMIT 1
+  Rendered /Users/livienyin/.rvm/gems/ruby-1.9.3-p392/gems/rails_admin-0.4.9/app/views/rails_admin/main/show.html.haml within layouts/rails_admin/pjax (5.9ms)
+Completed 200 OK in 29ms (Views: 21.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/page/12/edit?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2013-06-16 21:11:01 -0700
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"page", "id"=>"12"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = 12 LIMIT 1
+  Rendered /Users/livienyin/.rvm/gems/ruby-1.9.3-p392/gems/rails_admin-0.4.9/app/views/rails_admin/main/_form_field.html.haml (1.2ms)
+  Rendered /Users/livienyin/.rvm/gems/ruby-1.9.3-p392/gems/rails_admin-0.4.9/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /Users/livienyin/.rvm/gems/ruby-1.9.3-p392/gems/rails_admin-0.4.9/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /Users/livienyin/.rvm/gems/ruby-1.9.3-p392/gems/rails_admin-0.4.9/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /Users/livienyin/.rvm/gems/ruby-1.9.3-p392/gems/rails_admin-0.4.9/app/views/rails_admin/main/_submit_buttons.html.haml (6.7ms)
+  Rendered /Users/livienyin/.rvm/gems/ruby-1.9.3-p392/gems/rails_admin-0.4.9/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (24.2ms)
+Completed 200 OK in 48ms (Views: 39.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/page?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2013-06-16 21:11:43 -0700
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"page"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" ORDER BY pages.id desc LIMIT 20 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "pages" [0m
+  Rendered /Users/livienyin/.rvm/gems/ruby-1.9.3-p392/gems/rails_admin-0.4.9/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (67.5ms)
+Completed 200 OK in 79ms (Views: 74.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/page/13/edit?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2013-06-16 21:11:48 -0700
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"page", "id"=>"13"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = 13 LIMIT 1[0m
+  Rendered /Users/livienyin/.rvm/gems/ruby-1.9.3-p392/gems/rails_admin-0.4.9/app/views/rails_admin/main/_form_field.html.haml (3.0ms)
+  Rendered /Users/livienyin/.rvm/gems/ruby-1.9.3-p392/gems/rails_admin-0.4.9/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/livienyin/.rvm/gems/ruby-1.9.3-p392/gems/rails_admin-0.4.9/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/livienyin/.rvm/gems/ruby-1.9.3-p392/gems/rails_admin-0.4.9/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/livienyin/.rvm/gems/ruby-1.9.3-p392/gems/rails_admin-0.4.9/app/views/rails_admin/main/_submit_buttons.html.haml (0.9ms)
+  Rendered /Users/livienyin/.rvm/gems/ruby-1.9.3-p392/gems/rails_admin-0.4.9/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (21.3ms)
+Completed 200 OK in 47ms (Views: 37.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/page?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2013-06-16 21:12:15 -0700
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"page"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" ORDER BY pages.id desc LIMIT 20 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "pages" 
+  Rendered /Users/livienyin/.rvm/gems/ruby-1.9.3-p392/gems/rails_admin-0.4.9/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (35.3ms)
+Completed 200 OK in 48ms (Views: 42.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/page/14/edit?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2013-06-16 21:12:17 -0700
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"page", "id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = 14 LIMIT 1
+  Rendered /Users/livienyin/.rvm/gems/ruby-1.9.3-p392/gems/rails_admin-0.4.9/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /Users/livienyin/.rvm/gems/ruby-1.9.3-p392/gems/rails_admin-0.4.9/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /Users/livienyin/.rvm/gems/ruby-1.9.3-p392/gems/rails_admin-0.4.9/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /Users/livienyin/.rvm/gems/ruby-1.9.3-p392/gems/rails_admin-0.4.9/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /Users/livienyin/.rvm/gems/ruby-1.9.3-p392/gems/rails_admin-0.4.9/app/views/rails_admin/main/_submit_buttons.html.haml (0.8ms)
+  Rendered /Users/livienyin/.rvm/gems/ruby-1.9.3-p392/gems/rails_admin-0.4.9/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (11.2ms)
+Completed 200 OK in 32ms (Views: 25.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-16 21:20:52 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html within layouts/application (0.7ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-16 21:20:53 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/carousel.min.css?body=1" for 127.0.0.1 at 2013-06-16 21:20:53 -0700
+Served asset /carousel.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-16 21:20:53 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/page_style.css?body=1" for 127.0.0.1 at 2013-06-16 21:20:53 -0700
+Served asset /page_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index_style.css?body=1" for 127.0.0.1 at 2013-06-16 21:20:53 -0700
+Served asset /index_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-16 21:20:53 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.min.js?body=1" for 127.0.0.1 at 2013-06-16 21:20:53 -0700
+Served asset /bootstrap-carousel.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-06-16 21:20:53 -0700
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-16 21:20:53 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/page_info" for 127.0.0.1 at 2013-06-16 21:20:53 -0700
+Processing by PagesController#get_ordered_page_info as JSON
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE ("pages"."order_index" IS NOT NULL) ORDER BY order_index ASC[0m
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/page/14" for 127.0.0.1 at 2013-06-16 21:20:53 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "14"]]
+  Rendered pages/painting.html.erb (1.0ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/page/13" for 127.0.0.1 at 2013-06-16 21:20:53 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "13"]]
+  Rendered pages/code.html.erb (0.6ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/page/12" for 127.0.0.1 at 2013-06-16 21:20:53 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "12"]]
+  Rendered pages/about.html.erb (0.3ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-06-16 21:20:53 -0700
+Served asset /painting1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-06-16 21:20:53 -0700
+Served asset /painting4.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-06-16 21:20:53 -0700
+Served asset /painting3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-06-16 21:20:53 -0700
+Served asset /painting2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-06-16 21:20:53 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-06-16 21:20:53 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-06-16 21:20:53 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-06-16 21:20:53 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-06-16 21:20:53 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/next.png" for 127.0.0.1 at 2013-06-16 21:20:53 -0700
+Served asset /next.png - 304 Not Modified (6ms)
+
+
+Started GET "/assets/cssstache1.png" for 127.0.0.1 at 2013-06-16 21:20:53 -0700
+Served asset /cssstache1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache2.png" for 127.0.0.1 at 2013-06-16 21:20:53 -0700
+Served asset /cssstache2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache3.png" for 127.0.0.1 at 2013-06-16 21:20:53 -0700
+Served asset /cssstache3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache4.png" for 127.0.0.1 at 2013-06-16 21:20:53 -0700
+Served asset /cssstache4.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune1.png" for 127.0.0.1 at 2013-06-16 21:20:53 -0700
+Served asset /intune1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-06-16 21:20:53 -0700
+Served asset /portrait.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog_wdi.JPG" for 127.0.0.1 at 2013-06-16 21:20:53 -0700
+Served asset /blog_wdi.JPG - 304 Not Modified (0ms)
