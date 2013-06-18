@@ -30430,3 +30430,3891 @@ Served asset /portrait.JPG - 304 Not Modified (0ms)
 
 Started GET "/assets/blog_wdi.JPG" for 127.0.0.1 at 2013-06-16 22:12:44 -0700
 Served asset /blog_wdi.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/page/12" for 127.0.0.1 at 2013-06-16 22:27:04 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "12"]]
+  Rendered pages/about.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-06-16 22:27:04 -0700
+Served asset /portrait.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog_wdi.JPG" for 127.0.0.1 at 2013-06-16 22:27:04 -0700
+Served asset /blog_wdi.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/page/12" for 127.0.0.1 at 2013-06-16 22:28:22 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "12"]]
+  Rendered pages/about.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/blog_wdi.JPG" for 127.0.0.1 at 2013-06-16 22:28:22 -0700
+Served asset /blog_wdi.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-06-16 22:28:22 -0700
+Served asset /portrait.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/page/14" for 127.0.0.1 at 2013-06-16 22:29:04 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "14"]]
+  Rendered pages/painting.html.erb (1.2ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-06-16 22:29:04 -0700
+Served asset /painting1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-06-16 22:29:04 -0700
+Served asset /painting3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-06-16 22:29:04 -0700
+Served asset /painting2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-06-16 22:29:04 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-06-16 22:29:04 -0700
+Served asset /painting4.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-06-16 22:29:04 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-06-16 22:29:04 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-06-16 22:29:04 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-06-16 22:29:04 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/page/14" for 127.0.0.1 at 2013-06-16 22:32:28 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "14"]]
+  Rendered pages/painting.html.erb (0.8ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-06-16 22:32:28 -0700
+Served asset /painting3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-06-16 22:32:28 -0700
+Served asset /painting2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-06-16 22:32:28 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-06-16 22:32:28 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-06-16 22:32:28 -0700
+Served asset /painting4.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-06-16 22:32:28 -0700
+Served asset /painting1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-06-16 22:32:28 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-06-16 22:32:28 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-06-16 22:32:28 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/page/14" for 127.0.0.1 at 2013-06-16 22:33:15 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "14"]]
+  Rendered pages/painting.html.erb (0.7ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-06-16 22:33:16 -0700
+Served asset /painting1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-06-16 22:33:16 -0700
+Served asset /painting4.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-06-16 22:33:16 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-06-16 22:33:16 -0700
+Served asset /painting2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-06-16 22:33:16 -0700
+Served asset /painting3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-06-16 22:33:16 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-06-16 22:33:16 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-06-16 22:33:16 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-06-16 22:33:16 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-17 14:14:36 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html within layouts/application (0.0ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/carousel.min.css?body=1" for 127.0.0.1 at 2013-06-17 14:14:37 -0700
+Served asset /carousel.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index_style.css?body=1" for 127.0.0.1 at 2013-06-17 14:14:37 -0700
+Served asset /index_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-17 14:14:37 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/page_style.css?body=1" for 127.0.0.1 at 2013-06-17 14:14:37 -0700
+Served asset /page_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-17 14:14:37 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-17 14:14:37 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.min.js?body=1" for 127.0.0.1 at 2013-06-17 14:14:37 -0700
+Served asset /bootstrap-carousel.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-06-17 14:14:37 -0700
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-17 14:14:37 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/page_info" for 127.0.0.1 at 2013-06-17 14:14:43 -0700
+Processing by PagesController#get_ordered_page_info as JSON
+  [1m[36mPage Load (4.5ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE ("pages"."order_index" IS NOT NULL) ORDER BY order_index ASC[0m
+Completed 200 OK in 7ms (Views: 0.6ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/page/14" for 127.0.0.1 at 2013-06-17 14:14:44 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "14"]]
+  Rendered pages/painting.html.erb (1.2ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/12" for 127.0.0.1 at 2013-06-17 14:14:44 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "12"]]
+  Rendered pages/about.html.erb (2.8ms)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/page/13" for 127.0.0.1 at 2013-06-17 14:14:44 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "13"]]
+  Rendered pages/code.html.erb (0.9ms)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-06-17 14:14:44 -0700
+Served asset /painting1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-06-17 14:14:44 -0700
+Served asset /painting3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-06-17 14:14:44 -0700
+Served asset /painting2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-06-17 14:14:44 -0700
+Served asset /painting4.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-06-17 14:14:44 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-06-17 14:14:44 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-06-17 14:14:44 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-06-17 14:14:44 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/next.png" for 127.0.0.1 at 2013-06-17 14:14:44 -0700
+Served asset /next.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-06-17 14:14:44 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-06-17 14:14:44 -0700
+Served asset /portrait.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog_wdi.JPG" for 127.0.0.1 at 2013-06-17 14:14:44 -0700
+Served asset /blog_wdi.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache1.png" for 127.0.0.1 at 2013-06-17 14:14:44 -0700
+Served asset /cssstache1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache2.png" for 127.0.0.1 at 2013-06-17 14:14:44 -0700
+Served asset /cssstache2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache3.png" for 127.0.0.1 at 2013-06-17 14:14:44 -0700
+Served asset /cssstache3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache4.png" for 127.0.0.1 at 2013-06-17 14:14:44 -0700
+Served asset /cssstache4.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune1.png" for 127.0.0.1 at 2013-06-17 14:14:44 -0700
+Served asset /intune1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune2.png" for 127.0.0.1 at 2013-06-17 14:14:44 -0700
+Served asset /intune2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune3.png" for 127.0.0.1 at 2013-06-17 14:14:44 -0700
+Served asset /intune3.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-17 14:24:52 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html within layouts/application (0.0ms)
+Completed 200 OK in 35ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/carousel.min.css?body=1" for 127.0.0.1 at 2013-06-17 14:24:53 -0700
+Served asset /carousel.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index_style.css?body=1" for 127.0.0.1 at 2013-06-17 14:24:53 -0700
+Served asset /index_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-17 14:24:53 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/page_style.css?body=1" for 127.0.0.1 at 2013-06-17 14:24:53 -0700
+Served asset /page_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-17 14:24:53 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-17 14:24:53 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.min.js?body=1" for 127.0.0.1 at 2013-06-17 14:24:53 -0700
+Served asset /bootstrap-carousel.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-06-17 14:24:53 -0700
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-17 14:24:53 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/page_info" for 127.0.0.1 at 2013-06-17 14:25:03 -0700
+Processing by PagesController#get_ordered_page_info as JSON
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE ("pages"."order_index" IS NOT NULL) ORDER BY order_index ASC[0m
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/page/14" for 127.0.0.1 at 2013-06-17 14:25:03 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "14"]]
+  Rendered pages/painting.html.erb (0.7ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/page/13" for 127.0.0.1 at 2013-06-17 14:25:03 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "13"]]
+  Rendered pages/code.html.erb (0.9ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/12" for 127.0.0.1 at 2013-06-17 14:25:03 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "12"]]
+  Rendered pages/about.html.erb (1.2ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-06-17 14:25:03 -0700
+Served asset /painting4.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-06-17 14:25:03 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-06-17 14:25:03 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-06-17 14:25:03 -0700
+Served asset /painting1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-06-17 14:25:03 -0700
+Served asset /painting2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-06-17 14:25:03 -0700
+Served asset /painting3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-06-17 14:25:03 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-06-17 14:25:03 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-06-17 14:25:03 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/next.png" for 127.0.0.1 at 2013-06-17 14:25:03 -0700
+Served asset /next.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache2.png" for 127.0.0.1 at 2013-06-17 14:25:03 -0700
+Served asset /cssstache2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache1.png" for 127.0.0.1 at 2013-06-17 14:25:03 -0700
+Served asset /cssstache1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache3.png" for 127.0.0.1 at 2013-06-17 14:25:03 -0700
+Served asset /cssstache3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache4.png" for 127.0.0.1 at 2013-06-17 14:25:03 -0700
+Served asset /cssstache4.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune1.png" for 127.0.0.1 at 2013-06-17 14:25:03 -0700
+Served asset /intune1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune2.png" for 127.0.0.1 at 2013-06-17 14:25:03 -0700
+Served asset /intune2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune3.png" for 127.0.0.1 at 2013-06-17 14:25:03 -0700
+Served asset /intune3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-06-17 14:25:03 -0700
+Served asset /portrait.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog_wdi.JPG" for 127.0.0.1 at 2013-06-17 14:25:03 -0700
+Served asset /blog_wdi.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-17 14:31:40 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html within layouts/application (0.0ms)
+Completed 200 OK in 5ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-17 14:31:40 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/carousel.min.css?body=1" for 127.0.0.1 at 2013-06-17 14:31:40 -0700
+Served asset /carousel.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-17 14:31:40 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index_style.css?body=1" for 127.0.0.1 at 2013-06-17 14:31:40 -0700
+Served asset /index_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/page_style.css?body=1" for 127.0.0.1 at 2013-06-17 14:31:40 -0700
+Served asset /page_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-17 14:31:40 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.min.js?body=1" for 127.0.0.1 at 2013-06-17 14:31:40 -0700
+Served asset /bootstrap-carousel.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-06-17 14:31:40 -0700
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-17 14:31:40 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/page_info" for 127.0.0.1 at 2013-06-17 14:31:58 -0700
+Processing by PagesController#get_ordered_page_info as JSON
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE ("pages"."order_index" IS NOT NULL) ORDER BY order_index ASC[0m
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/page/14" for 127.0.0.1 at 2013-06-17 14:31:58 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "14"]]
+  Rendered pages/painting.html.erb (0.8ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/12" for 127.0.0.1 at 2013-06-17 14:31:58 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "12"]]
+  Rendered pages/about.html.erb (0.8ms)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-06-17 14:31:58 -0700
+Served asset /painting3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/page/13" for 127.0.0.1 at 2013-06-17 14:31:58 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "13"]]
+  Rendered pages/code.html.erb (0.8ms)
+Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-06-17 14:31:58 -0700
+Served asset /painting1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-06-17 14:31:58 -0700
+Served asset /painting2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-06-17 14:31:58 -0700
+Served asset /painting4.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-06-17 14:31:58 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-06-17 14:31:58 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-06-17 14:31:58 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-06-17 14:31:58 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-06-17 14:31:58 -0700
+Served asset /portrait.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog_wdi.JPG" for 127.0.0.1 at 2013-06-17 14:31:58 -0700
+Served asset /blog_wdi.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-06-17 14:31:59 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/next.png" for 127.0.0.1 at 2013-06-17 14:31:59 -0700
+Served asset /next.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache2.png" for 127.0.0.1 at 2013-06-17 14:31:59 -0700
+Served asset /cssstache2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache4.png" for 127.0.0.1 at 2013-06-17 14:31:59 -0700
+Served asset /cssstache4.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune2.png" for 127.0.0.1 at 2013-06-17 14:31:59 -0700
+Served asset /intune2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune1.png" for 127.0.0.1 at 2013-06-17 14:31:59 -0700
+Served asset /intune1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache1.png" for 127.0.0.1 at 2013-06-17 14:31:59 -0700
+Served asset /cssstache1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache3.png" for 127.0.0.1 at 2013-06-17 14:31:59 -0700
+Served asset /cssstache3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune3.png" for 127.0.0.1 at 2013-06-17 14:31:59 -0700
+Served asset /intune3.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-17 14:34:27 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html within layouts/application (0.1ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-17 14:34:27 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-17 14:34:27 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/page_style.css?body=1" for 127.0.0.1 at 2013-06-17 14:34:27 -0700
+Served asset /page_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-17 14:34:27 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/carousel.min.css?body=1" for 127.0.0.1 at 2013-06-17 14:34:27 -0700
+Served asset /carousel.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index_style.css?body=1" for 127.0.0.1 at 2013-06-17 14:34:27 -0700
+Served asset /index_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.min.js?body=1" for 127.0.0.1 at 2013-06-17 14:34:27 -0700
+Served asset /bootstrap-carousel.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-06-17 14:34:27 -0700
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-17 14:34:27 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/page_info" for 127.0.0.1 at 2013-06-17 14:34:41 -0700
+Processing by PagesController#get_ordered_page_info as JSON
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE ("pages"."order_index" IS NOT NULL) ORDER BY order_index ASC[0m
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/page/14" for 127.0.0.1 at 2013-06-17 14:34:41 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "14"]]
+  Rendered pages/painting.html.erb (1.0ms)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/page/13" for 127.0.0.1 at 2013-06-17 14:34:41 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "13"]]
+  Rendered pages/code.html.erb (0.8ms)
+Completed 200 OK in 14ms (Views: 9.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/12" for 127.0.0.1 at 2013-06-17 14:34:41 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "12"]]
+  Rendered pages/about.html.erb (2.9ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-06-17 14:34:41 -0700
+Served asset /painting4.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-06-17 14:34:41 -0700
+Served asset /painting1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-06-17 14:34:41 -0700
+Served asset /painting2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-06-17 14:34:41 -0700
+Served asset /painting3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-06-17 14:34:41 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-06-17 14:34:41 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-06-17 14:34:41 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-06-17 14:34:41 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-06-17 14:34:41 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache1.png" for 127.0.0.1 at 2013-06-17 14:34:41 -0700
+Served asset /cssstache1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/next.png" for 127.0.0.1 at 2013-06-17 14:34:41 -0700
+Served asset /next.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache2.png" for 127.0.0.1 at 2013-06-17 14:34:41 -0700
+Served asset /cssstache2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache3.png" for 127.0.0.1 at 2013-06-17 14:34:41 -0700
+Served asset /cssstache3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache4.png" for 127.0.0.1 at 2013-06-17 14:34:41 -0700
+Served asset /cssstache4.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune1.png" for 127.0.0.1 at 2013-06-17 14:34:41 -0700
+Served asset /intune1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune3.png" for 127.0.0.1 at 2013-06-17 14:34:41 -0700
+Served asset /intune3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune2.png" for 127.0.0.1 at 2013-06-17 14:34:41 -0700
+Served asset /intune2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-06-17 14:34:41 -0700
+Served asset /portrait.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog_wdi.JPG" for 127.0.0.1 at 2013-06-17 14:34:41 -0700
+Served asset /blog_wdi.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-17 14:37:41 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html within layouts/application (0.0ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-17 14:37:42 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index_style.css?body=1" for 127.0.0.1 at 2013-06-17 14:37:42 -0700
+Served asset /index_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/carousel.min.css?body=1" for 127.0.0.1 at 2013-06-17 14:37:42 -0700
+Served asset /carousel.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/page_style.css?body=1" for 127.0.0.1 at 2013-06-17 14:37:42 -0700
+Served asset /page_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-17 14:37:42 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-17 14:37:42 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.min.js?body=1" for 127.0.0.1 at 2013-06-17 14:37:42 -0700
+Served asset /bootstrap-carousel.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-06-17 14:37:42 -0700
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-17 14:37:42 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/page_info" for 127.0.0.1 at 2013-06-17 14:38:24 -0700
+Processing by PagesController#get_ordered_page_info as JSON
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE ("pages"."order_index" IS NOT NULL) ORDER BY order_index ASC[0m
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/page/14" for 127.0.0.1 at 2013-06-17 14:38:24 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "14"]]
+  Rendered pages/painting.html.erb (0.7ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/page/12" for 127.0.0.1 at 2013-06-17 14:38:24 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "12"]]
+  Rendered pages/about.html.erb (1.3ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/13" for 127.0.0.1 at 2013-06-17 14:38:24 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "13"]]
+  Rendered pages/code.html.erb (0.8ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-06-17 14:38:24 -0700
+Served asset /painting1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-06-17 14:38:24 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-06-17 14:38:24 -0700
+Served asset /painting4.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-06-17 14:38:24 -0700
+Served asset /painting2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-06-17 14:38:24 -0700
+Served asset /painting3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-06-17 14:38:24 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-06-17 14:38:24 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-06-17 14:38:24 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-06-17 14:38:24 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/next.png" for 127.0.0.1 at 2013-06-17 14:38:24 -0700
+Served asset /next.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-06-17 14:38:24 -0700
+Served asset /portrait.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog_wdi.JPG" for 127.0.0.1 at 2013-06-17 14:38:24 -0700
+Served asset /blog_wdi.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache1.png" for 127.0.0.1 at 2013-06-17 14:38:24 -0700
+Served asset /cssstache1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache2.png" for 127.0.0.1 at 2013-06-17 14:38:24 -0700
+Served asset /cssstache2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache3.png" for 127.0.0.1 at 2013-06-17 14:38:24 -0700
+Served asset /cssstache3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache4.png" for 127.0.0.1 at 2013-06-17 14:38:24 -0700
+Served asset /cssstache4.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune1.png" for 127.0.0.1 at 2013-06-17 14:38:24 -0700
+Served asset /intune1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune2.png" for 127.0.0.1 at 2013-06-17 14:38:24 -0700
+Served asset /intune2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune3.png" for 127.0.0.1 at 2013-06-17 14:38:24 -0700
+Served asset /intune3.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-17 14:41:27 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html within layouts/application (0.1ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-17 14:41:27 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/carousel.min.css?body=1" for 127.0.0.1 at 2013-06-17 14:41:27 -0700
+Served asset /carousel.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index_style.css?body=1" for 127.0.0.1 at 2013-06-17 14:41:27 -0700
+Served asset /index_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-17 14:41:27 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/page_style.css?body=1" for 127.0.0.1 at 2013-06-17 14:41:27 -0700
+Served asset /page_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-17 14:41:27 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.min.js?body=1" for 127.0.0.1 at 2013-06-17 14:41:27 -0700
+Served asset /bootstrap-carousel.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-06-17 14:41:27 -0700
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-17 14:41:27 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/page_info" for 127.0.0.1 at 2013-06-17 14:41:31 -0700
+Processing by PagesController#get_ordered_page_info as JSON
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE ("pages"."order_index" IS NOT NULL) ORDER BY order_index ASC[0m
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/page/14" for 127.0.0.1 at 2013-06-17 14:41:31 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "14"]]
+  Rendered pages/painting.html.erb (0.8ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/12" for 127.0.0.1 at 2013-06-17 14:41:31 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "12"]]
+  Rendered pages/about.html.erb (1.3ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/13" for 127.0.0.1 at 2013-06-17 14:41:31 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "13"]]
+  Rendered pages/code.html.erb (0.7ms)
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-06-17 14:41:31 -0700
+Served asset /painting4.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-06-17 14:41:31 -0700
+Served asset /painting3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-06-17 14:41:31 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-06-17 14:41:31 -0700
+Served asset /painting2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-06-17 14:41:31 -0700
+Served asset /painting1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-06-17 14:41:31 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-06-17 14:41:31 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-06-17 14:41:31 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-06-17 14:41:31 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/next.png" for 127.0.0.1 at 2013-06-17 14:41:31 -0700
+Served asset /next.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-06-17 14:41:31 -0700
+Served asset /portrait.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog_wdi.JPG" for 127.0.0.1 at 2013-06-17 14:41:31 -0700
+Served asset /blog_wdi.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache1.png" for 127.0.0.1 at 2013-06-17 14:41:31 -0700
+Served asset /cssstache1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache2.png" for 127.0.0.1 at 2013-06-17 14:41:31 -0700
+Served asset /cssstache2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache4.png" for 127.0.0.1 at 2013-06-17 14:41:31 -0700
+Served asset /cssstache4.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache3.png" for 127.0.0.1 at 2013-06-17 14:41:31 -0700
+Served asset /cssstache3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune1.png" for 127.0.0.1 at 2013-06-17 14:41:31 -0700
+Served asset /intune1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune2.png" for 127.0.0.1 at 2013-06-17 14:41:31 -0700
+Served asset /intune2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune3.png" for 127.0.0.1 at 2013-06-17 14:41:31 -0700
+Served asset /intune3.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-17 14:43:03 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html within layouts/application (0.0ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-17 14:43:03 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/carousel.min.css?body=1" for 127.0.0.1 at 2013-06-17 14:43:03 -0700
+Served asset /carousel.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-17 14:43:03 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index_style.css?body=1" for 127.0.0.1 at 2013-06-17 14:43:03 -0700
+Served asset /index_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/page_style.css?body=1" for 127.0.0.1 at 2013-06-17 14:43:03 -0700
+Served asset /page_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-17 14:43:03 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.min.js?body=1" for 127.0.0.1 at 2013-06-17 14:43:04 -0700
+Served asset /bootstrap-carousel.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-06-17 14:43:04 -0700
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-17 14:43:04 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-17 14:43:30 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html within layouts/application (0.0ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-17 14:43:30 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/carousel.min.css?body=1" for 127.0.0.1 at 2013-06-17 14:43:30 -0700
+Served asset /carousel.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index_style.css?body=1" for 127.0.0.1 at 2013-06-17 14:43:30 -0700
+Served asset /index_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/page_style.css?body=1" for 127.0.0.1 at 2013-06-17 14:43:30 -0700
+Served asset /page_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/page_info" for 127.0.0.1 at 2013-06-17 14:43:56 -0700
+Processing by PagesController#get_ordered_page_info as JSON
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE ("pages"."order_index" IS NOT NULL) ORDER BY order_index ASC[0m
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/page/14" for 127.0.0.1 at 2013-06-17 14:43:56 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "14"]]
+  Rendered pages/painting.html.erb (0.7ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/12" for 127.0.0.1 at 2013-06-17 14:43:56 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "12"]]
+  Rendered pages/about.html.erb (1.2ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/page/13" for 127.0.0.1 at 2013-06-17 14:43:56 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "13"]]
+  Rendered pages/code.html.erb (0.5ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-06-17 14:43:56 -0700
+Served asset /painting3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw2.jpg" for 127.0.0.1 at 2013-06-17 14:43:56 -0700
+Served asset /sketch_bw2.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-06-17 14:43:56 -0700
+Served asset /painting4.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-06-17 14:43:56 -0700
+Served asset /painting1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-06-17 14:43:56 -0700
+Served asset /painting2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-06-17 14:43:56 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-06-17 14:43:56 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-06-17 14:43:56 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-06-17 14:43:56 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-06-17 14:43:56 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/next.png" for 127.0.0.1 at 2013-06-17 14:43:56 -0700
+Served asset /next.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-06-17 14:43:56 -0700
+Served asset /portrait.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog_wdi.JPG" for 127.0.0.1 at 2013-06-17 14:43:56 -0700
+Served asset /blog_wdi.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache1.png" for 127.0.0.1 at 2013-06-17 14:43:56 -0700
+Served asset /cssstache1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache2.png" for 127.0.0.1 at 2013-06-17 14:43:56 -0700
+Served asset /cssstache2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache3.png" for 127.0.0.1 at 2013-06-17 14:43:56 -0700
+Served asset /cssstache3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache4.png" for 127.0.0.1 at 2013-06-17 14:43:56 -0700
+Served asset /cssstache4.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune1.png" for 127.0.0.1 at 2013-06-17 14:43:56 -0700
+Served asset /intune1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune2.png" for 127.0.0.1 at 2013-06-17 14:43:56 -0700
+Served asset /intune2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune3.png" for 127.0.0.1 at 2013-06-17 14:43:56 -0700
+Served asset /intune3.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-17 14:47:26 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html within layouts/application (0.0ms)
+Completed 200 OK in 35ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/carousel.min.css?body=1" for 127.0.0.1 at 2013-06-17 14:47:26 -0700
+Served asset /carousel.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-17 14:47:26 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index_style.css?body=1" for 127.0.0.1 at 2013-06-17 14:47:26 -0700
+Served asset /index_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/page_style.css?body=1" for 127.0.0.1 at 2013-06-17 14:47:26 -0700
+Served asset /page_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-17 14:47:26 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-17 14:47:26 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.min.js?body=1" for 127.0.0.1 at 2013-06-17 14:47:26 -0700
+Served asset /bootstrap-carousel.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-06-17 14:47:26 -0700
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-17 14:47:26 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/page_info" for 127.0.0.1 at 2013-06-17 14:47:31 -0700
+Processing by PagesController#get_ordered_page_info as JSON
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE ("pages"."order_index" IS NOT NULL) ORDER BY order_index ASC[0m
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/page/14" for 127.0.0.1 at 2013-06-17 14:47:32 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "14"]]
+  Rendered pages/painting.html.erb (0.6ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/13" for 127.0.0.1 at 2013-06-17 14:47:32 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "13"]]
+  Rendered pages/code.html.erb (0.8ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/12" for 127.0.0.1 at 2013-06-17 14:47:32 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "12"]]
+  Rendered pages/about.html.erb (1.3ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-06-17 14:47:32 -0700
+Served asset /painting1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-06-17 14:47:32 -0700
+Served asset /painting3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-06-17 14:47:32 -0700
+Served asset /painting4.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-06-17 14:47:32 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-06-17 14:47:32 -0700
+Served asset /painting2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-06-17 14:47:32 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-06-17 14:47:32 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-06-17 14:47:32 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-06-17 14:47:32 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/next.png" for 127.0.0.1 at 2013-06-17 14:47:32 -0700
+Served asset /next.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache1.png" for 127.0.0.1 at 2013-06-17 14:47:32 -0700
+Served asset /cssstache1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache2.png" for 127.0.0.1 at 2013-06-17 14:47:32 -0700
+Served asset /cssstache2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache3.png" for 127.0.0.1 at 2013-06-17 14:47:32 -0700
+Served asset /cssstache3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache4.png" for 127.0.0.1 at 2013-06-17 14:47:32 -0700
+Served asset /cssstache4.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune1.png" for 127.0.0.1 at 2013-06-17 14:47:32 -0700
+Served asset /intune1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune2.png" for 127.0.0.1 at 2013-06-17 14:47:32 -0700
+Served asset /intune2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune3.png" for 127.0.0.1 at 2013-06-17 14:47:32 -0700
+Served asset /intune3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-06-17 14:47:32 -0700
+Served asset /portrait.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog_wdi.JPG" for 127.0.0.1 at 2013-06-17 14:47:32 -0700
+Served asset /blog_wdi.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/page/14" for 127.0.0.1 at 2013-06-17 16:20:11 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "14"]]
+  Rendered pages/painting.html.erb (0.7ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/12" for 127.0.0.1 at 2013-06-17 16:20:11 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "12"]]
+  Rendered pages/about.html.erb (0.4ms)
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/13" for 127.0.0.1 at 2013-06-17 16:20:11 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "13"]]
+  Rendered pages/code.html.erb (0.6ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-06-17 16:20:11 -0700
+Served asset /painting1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-06-17 16:20:11 -0700
+Served asset /painting3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-06-17 16:20:11 -0700
+Served asset /painting2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-06-17 16:20:11 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-06-17 16:20:11 -0700
+Served asset /painting4.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-06-17 16:20:11 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-06-17 16:20:11 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-06-17 16:20:11 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-06-17 16:20:11 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw2.jpg" for 127.0.0.1 at 2013-06-17 16:20:11 -0700
+Served asset /sketch_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/next.png" for 127.0.0.1 at 2013-06-17 16:20:11 -0700
+Served asset /next.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog_wdi.JPG" for 127.0.0.1 at 2013-06-17 16:20:11 -0700
+Served asset /blog_wdi.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-06-17 16:20:11 -0700
+Served asset /portrait.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache4.png" for 127.0.0.1 at 2013-06-17 16:20:11 -0700
+Served asset /cssstache4.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache1.png" for 127.0.0.1 at 2013-06-17 16:20:11 -0700
+Served asset /cssstache1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache3.png" for 127.0.0.1 at 2013-06-17 16:20:11 -0700
+Served asset /cssstache3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache2.png" for 127.0.0.1 at 2013-06-17 16:20:11 -0700
+Served asset /cssstache2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune2.png" for 127.0.0.1 at 2013-06-17 16:20:11 -0700
+Served asset /intune2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune1.png" for 127.0.0.1 at 2013-06-17 16:20:11 -0700
+Served asset /intune1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune3.png" for 127.0.0.1 at 2013-06-17 16:20:11 -0700
+Served asset /intune3.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-17 16:24:56 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html within layouts/application (0.0ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-17 16:24:56 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/carousel.min.css?body=1" for 127.0.0.1 at 2013-06-17 16:24:56 -0700
+Served asset /carousel.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index_style.css?body=1" for 127.0.0.1 at 2013-06-17 16:24:56 -0700
+Served asset /index_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/page_style.css?body=1" for 127.0.0.1 at 2013-06-17 16:24:56 -0700
+Served asset /page_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/page/14" for 127.0.0.1 at 2013-06-17 16:24:56 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "14"]]
+  Rendered pages/painting.html.erb (1.3ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/12" for 127.0.0.1 at 2013-06-17 16:24:56 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "12"]]
+  Rendered pages/about.html.erb (1.5ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/13" for 127.0.0.1 at 2013-06-17 16:24:56 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "13"]]
+  Rendered pages/code.html.erb (0.9ms)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-06-17 16:24:56 -0700
+Served asset /painting1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-06-17 16:24:56 -0700
+Served asset /painting3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-06-17 16:24:56 -0700
+Served asset /painting4.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-06-17 16:24:56 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-06-17 16:24:56 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-06-17 16:24:56 -0700
+Served asset /painting2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-06-17 16:24:56 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-06-17 16:24:56 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-06-17 16:24:56 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw2.jpg" for 127.0.0.1 at 2013-06-17 16:24:56 -0700
+Served asset /sketch_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-06-17 16:24:56 -0700
+Served asset /portrait.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/next.png" for 127.0.0.1 at 2013-06-17 16:24:56 -0700
+Served asset /next.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog_wdi.JPG" for 127.0.0.1 at 2013-06-17 16:24:56 -0700
+Served asset /blog_wdi.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache1.png" for 127.0.0.1 at 2013-06-17 16:24:56 -0700
+Served asset /cssstache1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache2.png" for 127.0.0.1 at 2013-06-17 16:24:56 -0700
+Served asset /cssstache2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache3.png" for 127.0.0.1 at 2013-06-17 16:24:56 -0700
+Served asset /cssstache3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune1.png" for 127.0.0.1 at 2013-06-17 16:24:56 -0700
+Served asset /intune1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache4.png" for 127.0.0.1 at 2013-06-17 16:24:56 -0700
+Served asset /cssstache4.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune3.png" for 127.0.0.1 at 2013-06-17 16:24:56 -0700
+Served asset /intune3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune2.png" for 127.0.0.1 at 2013-06-17 16:24:56 -0700
+Served asset /intune2.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-17 16:27:40 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html within layouts/application (0.0ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-17 16:27:40 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/carousel.min.css?body=1" for 127.0.0.1 at 2013-06-17 16:27:40 -0700
+Served asset /carousel.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index_style.css?body=1" for 127.0.0.1 at 2013-06-17 16:27:40 -0700
+Served asset /index_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-17 16:27:40 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/page_style.css?body=1" for 127.0.0.1 at 2013-06-17 16:27:40 -0700
+Served asset /page_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-17 16:27:40 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.min.js?body=1" for 127.0.0.1 at 2013-06-17 16:27:40 -0700
+Served asset /bootstrap-carousel.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-06-17 16:27:40 -0700
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-17 16:27:40 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/page_info" for 127.0.0.1 at 2013-06-17 16:27:51 -0700
+Processing by PagesController#get_ordered_page_info as JSON
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE ("pages"."order_index" IS NOT NULL) ORDER BY order_index ASC[0m
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/page/14" for 127.0.0.1 at 2013-06-17 16:27:51 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "14"]]
+  Rendered pages/painting.html.erb (0.7ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/12" for 127.0.0.1 at 2013-06-17 16:27:51 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "12"]]
+  Rendered pages/about.html.erb (1.2ms)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/page/13" for 127.0.0.1 at 2013-06-17 16:27:51 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "13"]]
+  Rendered pages/code.html.erb (0.8ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-06-17 16:27:51 -0700
+Served asset /painting1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-06-17 16:27:51 -0700
+Served asset /painting3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-06-17 16:27:51 -0700
+Served asset /painting4.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-06-17 16:27:51 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-06-17 16:27:51 -0700
+Served asset /painting2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-06-17 16:27:51 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-06-17 16:27:51 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-06-17 16:27:51 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-06-17 16:27:51 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw2.jpg" for 127.0.0.1 at 2013-06-17 16:27:51 -0700
+Served asset /sketch_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/next.png" for 127.0.0.1 at 2013-06-17 16:27:51 -0700
+Served asset /next.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-06-17 16:27:51 -0700
+Served asset /portrait.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog_wdi.JPG" for 127.0.0.1 at 2013-06-17 16:27:51 -0700
+Served asset /blog_wdi.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache1.png" for 127.0.0.1 at 2013-06-17 16:27:51 -0700
+Served asset /cssstache1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache2.png" for 127.0.0.1 at 2013-06-17 16:27:52 -0700
+Served asset /cssstache2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache3.png" for 127.0.0.1 at 2013-06-17 16:27:52 -0700
+Served asset /cssstache3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache4.png" for 127.0.0.1 at 2013-06-17 16:27:52 -0700
+Served asset /cssstache4.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune1.png" for 127.0.0.1 at 2013-06-17 16:27:52 -0700
+Served asset /intune1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune2.png" for 127.0.0.1 at 2013-06-17 16:27:52 -0700
+Served asset /intune2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune3.png" for 127.0.0.1 at 2013-06-17 16:27:52 -0700
+Served asset /intune3.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-17 16:30:20 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html within layouts/application (0.0ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/index_style.css?body=1" for 127.0.0.1 at 2013-06-17 16:30:20 -0700
+Served asset /index_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/carousel.min.css?body=1" for 127.0.0.1 at 2013-06-17 16:30:20 -0700
+Served asset /carousel.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-17 16:30:20 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-17 16:30:20 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/page_style.css?body=1" for 127.0.0.1 at 2013-06-17 16:30:20 -0700
+Served asset /page_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-17 16:30:20 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-06-17 16:30:20 -0700
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.min.js?body=1" for 127.0.0.1 at 2013-06-17 16:30:20 -0700
+Served asset /bootstrap-carousel.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-17 16:30:20 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/page_info" for 127.0.0.1 at 2013-06-17 16:30:23 -0700
+Processing by PagesController#get_ordered_page_info as JSON
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE ("pages"."order_index" IS NOT NULL) ORDER BY order_index ASC[0m
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/page/14" for 127.0.0.1 at 2013-06-17 16:30:23 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "14"]]
+  Rendered pages/painting.html.erb (0.8ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/13" for 127.0.0.1 at 2013-06-17 16:30:23 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "13"]]
+  Rendered pages/code.html.erb (0.5ms)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/12" for 127.0.0.1 at 2013-06-17 16:30:23 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "12"]]
+  Rendered pages/about.html.erb (0.9ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-06-17 16:30:23 -0700
+Served asset /painting1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-06-17 16:30:23 -0700
+Served asset /painting4.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-06-17 16:30:23 -0700
+Served asset /painting3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-06-17 16:30:23 -0700
+Served asset /painting2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-06-17 16:30:23 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-06-17 16:30:23 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-06-17 16:30:23 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-06-17 16:30:23 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-06-17 16:30:23 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw2.jpg" for 127.0.0.1 at 2013-06-17 16:30:23 -0700
+Served asset /sketch_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/next.png" for 127.0.0.1 at 2013-06-17 16:30:23 -0700
+Served asset /next.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache1.png" for 127.0.0.1 at 2013-06-17 16:30:23 -0700
+Served asset /cssstache1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache2.png" for 127.0.0.1 at 2013-06-17 16:30:23 -0700
+Served asset /cssstache2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache4.png" for 127.0.0.1 at 2013-06-17 16:30:23 -0700
+Served asset /cssstache4.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache3.png" for 127.0.0.1 at 2013-06-17 16:30:23 -0700
+Served asset /cssstache3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune1.png" for 127.0.0.1 at 2013-06-17 16:30:23 -0700
+Served asset /intune1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune2.png" for 127.0.0.1 at 2013-06-17 16:30:23 -0700
+Served asset /intune2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-06-17 16:30:23 -0700
+Served asset /portrait.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune3.png" for 127.0.0.1 at 2013-06-17 16:30:23 -0700
+Served asset /intune3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog_wdi.JPG" for 127.0.0.1 at 2013-06-17 16:30:23 -0700
+Served asset /blog_wdi.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-17 16:30:32 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html within layouts/application (0.0ms)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/carousel.min.css?body=1" for 127.0.0.1 at 2013-06-17 16:30:32 -0700
+Served asset /carousel.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-17 16:30:32 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index_style.css?body=1" for 127.0.0.1 at 2013-06-17 16:30:32 -0700
+Served asset /index_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/page_style.css?body=1" for 127.0.0.1 at 2013-06-17 16:30:32 -0700
+Served asset /page_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-17 16:30:32 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-17 16:30:32 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-06-17 16:30:32 -0700
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.min.js?body=1" for 127.0.0.1 at 2013-06-17 16:30:32 -0700
+Served asset /bootstrap-carousel.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-17 16:30:32 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/page_info" for 127.0.0.1 at 2013-06-17 16:30:34 -0700
+Processing by PagesController#get_ordered_page_info as JSON
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE ("pages"."order_index" IS NOT NULL) ORDER BY order_index ASC[0m
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/page/14" for 127.0.0.1 at 2013-06-17 16:30:34 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "14"]]
+  Rendered pages/painting.html.erb (0.6ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/page/12" for 127.0.0.1 at 2013-06-17 16:30:34 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "12"]]
+  Rendered pages/about.html.erb (1.1ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/13" for 127.0.0.1 at 2013-06-17 16:30:34 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "13"]]
+  Rendered pages/code.html.erb (0.9ms)
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-06-17 16:30:34 -0700
+Served asset /painting1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-06-17 16:30:34 -0700
+Served asset /painting3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-06-17 16:30:34 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-06-17 16:30:34 -0700
+Served asset /painting2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-06-17 16:30:34 -0700
+Served asset /painting4.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-06-17 16:30:34 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-06-17 16:30:34 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-06-17 16:30:34 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-06-17 16:30:34 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw2.jpg" for 127.0.0.1 at 2013-06-17 16:30:34 -0700
+Served asset /sketch_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/next.png" for 127.0.0.1 at 2013-06-17 16:30:34 -0700
+Served asset /next.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-06-17 16:30:34 -0700
+Served asset /portrait.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog_wdi.JPG" for 127.0.0.1 at 2013-06-17 16:30:34 -0700
+Served asset /blog_wdi.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache1.png" for 127.0.0.1 at 2013-06-17 16:30:34 -0700
+Served asset /cssstache1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache2.png" for 127.0.0.1 at 2013-06-17 16:30:34 -0700
+Served asset /cssstache2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache4.png" for 127.0.0.1 at 2013-06-17 16:30:34 -0700
+Served asset /cssstache4.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache3.png" for 127.0.0.1 at 2013-06-17 16:30:34 -0700
+Served asset /cssstache3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune1.png" for 127.0.0.1 at 2013-06-17 16:30:34 -0700
+Served asset /intune1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune2.png" for 127.0.0.1 at 2013-06-17 16:30:34 -0700
+Served asset /intune2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune3.png" for 127.0.0.1 at 2013-06-17 16:30:34 -0700
+Served asset /intune3.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-17 16:31:12 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html within layouts/application (0.1ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-17 16:31:12 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index_style.css?body=1" for 127.0.0.1 at 2013-06-17 16:31:12 -0700
+Served asset /index_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/carousel.min.css?body=1" for 127.0.0.1 at 2013-06-17 16:31:12 -0700
+Served asset /carousel.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-17 16:31:12 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/page_style.css?body=1" for 127.0.0.1 at 2013-06-17 16:31:12 -0700
+Served asset /page_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-17 16:31:12 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.min.js?body=1" for 127.0.0.1 at 2013-06-17 16:31:12 -0700
+Served asset /bootstrap-carousel.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-06-17 16:31:12 -0700
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-17 16:31:12 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/page_info" for 127.0.0.1 at 2013-06-17 16:31:13 -0700
+Processing by PagesController#get_ordered_page_info as JSON
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE ("pages"."order_index" IS NOT NULL) ORDER BY order_index ASC[0m
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/page/14" for 127.0.0.1 at 2013-06-17 16:31:13 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "14"]]
+  Rendered pages/painting.html.erb (0.6ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/12" for 127.0.0.1 at 2013-06-17 16:31:13 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "12"]]
+  Rendered pages/about.html.erb (1.3ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/13" for 127.0.0.1 at 2013-06-17 16:31:13 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "13"]]
+  Rendered pages/code.html.erb (0.7ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-06-17 16:31:13 -0700
+Served asset /painting1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-06-17 16:31:13 -0700
+Served asset /painting3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-06-17 16:31:13 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-06-17 16:31:13 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-06-17 16:31:13 -0700
+Served asset /painting2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-06-17 16:31:13 -0700
+Served asset /painting4.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-06-17 16:31:13 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-06-17 16:31:13 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-06-17 16:31:13 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/next.png" for 127.0.0.1 at 2013-06-17 16:31:13 -0700
+Served asset /next.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw2.jpg" for 127.0.0.1 at 2013-06-17 16:31:13 -0700
+Served asset /sketch_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-06-17 16:31:13 -0700
+Served asset /portrait.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog_wdi.JPG" for 127.0.0.1 at 2013-06-17 16:31:13 -0700
+Served asset /blog_wdi.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache1.png" for 127.0.0.1 at 2013-06-17 16:31:13 -0700
+Served asset /cssstache1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache2.png" for 127.0.0.1 at 2013-06-17 16:31:13 -0700
+Served asset /cssstache2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache3.png" for 127.0.0.1 at 2013-06-17 16:31:13 -0700
+Served asset /cssstache3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache4.png" for 127.0.0.1 at 2013-06-17 16:31:13 -0700
+Served asset /cssstache4.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune1.png" for 127.0.0.1 at 2013-06-17 16:31:13 -0700
+Served asset /intune1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune2.png" for 127.0.0.1 at 2013-06-17 16:31:13 -0700
+Served asset /intune2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune3.png" for 127.0.0.1 at 2013-06-17 16:31:13 -0700
+Served asset /intune3.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-17 16:32:46 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html within layouts/application (0.0ms)
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/carousel.min.css?body=1" for 127.0.0.1 at 2013-06-17 16:32:46 -0700
+Served asset /carousel.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-17 16:32:46 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-17 16:32:46 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index_style.css?body=1" for 127.0.0.1 at 2013-06-17 16:32:46 -0700
+Served asset /index_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/page_style.css?body=1" for 127.0.0.1 at 2013-06-17 16:32:46 -0700
+Served asset /page_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-17 16:32:46 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.min.js?body=1" for 127.0.0.1 at 2013-06-17 16:32:46 -0700
+Served asset /bootstrap-carousel.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-06-17 16:32:46 -0700
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-17 16:32:46 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/page_info" for 127.0.0.1 at 2013-06-17 16:32:46 -0700
+Processing by PagesController#get_ordered_page_info as JSON
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE ("pages"."order_index" IS NOT NULL) ORDER BY order_index ASC[0m
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/page/14" for 127.0.0.1 at 2013-06-17 16:32:47 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "14"]]
+  Rendered pages/painting.html.erb (0.8ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/12" for 127.0.0.1 at 2013-06-17 16:32:47 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "12"]]
+  Rendered pages/about.html.erb (1.3ms)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/13" for 127.0.0.1 at 2013-06-17 16:32:47 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "13"]]
+  Rendered pages/code.html.erb (0.7ms)
+Completed 200 OK in 17ms (Views: 11.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-06-17 16:32:47 -0700
+Served asset /painting1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-06-17 16:32:47 -0700
+Served asset /painting3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-06-17 16:32:47 -0700
+Served asset /painting2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-06-17 16:32:47 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-06-17 16:32:47 -0700
+Served asset /painting4.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-06-17 16:32:47 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-06-17 16:32:47 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-06-17 16:32:47 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-06-17 16:32:47 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw2.jpg" for 127.0.0.1 at 2013-06-17 16:32:47 -0700
+Served asset /sketch_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/next.png" for 127.0.0.1 at 2013-06-17 16:32:47 -0700
+Served asset /next.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-06-17 16:32:47 -0700
+Served asset /portrait.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog_wdi.JPG" for 127.0.0.1 at 2013-06-17 16:32:47 -0700
+Served asset /blog_wdi.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache1.png" for 127.0.0.1 at 2013-06-17 16:32:47 -0700
+Served asset /cssstache1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache2.png" for 127.0.0.1 at 2013-06-17 16:32:47 -0700
+Served asset /cssstache2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache3.png" for 127.0.0.1 at 2013-06-17 16:32:47 -0700
+Served asset /cssstache3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache4.png" for 127.0.0.1 at 2013-06-17 16:32:47 -0700
+Served asset /cssstache4.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune2.png" for 127.0.0.1 at 2013-06-17 16:32:47 -0700
+Served asset /intune2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune3.png" for 127.0.0.1 at 2013-06-17 16:32:47 -0700
+Served asset /intune3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune1.png" for 127.0.0.1 at 2013-06-17 16:32:47 -0700
+Served asset /intune1.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-17 16:37:14 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html within layouts/application (0.1ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-17 16:37:14 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/carousel.min.css?body=1" for 127.0.0.1 at 2013-06-17 16:37:14 -0700
+Served asset /carousel.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index_style.css?body=1" for 127.0.0.1 at 2013-06-17 16:37:14 -0700
+Served asset /index_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-17 16:37:14 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/page_style.css?body=1" for 127.0.0.1 at 2013-06-17 16:37:14 -0700
+Served asset /page_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-17 16:37:14 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.min.js?body=1" for 127.0.0.1 at 2013-06-17 16:37:14 -0700
+Served asset /bootstrap-carousel.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-06-17 16:37:14 -0700
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-17 16:37:14 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/page_info" for 127.0.0.1 at 2013-06-17 16:37:21 -0700
+Processing by PagesController#get_ordered_page_info as JSON
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE ("pages"."order_index" IS NOT NULL) ORDER BY order_index ASC[0m
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/page/14" for 127.0.0.1 at 2013-06-17 16:37:21 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "14"]]
+  Rendered pages/painting.html.erb (0.8ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/12" for 127.0.0.1 at 2013-06-17 16:37:22 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "12"]]
+  Rendered pages/about.html.erb (1.5ms)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/page/13" for 127.0.0.1 at 2013-06-17 16:37:22 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "13"]]
+  Rendered pages/code.html.erb (1.1ms)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-06-17 16:37:22 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-06-17 16:37:22 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-06-17 16:37:22 -0700
+Served asset /painting3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-06-17 16:37:22 -0700
+Served asset /painting1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-06-17 16:37:22 -0700
+Served asset /painting2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-06-17 16:37:22 -0700
+Served asset /painting4.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-06-17 16:37:22 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-06-17 16:37:22 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/next.png" for 127.0.0.1 at 2013-06-17 16:37:22 -0700
+Served asset /next.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-06-17 16:37:22 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw2.jpg" for 127.0.0.1 at 2013-06-17 16:37:22 -0700
+Served asset /sketch_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-06-17 16:37:22 -0700
+Served asset /portrait.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache1.png" for 127.0.0.1 at 2013-06-17 16:37:22 -0700
+Served asset /cssstache1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog_wdi.JPG" for 127.0.0.1 at 2013-06-17 16:37:22 -0700
+Served asset /blog_wdi.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache2.png" for 127.0.0.1 at 2013-06-17 16:37:22 -0700
+Served asset /cssstache2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache3.png" for 127.0.0.1 at 2013-06-17 16:37:22 -0700
+Served asset /cssstache3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache4.png" for 127.0.0.1 at 2013-06-17 16:37:22 -0700
+Served asset /cssstache4.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune1.png" for 127.0.0.1 at 2013-06-17 16:37:22 -0700
+Served asset /intune1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune2.png" for 127.0.0.1 at 2013-06-17 16:37:22 -0700
+Served asset /intune2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune3.png" for 127.0.0.1 at 2013-06-17 16:37:22 -0700
+Served asset /intune3.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-17 16:39:15 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html within layouts/application (0.0ms)
+Completed 200 OK in 6ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/carousel.min.css?body=1" for 127.0.0.1 at 2013-06-17 16:39:15 -0700
+Served asset /carousel.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-17 16:39:15 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index_style.css?body=1" for 127.0.0.1 at 2013-06-17 16:39:15 -0700
+Served asset /index_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/page_style.css?body=1" for 127.0.0.1 at 2013-06-17 16:39:15 -0700
+Served asset /page_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-17 16:39:15 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-17 16:39:15 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.min.js?body=1" for 127.0.0.1 at 2013-06-17 16:39:15 -0700
+Served asset /bootstrap-carousel.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-06-17 16:39:15 -0700
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-17 16:39:15 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/page_info" for 127.0.0.1 at 2013-06-17 16:39:16 -0700
+Processing by PagesController#get_ordered_page_info as JSON
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE ("pages"."order_index" IS NOT NULL) ORDER BY order_index ASC[0m
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/page/14" for 127.0.0.1 at 2013-06-17 16:39:16 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "14"]]
+  Rendered pages/painting.html.erb (0.7ms)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/12" for 127.0.0.1 at 2013-06-17 16:39:16 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "12"]]
+  Rendered pages/about.html.erb (1.4ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/page/13" for 127.0.0.1 at 2013-06-17 16:39:16 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "13"]]
+  Rendered pages/code.html.erb (0.5ms)
+Completed 200 OK in 42ms (Views: 5.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-06-17 16:39:16 -0700
+Served asset /painting4.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-06-17 16:39:16 -0700
+Served asset /painting3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-06-17 16:39:16 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-06-17 16:39:16 -0700
+Served asset /painting1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-06-17 16:39:16 -0700
+Served asset /painting2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-06-17 16:39:16 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-06-17 16:39:16 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-06-17 16:39:16 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-06-17 16:39:16 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/next.png" for 127.0.0.1 at 2013-06-17 16:39:16 -0700
+Served asset /next.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw2.jpg" for 127.0.0.1 at 2013-06-17 16:39:16 -0700
+Served asset /sketch_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-06-17 16:39:16 -0700
+Served asset /portrait.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog_wdi.JPG" for 127.0.0.1 at 2013-06-17 16:39:16 -0700
+Served asset /blog_wdi.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache1.png" for 127.0.0.1 at 2013-06-17 16:39:16 -0700
+Served asset /cssstache1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache2.png" for 127.0.0.1 at 2013-06-17 16:39:16 -0700
+Served asset /cssstache2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache3.png" for 127.0.0.1 at 2013-06-17 16:39:16 -0700
+Served asset /cssstache3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache4.png" for 127.0.0.1 at 2013-06-17 16:39:16 -0700
+Served asset /cssstache4.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune1.png" for 127.0.0.1 at 2013-06-17 16:39:16 -0700
+Served asset /intune1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune2.png" for 127.0.0.1 at 2013-06-17 16:39:16 -0700
+Served asset /intune2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune3.png" for 127.0.0.1 at 2013-06-17 16:39:16 -0700
+Served asset /intune3.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-17 16:41:52 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html within layouts/application (0.0ms)
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/carousel.min.css?body=1" for 127.0.0.1 at 2013-06-17 16:41:52 -0700
+Served asset /carousel.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-17 16:41:52 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index_style.css?body=1" for 127.0.0.1 at 2013-06-17 16:41:52 -0700
+Served asset /index_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/page_style.css?body=1" for 127.0.0.1 at 2013-06-17 16:41:52 -0700
+Served asset /page_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-17 16:41:52 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-17 16:41:52 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.min.js?body=1" for 127.0.0.1 at 2013-06-17 16:41:52 -0700
+Served asset /bootstrap-carousel.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-06-17 16:41:52 -0700
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-17 16:41:52 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/page_info" for 127.0.0.1 at 2013-06-17 16:41:53 -0700
+Processing by PagesController#get_ordered_page_info as JSON
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE ("pages"."order_index" IS NOT NULL) ORDER BY order_index ASC[0m
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/page/14" for 127.0.0.1 at 2013-06-17 16:41:53 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "14"]]
+  Rendered pages/painting.html.erb (0.7ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/12" for 127.0.0.1 at 2013-06-17 16:41:53 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "12"]]
+  Rendered pages/about.html.erb (1.3ms)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/13" for 127.0.0.1 at 2013-06-17 16:41:53 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "13"]]
+  Rendered pages/code.html.erb (0.8ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-06-17 16:41:53 -0700
+Served asset /painting3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-06-17 16:41:53 -0700
+Served asset /painting1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-06-17 16:41:53 -0700
+Served asset /painting4.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-06-17 16:41:53 -0700
+Served asset /painting2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-06-17 16:41:53 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-06-17 16:41:53 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-06-17 16:41:53 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-06-17 16:41:53 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-06-17 16:41:53 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw2.jpg" for 127.0.0.1 at 2013-06-17 16:41:53 -0700
+Served asset /sketch_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/next.png" for 127.0.0.1 at 2013-06-17 16:41:53 -0700
+Served asset /next.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-06-17 16:41:53 -0700
+Served asset /portrait.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog_wdi.JPG" for 127.0.0.1 at 2013-06-17 16:41:53 -0700
+Served asset /blog_wdi.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache1.png" for 127.0.0.1 at 2013-06-17 16:41:53 -0700
+Served asset /cssstache1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache2.png" for 127.0.0.1 at 2013-06-17 16:41:53 -0700
+Served asset /cssstache2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache4.png" for 127.0.0.1 at 2013-06-17 16:41:53 -0700
+Served asset /cssstache4.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache3.png" for 127.0.0.1 at 2013-06-17 16:41:53 -0700
+Served asset /cssstache3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune1.png" for 127.0.0.1 at 2013-06-17 16:41:53 -0700
+Served asset /intune1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune2.png" for 127.0.0.1 at 2013-06-17 16:41:53 -0700
+Served asset /intune2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune3.png" for 127.0.0.1 at 2013-06-17 16:41:53 -0700
+Served asset /intune3.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-17 16:42:34 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html within layouts/application (0.1ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-17 16:42:34 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/carousel.min.css?body=1" for 127.0.0.1 at 2013-06-17 16:42:34 -0700
+Served asset /carousel.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index_style.css?body=1" for 127.0.0.1 at 2013-06-17 16:42:34 -0700
+Served asset /index_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-17 16:42:34 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/page_style.css?body=1" for 127.0.0.1 at 2013-06-17 16:42:34 -0700
+Served asset /page_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-17 16:42:34 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.min.js?body=1" for 127.0.0.1 at 2013-06-17 16:42:34 -0700
+Served asset /bootstrap-carousel.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-06-17 16:42:34 -0700
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-17 16:42:34 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/page_info" for 127.0.0.1 at 2013-06-17 16:42:35 -0700
+Processing by PagesController#get_ordered_page_info as JSON
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE ("pages"."order_index" IS NOT NULL) ORDER BY order_index ASC[0m
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/page/14" for 127.0.0.1 at 2013-06-17 16:42:35 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "14"]]
+  Rendered pages/painting.html.erb (0.8ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/12" for 127.0.0.1 at 2013-06-17 16:42:35 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "12"]]
+  Rendered pages/about.html.erb (1.6ms)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/13" for 127.0.0.1 at 2013-06-17 16:42:35 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "13"]]
+  Rendered pages/code.html.erb (0.8ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-06-17 16:42:35 -0700
+Served asset /painting1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-06-17 16:42:35 -0700
+Served asset /painting3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-06-17 16:42:35 -0700
+Served asset /painting4.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-06-17 16:42:35 -0700
+Served asset /painting2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-06-17 16:42:35 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-06-17 16:42:35 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-06-17 16:42:35 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-06-17 16:42:35 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-06-17 16:42:35 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/next.png" for 127.0.0.1 at 2013-06-17 16:42:35 -0700
+Served asset /next.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw2.jpg" for 127.0.0.1 at 2013-06-17 16:42:35 -0700
+Served asset /sketch_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-06-17 16:42:35 -0700
+Served asset /portrait.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog_wdi.JPG" for 127.0.0.1 at 2013-06-17 16:42:35 -0700
+Served asset /blog_wdi.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache1.png" for 127.0.0.1 at 2013-06-17 16:42:35 -0700
+Served asset /cssstache1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache2.png" for 127.0.0.1 at 2013-06-17 16:42:35 -0700
+Served asset /cssstache2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache3.png" for 127.0.0.1 at 2013-06-17 16:42:35 -0700
+Served asset /cssstache3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache4.png" for 127.0.0.1 at 2013-06-17 16:42:35 -0700
+Served asset /cssstache4.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune1.png" for 127.0.0.1 at 2013-06-17 16:42:35 -0700
+Served asset /intune1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune2.png" for 127.0.0.1 at 2013-06-17 16:42:35 -0700
+Served asset /intune2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune3.png" for 127.0.0.1 at 2013-06-17 16:42:35 -0700
+Served asset /intune3.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html within layouts/application (0.0ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/carousel.min.css?body=1" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Served asset /carousel.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index_style.css?body=1" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Served asset /index_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/page_style.css?body=1" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Served asset /page_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.min.js?body=1" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Served asset /bootstrap-carousel.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/page_info" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Processing by PagesController#get_ordered_page_info as JSON
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE ("pages"."order_index" IS NOT NULL) ORDER BY order_index ASC[0m
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/page/14" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "14"]]
+  Rendered pages/painting.html.erb (0.8ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/12" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "12"]]
+  Rendered pages/about.html.erb (1.4ms)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/page/13" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "13"]]
+  Rendered pages/code.html.erb (1.0ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Served asset /painting1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Served asset /painting3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Served asset /painting4.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Served asset /painting2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw2.jpg" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Served asset /sketch_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/next.png" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Served asset /next.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Served asset /portrait.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog_wdi.JPG" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Served asset /blog_wdi.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache2.png" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Served asset /cssstache2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache1.png" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Served asset /cssstache1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache3.png" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Served asset /cssstache3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache4.png" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Served asset /cssstache4.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune1.png" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Served asset /intune1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune2.png" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Served asset /intune2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune3.png" for 127.0.0.1 at 2013-06-17 16:44:45 -0700
+Served asset /intune3.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-17 17:05:36 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html within layouts/application (0.0ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-17 17:05:36 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index_style.css?body=1" for 127.0.0.1 at 2013-06-17 17:05:36 -0700
+Served asset /index_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/carousel.min.css?body=1" for 127.0.0.1 at 2013-06-17 17:05:36 -0700
+Served asset /carousel.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/page_style.css?body=1" for 127.0.0.1 at 2013-06-17 17:05:36 -0700
+Served asset /page_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-17 17:05:36 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-17 17:05:36 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.min.js?body=1" for 127.0.0.1 at 2013-06-17 17:05:36 -0700
+Served asset /bootstrap-carousel.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-06-17 17:05:36 -0700
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-17 17:05:36 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/page_info" for 127.0.0.1 at 2013-06-17 17:05:40 -0700
+Processing by PagesController#get_ordered_page_info as JSON
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE ("pages"."order_index" IS NOT NULL) ORDER BY order_index ASC[0m
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/page/14" for 127.0.0.1 at 2013-06-17 17:05:40 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "14"]]
+  Rendered pages/painting.html.erb (1.0ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/12" for 127.0.0.1 at 2013-06-17 17:05:40 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "12"]]
+  Rendered pages/about.html.erb (0.8ms)
+Completed 200 OK in 8ms (Views: 4.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/13" for 127.0.0.1 at 2013-06-17 17:05:40 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "13"]]
+  Rendered pages/code.html.erb (1.1ms)
+Completed 200 OK in 109ms (Views: 104.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-06-17 17:05:40 -0700
+Served asset /painting1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-06-17 17:05:40 -0700
+Served asset /painting3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-06-17 17:05:40 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-06-17 17:05:40 -0700
+Served asset /painting2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-06-17 17:05:40 -0700
+Served asset /painting4.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-06-17 17:05:40 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-06-17 17:05:40 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-06-17 17:05:40 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-06-17 17:05:40 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw2.jpg" for 127.0.0.1 at 2013-06-17 17:05:40 -0700
+Served asset /sketch_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/next.png" for 127.0.0.1 at 2013-06-17 17:05:40 -0700
+Served asset /next.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-06-17 17:05:40 -0700
+Served asset /portrait.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog_wdi.JPG" for 127.0.0.1 at 2013-06-17 17:05:40 -0700
+Served asset /blog_wdi.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache1.png" for 127.0.0.1 at 2013-06-17 17:05:40 -0700
+Served asset /cssstache1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache2.png" for 127.0.0.1 at 2013-06-17 17:05:40 -0700
+Served asset /cssstache2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache3.png" for 127.0.0.1 at 2013-06-17 17:05:40 -0700
+Served asset /cssstache3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune1.png" for 127.0.0.1 at 2013-06-17 17:05:40 -0700
+Served asset /intune1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache4.png" for 127.0.0.1 at 2013-06-17 17:05:40 -0700
+Served asset /cssstache4.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune3.png" for 127.0.0.1 at 2013-06-17 17:05:40 -0700
+Served asset /intune3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune2.png" for 127.0.0.1 at 2013-06-17 17:05:40 -0700
+Served asset /intune2.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-17 17:06:08 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html within layouts/application (0.1ms)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-17 17:06:08 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/carousel.min.css?body=1" for 127.0.0.1 at 2013-06-17 17:06:08 -0700
+Served asset /carousel.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index_style.css?body=1" for 127.0.0.1 at 2013-06-17 17:06:08 -0700
+Served asset /index_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/page_style.css?body=1" for 127.0.0.1 at 2013-06-17 17:06:08 -0700
+Served asset /page_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-17 17:06:08 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-17 17:06:08 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.min.js?body=1" for 127.0.0.1 at 2013-06-17 17:06:08 -0700
+Served asset /bootstrap-carousel.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-06-17 17:06:08 -0700
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-17 17:06:08 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/page_info" for 127.0.0.1 at 2013-06-17 17:06:09 -0700
+Processing by PagesController#get_ordered_page_info as JSON
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE ("pages"."order_index" IS NOT NULL) ORDER BY order_index ASC[0m
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/page/14" for 127.0.0.1 at 2013-06-17 17:06:09 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "14"]]
+  Rendered pages/painting.html.erb (1.2ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/page/12" for 127.0.0.1 at 2013-06-17 17:06:09 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "12"]]
+  Rendered pages/about.html.erb (1.3ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/13" for 127.0.0.1 at 2013-06-17 17:06:09 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "13"]]
+  Rendered pages/code.html.erb (0.8ms)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-06-17 17:06:09 -0700
+Served asset /painting1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-06-17 17:06:09 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-06-17 17:06:09 -0700
+Served asset /painting3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-06-17 17:06:09 -0700
+Served asset /painting2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-06-17 17:06:09 -0700
+Served asset /painting4.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-06-17 17:06:09 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-06-17 17:06:09 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-06-17 17:06:09 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-06-17 17:06:09 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw2.jpg" for 127.0.0.1 at 2013-06-17 17:06:09 -0700
+Served asset /sketch_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/next.png" for 127.0.0.1 at 2013-06-17 17:06:09 -0700
+Served asset /next.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog_wdi.JPG" for 127.0.0.1 at 2013-06-17 17:06:09 -0700
+Served asset /blog_wdi.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-06-17 17:06:09 -0700
+Served asset /portrait.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache2.png" for 127.0.0.1 at 2013-06-17 17:06:09 -0700
+Served asset /cssstache2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache1.png" for 127.0.0.1 at 2013-06-17 17:06:09 -0700
+Served asset /cssstache1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache3.png" for 127.0.0.1 at 2013-06-17 17:06:09 -0700
+Served asset /cssstache3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache4.png" for 127.0.0.1 at 2013-06-17 17:06:09 -0700
+Served asset /cssstache4.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune1.png" for 127.0.0.1 at 2013-06-17 17:06:09 -0700
+Served asset /intune1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune3.png" for 127.0.0.1 at 2013-06-17 17:06:09 -0700
+Served asset /intune3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune2.png" for 127.0.0.1 at 2013-06-17 17:06:09 -0700
+Served asset /intune2.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-17 17:08:20 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html within layouts/application (0.0ms)
+Completed 200 OK in 5ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-17 17:08:20 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/carousel.min.css?body=1" for 127.0.0.1 at 2013-06-17 17:08:20 -0700
+Served asset /carousel.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index_style.css?body=1" for 127.0.0.1 at 2013-06-17 17:08:20 -0700
+Served asset /index_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-17 17:08:20 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/page_style.css?body=1" for 127.0.0.1 at 2013-06-17 17:08:20 -0700
+Served asset /page_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-17 17:08:20 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.min.js?body=1" for 127.0.0.1 at 2013-06-17 17:08:20 -0700
+Served asset /bootstrap-carousel.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-06-17 17:08:20 -0700
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-17 17:08:20 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/page_info" for 127.0.0.1 at 2013-06-17 17:08:37 -0700
+Processing by PagesController#get_ordered_page_info as JSON
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE ("pages"."order_index" IS NOT NULL) ORDER BY order_index ASC[0m
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/page/14" for 127.0.0.1 at 2013-06-17 17:08:37 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "14"]]
+  Rendered pages/painting.html.erb (0.8ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/page/12" for 127.0.0.1 at 2013-06-17 17:08:37 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "12"]]
+  Rendered pages/about.html.erb (1.1ms)
+Completed 200 OK in 11ms (Views: 5.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/13" for 127.0.0.1 at 2013-06-17 17:08:37 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "13"]]
+  Rendered pages/code.html.erb (0.7ms)
+Completed 200 OK in 13ms (Views: 8.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-06-17 17:08:37 -0700
+Served asset /painting3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-06-17 17:08:37 -0700
+Served asset /painting1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-06-17 17:08:37 -0700
+Served asset /painting4.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-06-17 17:08:37 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-06-17 17:08:37 -0700
+Served asset /painting2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-06-17 17:08:37 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-06-17 17:08:37 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-06-17 17:08:37 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-06-17 17:08:37 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw2.jpg" for 127.0.0.1 at 2013-06-17 17:08:37 -0700
+Served asset /sketch_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/next.png" for 127.0.0.1 at 2013-06-17 17:08:37 -0700
+Served asset /next.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-06-17 17:08:37 -0700
+Served asset /portrait.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog_wdi.JPG" for 127.0.0.1 at 2013-06-17 17:08:37 -0700
+Served asset /blog_wdi.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache1.png" for 127.0.0.1 at 2013-06-17 17:08:37 -0700
+Served asset /cssstache1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache2.png" for 127.0.0.1 at 2013-06-17 17:08:37 -0700
+Served asset /cssstache2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache3.png" for 127.0.0.1 at 2013-06-17 17:08:37 -0700
+Served asset /cssstache3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache4.png" for 127.0.0.1 at 2013-06-17 17:08:37 -0700
+Served asset /cssstache4.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune1.png" for 127.0.0.1 at 2013-06-17 17:08:37 -0700
+Served asset /intune1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune2.png" for 127.0.0.1 at 2013-06-17 17:08:37 -0700
+Served asset /intune2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune3.png" for 127.0.0.1 at 2013-06-17 17:08:37 -0700
+Served asset /intune3.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-17 17:09:10 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html within layouts/application (0.1ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/index_style.css?body=1" for 127.0.0.1 at 2013-06-17 17:09:10 -0700
+Served asset /index_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-17 17:09:10 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/page_style.css?body=1" for 127.0.0.1 at 2013-06-17 17:09:10 -0700
+Served asset /page_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/carousel.min.css?body=1" for 127.0.0.1 at 2013-06-17 17:09:10 -0700
+Served asset /carousel.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-17 17:09:10 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-17 17:09:10 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-06-17 17:09:10 -0700
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.min.js?body=1" for 127.0.0.1 at 2013-06-17 17:09:10 -0700
+Served asset /bootstrap-carousel.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-17 17:09:10 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/page_info" for 127.0.0.1 at 2013-06-17 17:09:21 -0700
+Processing by PagesController#get_ordered_page_info as JSON
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE ("pages"."order_index" IS NOT NULL) ORDER BY order_index ASC[0m
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/page/14" for 127.0.0.1 at 2013-06-17 17:09:21 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "14"]]
+  Rendered pages/painting.html.erb (0.7ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/12" for 127.0.0.1 at 2013-06-17 17:09:21 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "12"]]
+  Rendered pages/about.html.erb (0.9ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/page/13" for 127.0.0.1 at 2013-06-17 17:09:21 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "13"]]
+  Rendered pages/code.html.erb (0.7ms)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-06-17 17:09:21 -0700
+Served asset /painting4.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-06-17 17:09:21 -0700
+Served asset /painting1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-06-17 17:09:21 -0700
+Served asset /painting3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-06-17 17:09:21 -0700
+Served asset /painting2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-06-17 17:09:21 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-06-17 17:09:21 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-06-17 17:09:21 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-06-17 17:09:21 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw2.jpg" for 127.0.0.1 at 2013-06-17 17:09:21 -0700
+Served asset /sketch_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-06-17 17:09:21 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/next.png" for 127.0.0.1 at 2013-06-17 17:09:21 -0700
+Served asset /next.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-06-17 17:09:21 -0700
+Served asset /portrait.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog_wdi.JPG" for 127.0.0.1 at 2013-06-17 17:09:21 -0700
+Served asset /blog_wdi.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache1.png" for 127.0.0.1 at 2013-06-17 17:09:21 -0700
+Served asset /cssstache1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache2.png" for 127.0.0.1 at 2013-06-17 17:09:21 -0700
+Served asset /cssstache2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache4.png" for 127.0.0.1 at 2013-06-17 17:09:21 -0700
+Served asset /cssstache4.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache3.png" for 127.0.0.1 at 2013-06-17 17:09:21 -0700
+Served asset /cssstache3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune2.png" for 127.0.0.1 at 2013-06-17 17:09:21 -0700
+Served asset /intune2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune3.png" for 127.0.0.1 at 2013-06-17 17:09:21 -0700
+Served asset /intune3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune1.png" for 127.0.0.1 at 2013-06-17 17:09:21 -0700
+Served asset /intune1.png - 304 Not Modified (0ms)
+
+
+Started GET "/page/13" for 127.0.0.1 at 2013-06-17 17:11:54 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "13"]]
+  Rendered pages/code.html.erb (0.8ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/cssstache2.png" for 127.0.0.1 at 2013-06-17 17:11:54 -0700
+Served asset /cssstache2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache1.png" for 127.0.0.1 at 2013-06-17 17:11:54 -0700
+Served asset /cssstache1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune1.png" for 127.0.0.1 at 2013-06-17 17:11:54 -0700
+Served asset /intune1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune2.png" for 127.0.0.1 at 2013-06-17 17:11:54 -0700
+Served asset /intune2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache4.png" for 127.0.0.1 at 2013-06-17 17:11:54 -0700
+Served asset /cssstache4.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache3.png" for 127.0.0.1 at 2013-06-17 17:11:54 -0700
+Served asset /cssstache3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune3.png" for 127.0.0.1 at 2013-06-17 17:11:54 -0700
+Served asset /intune3.png - 304 Not Modified (0ms)
+
+
+Started GET "/page/12" for 127.0.0.1 at 2013-06-17 17:12:01 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "12"]]
+  Rendered pages/about.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/blog_wdi.JPG" for 127.0.0.1 at 2013-06-17 17:12:01 -0700
+Served asset /blog_wdi.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-06-17 17:12:01 -0700
+Served asset /portrait.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/page/14" for 127.0.0.1 at 2013-06-17 17:12:45 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "14"]]
+  Rendered pages/painting.html.erb (0.9ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/page/12" for 127.0.0.1 at 2013-06-17 17:12:45 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPage Load (2.3ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "12"]]
+  Rendered pages/about.html.erb (0.5ms)
+Completed 200 OK in 10ms (Views: 5.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/page/13" for 127.0.0.1 at 2013-06-17 17:12:45 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "13"]]
+  Rendered pages/code.html.erb (2.4ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-06-17 17:12:45 -0700
+Served asset /painting4.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-06-17 17:12:45 -0700
+Served asset /painting3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-06-17 17:12:45 -0700
+Served asset /painting1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-06-17 17:12:45 -0700
+Served asset /painting2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-06-17 17:12:45 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-06-17 17:12:45 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-06-17 17:12:45 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-06-17 17:12:45 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-06-17 17:12:45 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw2.jpg" for 127.0.0.1 at 2013-06-17 17:12:45 -0700
+Served asset /sketch_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/next.png" for 127.0.0.1 at 2013-06-17 17:12:45 -0700
+Served asset /next.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-06-17 17:12:45 -0700
+Served asset /portrait.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog_wdi.JPG" for 127.0.0.1 at 2013-06-17 17:12:45 -0700
+Served asset /blog_wdi.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache1.png" for 127.0.0.1 at 2013-06-17 17:12:46 -0700
+Served asset /cssstache1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache2.png" for 127.0.0.1 at 2013-06-17 17:12:46 -0700
+Served asset /cssstache2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache3.png" for 127.0.0.1 at 2013-06-17 17:12:46 -0700
+Served asset /cssstache3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache4.png" for 127.0.0.1 at 2013-06-17 17:12:46 -0700
+Served asset /cssstache4.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune1.png" for 127.0.0.1 at 2013-06-17 17:12:46 -0700
+Served asset /intune1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune2.png" for 127.0.0.1 at 2013-06-17 17:12:46 -0700
+Served asset /intune2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune3.png" for 127.0.0.1 at 2013-06-17 17:12:46 -0700
+Served asset /intune3.png - 304 Not Modified (0ms)
