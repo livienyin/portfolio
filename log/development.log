@@ -52439,3 +52439,231 @@ Served asset /intune2.png - 304 Not Modified (2ms)
 
 Started GET "/assets/intune3.png" for 127.0.0.1 at 2013-08-09 13:28:41 -0700
 Served asset /intune3.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-08-09 13:30:54 -0700
+Served asset /painting1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-08-09 13:30:54 -0700
+Served asset /painting4.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-08-09 13:30:54 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-08-09 13:30:54 -0700
+Served asset /painting2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-08-09 13:30:54 -0700
+Served asset /painting3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-08-09 13:30:54 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-08-09 13:30:54 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-08-09 13:30:54 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-08-09 13:30:54 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw2.jpg" for 127.0.0.1 at 2013-08-09 13:30:54 -0700
+Served asset /sketch_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/next.png" for 127.0.0.1 at 2013-08-09 13:30:54 -0700
+Served asset /next.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-08-09 13:30:54 -0700
+Served asset /portrait.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/venndiagram.png" for 127.0.0.1 at 2013-08-09 13:30:54 -0700
+Served asset /venndiagram.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog_rafael2.png" for 127.0.0.1 at 2013-08-09 13:30:54 -0700
+Served asset /blog_rafael2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog_rafael1.png" for 127.0.0.1 at 2013-08-09 13:30:54 -0700
+Served asset /blog_rafael1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/chess1.png" for 127.0.0.1 at 2013-08-09 13:30:54 -0700
+Served asset /chess1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/chess2.png" for 127.0.0.1 at 2013-08-09 13:30:54 -0700
+Served asset /chess2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/chess3.png" for 127.0.0.1 at 2013-08-09 13:30:54 -0700
+Served asset /chess3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/chess4.png" for 127.0.0.1 at 2013-08-09 13:30:54 -0700
+Served asset /chess4.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache1.png" for 127.0.0.1 at 2013-08-09 13:30:54 -0700
+Served asset /cssstache1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache2.png" for 127.0.0.1 at 2013-08-09 13:30:54 -0700
+Served asset /cssstache2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache4.png" for 127.0.0.1 at 2013-08-09 13:30:54 -0700
+Served asset /cssstache4.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache3.png" for 127.0.0.1 at 2013-08-09 13:30:54 -0700
+Served asset /cssstache3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune1.png" for 127.0.0.1 at 2013-08-09 13:30:54 -0700
+Served asset /intune1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune2.png" for 127.0.0.1 at 2013-08-09 13:30:54 -0700
+Served asset /intune2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune3.png" for 127.0.0.1 at 2013-08-09 13:30:54 -0700
+Served asset /intune3.png - 304 Not Modified (0ms)
+
+
+Started GET "/page/14" for 127.0.0.1 at 2013-08-09 13:31:31 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "14"]]
+  Rendered pages/painting.html.erb (0.7ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/painting4.jpg" for 127.0.0.1 at 2013-08-09 13:31:31 -0700
+Served asset /painting4.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting3.jpg" for 127.0.0.1 at 2013-08-09 13:31:31 -0700
+Served asset /painting3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw2.jpg" for 127.0.0.1 at 2013-08-09 13:31:31 -0700
+Served asset /painting_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting1.jpg" for 127.0.0.1 at 2013-08-09 13:31:31 -0700
+Served asset /painting1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw3.jpg" for 127.0.0.1 at 2013-08-09 13:31:31 -0700
+Served asset /painting_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting2.jpg" for 127.0.0.1 at 2013-08-09 13:31:31 -0700
+Served asset /painting2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/painting_bw1.jpg" for 127.0.0.1 at 2013-08-09 13:31:31 -0700
+Served asset /painting_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw3.jpg" for 127.0.0.1 at 2013-08-09 13:31:31 -0700
+Served asset /sketch_bw3.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw1.jpg" for 127.0.0.1 at 2013-08-09 13:31:31 -0700
+Served asset /sketch_bw1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sketch_bw2.jpg" for 127.0.0.1 at 2013-08-09 13:31:31 -0700
+Served asset /sketch_bw2.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/page/12" for 127.0.0.1 at 2013-08-09 13:31:44 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "12"]]
+  Rendered pages/about.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/portrait.JPG" for 127.0.0.1 at 2013-08-09 13:31:44 -0700
+Served asset /portrait.JPG - 304 Not Modified (0ms)
+
+
+Started GET "/assets/venndiagram.png" for 127.0.0.1 at 2013-08-09 13:31:44 -0700
+Served asset /venndiagram.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog_rafael1.png" for 127.0.0.1 at 2013-08-09 13:31:44 -0700
+Served asset /blog_rafael1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blog_rafael2.png" for 127.0.0.1 at 2013-08-09 13:31:44 -0700
+Served asset /blog_rafael2.png - 304 Not Modified (0ms)
+
+
+Started GET "/page/13" for 127.0.0.1 at 2013-08-09 13:31:51 -0700
+Processing by PagesController#get_page as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "13"]]
+  Rendered pages/code.html.erb (1.4ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/chess1.png" for 127.0.0.1 at 2013-08-09 13:31:51 -0700
+Served asset /chess1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache1.png" for 127.0.0.1 at 2013-08-09 13:31:51 -0700
+Served asset /cssstache1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/chess3.png" for 127.0.0.1 at 2013-08-09 13:31:51 -0700
+Served asset /chess3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/chess4.png" for 127.0.0.1 at 2013-08-09 13:31:51 -0700
+Served asset /chess4.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/chess2.png" for 127.0.0.1 at 2013-08-09 13:31:51 -0700
+Served asset /chess2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache2.png" for 127.0.0.1 at 2013-08-09 13:31:51 -0700
+Served asset /cssstache2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache3.png" for 127.0.0.1 at 2013-08-09 13:31:51 -0700
+Served asset /cssstache3.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cssstache4.png" for 127.0.0.1 at 2013-08-09 13:31:51 -0700
+Served asset /cssstache4.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune2.png" for 127.0.0.1 at 2013-08-09 13:31:51 -0700
+Served asset /intune2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune1.png" for 127.0.0.1 at 2013-08-09 13:31:51 -0700
+Served asset /intune1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/intune3.png" for 127.0.0.1 at 2013-08-09 13:31:51 -0700
+Served asset /intune3.png - 304 Not Modified (0ms)
