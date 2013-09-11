@@ -53906,6 +53906,7 @@ Served asset /intune3.png - 304 Not Modified (0ms)
 
 Started GET "/assets/intune2.png" for 127.0.0.1 at 2013-08-30 12:43:52 -0700
 Served asset /intune2.png - 304 Not Modified (0ms)
+<<<<<<< HEAD
 Connecting to database specified by database.yml
 
 
@@ -54376,3 +54377,5 @@ Processing by PagesController#get_page as HTML
   [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "13"]]
   Rendered pages/code.html.erb (1.3ms)
 Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.1ms)
+=======
+>>>>>>> 7bb46b7820454a54e662bb423a2a9d53289c2ea3
