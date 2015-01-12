@@ -4,11 +4,94 @@
     <div class="project-description">
       <div class="project-link">
         <h4>
+          <a href="https://www.citygram.org/" target="_blank">Citygram</a>
+        </h4>
+      </div>
+      <p id="tools">
+        user research, front end development, UX/UI design
+      </p>
+      <p>
+        Citygram is a notifications platform for subscribing to your city, whether it's local foreclosures or building permits along your commute. Sign up to find out about the things that matter to you where they matter to you.
+      </p>
+      <p>
+        This was a 2014 <a href="http://www.codeforamerica.org/" target="_blank">Code for America</a> Fellowship project built by Team Charlotte in collaboration with Team Lexington.
+      </p>
+    </div>
+    <div id="citygram" class="project-image carousel">
+      <div class="carousel-inner">
+        <div class="thumbnail item active"> 
+          <a href="#citygram" data-slide="next">
+            <%= image_tag("citygram_home.jpg") %>
+          </a>
+        </div>
+        <div class="thumbnail item">
+          <a href="#citygram" data-slide="next">
+            <%= image_tag("citygram_lex.jpg") %>
+          </a>
+        </div>
+        <div class="thumbnail item">
+          <a href="#citygram" data-slide="next">
+            <%= image_tag("citygram_subscribe.jpg") %>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div> <!-- project -->
+
+  <div class="project">
+    <div class="project-description">
+      <div class="project-link">
+        <h4>
+          Code for America Fellowship Timeline
+        </h4>
+      </div>
+      <p id="tools">
+        infographic, visual design
+      </p>
+      <p>
+        Infographic created to easily communicate fellowship development process to our city partners. Design was shared with other fellows and staff to be repurposed for their cities and presentations. 
+      </p>
+    </div>
+    <div class="project-image">
+      <div class="thumbnail">
+        <%= image_tag("fellowship_timeline.png") %>
+      </div>
+    </div>
+  </div> <!-- project -->
+
+  <div class="project">
+    <div class="project-description">
+      <div class="project-link">
+        <h4>
+          <a href="http://codeforamerica.github.io/lexington-qold/" target="_blank">Lexington Housing Dashboard</a>
+        </h4>
+      </div>
+      <p id="tools">
+        front end development, UI design, user research
+      </p>
+      <p>
+        The Lexington Housing Dashboard is a tool designed for visualizing and understanding housing trends in Lexington and Fayette County. 
+      </p>
+      <p>
+        Developed as a project for the 2014 <a href="http://www.codeforamerica.org/" target="_blank">Code for America</a> Fellowship, the dashboard displays neighborhood-level data like building permits, foreclosures, and code violations on an annual basis, allowing Lexingtonians to compare neighborhoods and see how they change over time.
+      </p>
+    </div>
+    <div class="project-image">
+      <div class="thumbnail">
+        <%= image_tag("housing_dashboard.jpg") %>
+      </div>
+    </div>
+  </div> <!-- project -->
+
+  <div class="project">
+    <div class="project-description">
+      <div class="project-link">
+        <h4>
             Chess Stats
         </h4>
       </div>
       <p id="tools">
-        Javascript, D3.js, AngularJS, CSS
+        front end development, visual design
       </p>
       <p>
         Chess Stats gives Chess.com users insight into their playing history.
@@ -49,99 +132,4 @@
     </div>
   </div> <!-- project -->
 
-  <div class="project">
-    <div class="project-description">
-      <div class="project-link">
-        <h4>
-          <a href="http://cssstache.com" target="_blank">
-            CSS Stache
-          </a>
-        </h4>
-      </div>
-      <p id="tools">
-        SCSS, Javascript, Ruby on Rails
-      </p>
-      <p>
-        CSS Stache is a Rails app that showcases CSS code
-        snippets. Visitors can use the code, show off their own
-        contributions, and play with the code using an in-browser text editor.
-      </p>
-      <p>
-        As a front-end contributor, I worked on the styling, javascript animation, and the
-        live-rendering text editor.
-      </p>
-      <p>
-        Front: <a href="https://github.com/wjpark"
-        target="_blank">Woo Jin Park</a>, <a href="http://www.jeffreylkao.com/"
-        target="_blank">Jeffrey Kao</a>
-        Back: <a href="http://miclowe.github.io/" target="_blank">Michelle
-        Lowe</a>,
-        <a href="https://github.com/dingeuwen" target="_blank">Eu-wen Ding</a>
-      </p>
-    </div>
-    <div id="css-stache" class="project-image carousel">
-      <div class="carousel-inner">
-        <div class="thumbnail item active"> 
-          <a href="#css-stache" data-slide="next">
-            <%= image_tag("cssstache1.png") %>
-          </a>
-        </div>
-        <div class="thumbnail item">
-          <a href="#css-stache" data-slide="next">
-            <%= image_tag("cssstache2.png") %>
-          </a>
-        </div>
-        <div class="thumbnail item">
-          <a href="#css-stache" data-slide="next">
-            <%= image_tag("cssstache3.png") %>
-          </a>
-        </div>
-        <div class="thumbnail item">
-          <a href="#css-stache" data-slide="next">
-            <%= image_tag("cssstache4.png") %>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div> <!-- project -->
-
-  <div class="project">
-    <div class="project-description">
-      <div class="project-link">
-        <h4>InTune</h4>
-      </div>
-      <p id="tools">
-        Ruby on Rails, HTML, CSS,<br /> Last.fm API
-      </p>
-      <p>
-        InTune compares Last.fm users with their friends to see
-        who's on the same wavelength.
-      </p>
-      <p>
-        The app collects user data from the Last.fm API, and sorts the user's
-        friends by most shared artists. A simple bar
-        chart allows users to see which artists they have in common
-        with each friend.
-      </p>
-    </div>
-    <div id="intune" class="project-image carousel">
-      <div class="carousel-inner">
-        <div class="thumbnail item active"> 
-          <a href="#intune" data-slide="next">
-            <%= image_tag("intune1.png") %>
-          </a>
-        </div>
-        <div class="thumbnail item"> 
-          <a href="#intune" data-slide="next">
-            <%= image_tag("intune2.png") %>
-          </a>
-        </div>
-        <div class="thumbnail item"> 
-          <a href="#intune" data-slide="next">
-            <%= image_tag("intune3.png") %>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div> <!-- project -->
 </div>  <!-- webdev -->
